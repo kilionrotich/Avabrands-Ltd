@@ -1,0 +1,29 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: dark;
+}
+
+body {
+  font-family: "Source Sans 3", sans-serif;
+  background: #070707;
+}
+
+.hero-backdrop {
+  background-image:
+    linear-gradient(120deg, rgba(0, 0, 0, 0.92) 10%, rgba(0, 0, 0, 0.55) 55%, rgba(214, 177, 94, 0.12) 100%),
+    radial-gradient(circle at 10% 10%, rgba(214, 177, 94, 0.12), transparent 50%),
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1200' height='800' viewBox='0 0 1200 800'%3E%3Crect width='1200' height='800' fill='%230b0b0b'/%3E%3Cpath d='M0 600 C 200 520 420 540 650 450 C 820 382 1000 300 1200 280 L1200 800 L0 800 Z' fill='%23111111'/%3E%3Cpath d='M0 500 C 220 420 460 470 700 390 C 880 330 1060 260 1200 220 L1200 800 L0 800 Z' fill='%23161616'/%3E%3C/svg%3E");
+  background-size: cover;
+  background-position: center;
+}
+
+.section-glow {
+  background: radial-gradient(circle at 20% 20%, rgba(214, 177, 94, 0.18), transparent 55%);
+}
+
+.text-balance {
+  text-wrap: balance;
+}
