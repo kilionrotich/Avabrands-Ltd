@@ -32,37 +32,43 @@ const portfolioItems = [
     id: 1,
     title: "Atlas Capital HQ",
     category: "Production",
-    summary: "Lobby environmental branding and premium wayfinding system."
+    summary: "Lobby environmental branding and premium wayfinding system.",
+    image_url: "https://picsum.photos/seed/atlas/800/500"
   },
   {
     id: 2,
     title: "Northbridge Rebrand",
     category: "Branding",
-    summary: "Complete identity refresh with global rollout toolkit."
+    summary: "Complete identity refresh with global rollout toolkit.",
+    image_url: "https://picsum.photos/seed/northbridge/800/500"
   },
   {
     id: 3,
     title: "Skyline Pavilion",
     category: "Civil Works",
-    summary: "Large-format structural signage and steel fabrication."
+    summary: "Large-format structural signage and steel fabrication.",
+    image_url: "https://picsum.photos/seed/skyline/800/500"
   },
   {
     id: 4,
     title: "Aurora Campaign",
     category: "Agency",
-    summary: "Cross-agency collaboration for a national campaign launch."
+    summary: "Cross-agency collaboration for a national campaign launch.",
+    image_url: "https://picsum.photos/seed/aurora/800/500"
   },
   {
     id: 5,
     title: "Vantage Studio",
     category: "Production",
-    summary: "Immersive showroom experience with audio-visual integration."
+    summary: "Immersive showroom experience with audio-visual integration.",
+    image_url: "https://picsum.photos/seed/vantage/800/500"
   },
   {
     id: 6,
     title: "Lumen District",
     category: "Civil Works",
-    summary: "Public-facing identity with architectural lighting accents."
+    summary: "Public-facing identity with architectural lighting accents.",
+    image_url: "https://picsum.photos/seed/lumen/800/500"
   }
 ];
 
