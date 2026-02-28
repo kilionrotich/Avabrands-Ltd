@@ -1,4 +1,9 @@
-from mongoengine import Document, StringField, IntField, EmailField, URLField, FileField, DateTimeField, DateField
+from mongoengine import Document, StringField, IntField, EmailField, URLField, FileField, DateTimeField, DateField, EmbeddedDocument, EmbeddedDocumentField, ListField
+
+
+class ImageWithDescription(EmbeddedDocument):
+    image_name = StringField(required=True)
+    description = StringField(default="")
 
 
 class Service(Document):
@@ -17,6 +22,7 @@ class PortfolioItem(Document):
     category = StringField(max_length=80, required=True)
     summary = StringField(required=True)
     image_url = URLField()
+    images = ListField(EmbeddedDocumentField(ImageWithDescription), default=[])
 
     meta = {"collection": "portfolio_items"}
 

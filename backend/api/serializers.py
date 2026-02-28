@@ -11,7 +11,7 @@ class ServiceSerializer(serializers.ModelSerializer):
 class PortfolioSerializer(serializers.ModelSerializer):
     class Meta:
         model = PortfolioItem
-        fields = ["id", "title", "category", "summary", "image_url"]
+        fields = ["id", "title", "category", "summary", "image_url", "images"]
 
 
 class RfqSerializer(serializers.ModelSerializer):

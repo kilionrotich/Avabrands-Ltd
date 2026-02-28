@@ -8,6 +8,9 @@ export default {
           DEFAULT: "#d6b15e",
           soft: "#f2d88c",
           dark: "#b08a3e"
+        },
+        text: {
+          light: "#e0e0e0"
         }
       },
       fontFamily: {
