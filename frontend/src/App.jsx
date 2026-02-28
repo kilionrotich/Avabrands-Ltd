@@ -63,6 +63,18 @@ const portfolioItems = [
     title: "Lumen District",
     category: "Civil Works",
     summary: "Public-facing identity with architectural lighting accents."
+  },
+  {
+    id: 7,
+    title: "Pop Up Banners",
+    category: "Pop Up Banners",
+    summary: "High-impact retractable and tension pop-up banners for events, exhibitions, and retail activations."
+  },
+  {
+    id: 8,
+    title: "Photo Frames",
+    category: "Photo Frames",
+    summary: "Custom-branded photo frames in a range of finishes, sizes, and mounting options for gifting and display."
   }
 ];
 

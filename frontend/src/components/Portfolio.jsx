@@ -1,6 +1,6 @@
 import { useMemo, useState } from "react";
 
-const filters = ["All", "Branding", "Production", "Civil Works", "Agency"];
+const filters = ["All", "Branding", "Production", "Civil Works", "Agency", "Pop Up Banners", "Photo Frames"];
 
 function Portfolio({ items }) {
   const [activeFilter, setActiveFilter] = useState("All");
@@ -79,7 +79,15 @@ function Portfolio({ items }) {
             </h3>
             <p className="mt-4 text-sm text-white/70">{activeItem.summary}</p>
             <div className="mt-6 rounded-xl border border-white/10 bg-black/60 p-6 text-sm text-white/60">
-              Replace this block with gallery images or a video case study.
+              {activeItem.image_url ? (
+                <img
+                  src={activeItem.image_url}
+                  alt={activeItem.title}
+                  className="h-48 w-full rounded-lg object-cover"
+                />
+              ) : (
+                <p className="text-center">Images coming soon.</p>
+              )}
             </div>
           </div>
         </div>
