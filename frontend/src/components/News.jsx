@@ -4,12 +4,12 @@ function News({ posts, bgImages }) {
       <div className="absolute inset-0 bg-black/75" aria-hidden="true" />
       {bgImages && bgImages[0] && (
         <div className="absolute left-0 top-1/2 -translate-y-1/2 opacity-35 h-96 w-96">
-          <img src={`/images/${bgImages[0]}`} alt="" className="w-full h-full object-cover rounded-r-3xl" />
+          <img src={`${import.meta.env.BASE_URL}images/${bgImages[0]}`} alt="" className="w-full h-full object-cover rounded-r-3xl" />
         </div>
       )}
       {bgImages && bgImages[1] && (
         <div className="absolute right-0 bottom-0 opacity-30 h-72 w-72">
-          <img src={`/images/${bgImages[1]}`} alt="" className="w-full h-full object-cover rounded-tl-3xl" />
+          <img src={`${import.meta.env.BASE_URL}images/${bgImages[1]}`} alt="" className="w-full h-full object-cover rounded-tl-3xl" />
         </div>
       )}
       <div className="relative mx-auto max-w-6xl px-6">

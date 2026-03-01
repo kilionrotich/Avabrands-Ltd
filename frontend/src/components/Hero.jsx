@@ -19,7 +19,7 @@ function Hero({ bgImage }) {
         <div className="absolute right-0 top-1/2 -translate-y-1/2 z-0 opacity-85 flex gap-6">
           <div className="w-72 h-96 rounded-lg overflow-hidden border border-gold/40 shadow-lg">
             <img 
-              src={`/images/${images[0]}`} 
+              src={`${import.meta.env.BASE_URL}images/${images[0]}`} 
               alt="Portfolio showcase"
               className="w-full h-full object-cover"
             />

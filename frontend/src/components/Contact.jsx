@@ -4,12 +4,12 @@ function Contact({ bgImages }) {
       <div className="absolute inset-0 bg-black/75" aria-hidden="true" />
       {bgImages && bgImages[0] && (
         <div className="absolute right-0 top-0 opacity-30 h-[28rem] w-[28rem]">
-          <img src={`/images/${bgImages[0]}`} alt="" className="w-full h-full object-cover" />
+          <img src={`${import.meta.env.BASE_URL}images/${bgImages[0]}`} alt="" className="w-full h-full object-cover" />
         </div>
       )}
       {bgImages && bgImages[1] && (
         <div className="absolute left-0 bottom-0 opacity-35 h-96 w-96">
-          <img src={`/images/${bgImages[1]}`} alt="" className="w-full h-full object-cover rounded-tr-3xl" />
+          <img src={`${import.meta.env.BASE_URL}images/${bgImages[1]}`} alt="" className="w-full h-full object-cover rounded-tr-3xl" />
         </div>
       )}
       <div className="relative mx-auto grid max-w-6xl gap-10 px-6 md:grid-cols-[1.1fr_0.9fr]">

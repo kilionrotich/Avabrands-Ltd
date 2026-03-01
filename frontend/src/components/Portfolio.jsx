@@ -2,7 +2,7 @@ import { useMemo, useState } from "react";
 
 function Portfolio({ items, bgImage }) {
   const backgroundStyle = bgImage ? {
-    backgroundImage: `url(/images/${bgImage})`,
+    backgroundImage: `url(${import.meta.env.BASE_URL}images/${bgImage})`,
     backgroundSize: "cover",
     backgroundPosition: "center",
   } : {};
@@ -95,7 +95,7 @@ function Portfolio({ items, bgImage }) {
                   <div key={idx} className="flex flex-col">
                     <div className="overflow-hidden rounded-xl border border-white/10 bg-black/60 aspect-square">
                       <img 
-                        src={`/images/${item.image_name}`} 
+                        src={`${import.meta.env.BASE_URL}images/${item.image_name}`} 
                         alt={item.description || `Project image ${idx + 1}`}
                         className="w-full h-full object-cover hover:scale-105 transition duration-300"
                       />
