@@ -51,11 +51,11 @@ function Contact({ bgImages }) {
               loading="lazy"
               allowFullScreen
               referrerPolicy="no-referrer-when-downgrade"
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d31710.38368458906!2d3.3480286!3d6.5243793!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x103b8c4c5d46a7af%3A0x9a3bca9b8ab8d6b!2sLagos%2C%20Nigeria!5e0!3m2!1sen!2sng!4v1700000000000"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3988.8202815568446!2d35.14170731093628!3d0.33176980000000003!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x178059953673aaf3%3A0x62c0e46e25b74da!2sDr.Tanui's!5e0!3m2!1sen!2ske!4v1740883200000"
             />
           </div>
           <p className="mt-4 text-xs text-text-light/50">
-            Replace the map embed link with your official Google Maps location.
+            Dr. Tanui's location (84JV+PP3)
           </p>
         </div>
       </div>

@@ -1,7 +1,5 @@
 import { useMemo, useState } from "react";
 
-const filters = ["All", "Corporate Branding", "Signage Solutions", "Vehicle Branding", "Large Format Printing", "Printing Services", "Apparel & Promotional Branding"];
-
 function Portfolio({ items, bgImage }) {
   const backgroundStyle = bgImage ? {
     backgroundImage: `url(/images/${bgImage})`,
@@ -10,6 +8,11 @@ function Portfolio({ items, bgImage }) {
   } : {};
   const [activeFilter, setActiveFilter] = useState("All");
   const [activeItem, setActiveItem] = useState(null);
+
+  const filters = useMemo(() => {
+    const categories = [...new Set(items.map((item) => item.category))];
+    return ["All", ...categories];
+  }, [items]);
 
   const filteredItems = useMemo(() => {
     if (activeFilter === "All") return items;

@@ -15,7 +15,7 @@ function Hero({ bgImage }) {
       <div className="absolute inset-0 bg-black/70" aria-hidden="true" />
       
       {/* Background images displayed on the right */}
-      {images.length > 0 && (
+      {images.length > 0 ? (
         <div className="absolute right-0 top-1/2 -translate-y-1/2 z-0 opacity-85 flex gap-6">
           <div className="w-72 h-96 rounded-lg overflow-hidden border border-gold/40 shadow-lg">
             <img 
@@ -25,7 +25,7 @@ function Hero({ bgImage }) {
             />
           </div>
         </div>
-      )}}
+      ) : null}
 
       <div className="relative mx-auto grid max-w-6xl gap-10 px-6 py-20 md:grid-cols-[1.3fr_0.7fr] z-10">
         <div>
