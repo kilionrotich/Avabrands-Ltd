@@ -1,4 +1,4 @@
-import { useMemo, useState } from "react";
+import { useMemo, useState, useRef, useEffect } from "react";
 
 function Portfolio({ items, bgImage }) {
   const backgroundStyle = bgImage ? {
@@ -8,6 +8,7 @@ function Portfolio({ items, bgImage }) {
   } : {};
   const [activeFilter, setActiveFilter] = useState("All");
   const [activeItem, setActiveItem] = useState(null);
+  const gridRef = useRef(null);
 
   const filters = useMemo(() => {
     const categories = [...new Set(items.map((item) => item.category))];
@@ -18,6 +19,16 @@ function Portfolio({ items, bgImage }) {
     if (activeFilter === "All") return items;
     return items.filter((item) => item.category === activeFilter);
   }, [activeFilter, items]);
+
+  // Scroll to grid when filter changes (especially helpful on mobile)
+  useEffect(() => {
+    if (gridRef.current && activeFilter !== "All") {
+      const yOffset = -100; // Offset for header
+      const element = gridRef.current;
+      const y = element.getBoundingClientRect().top + window.pageYOffset + yOffset;
+      window.scrollTo({ top: y, behavior: 'smooth' });
+    }
+  }, [activeFilter]);
 
   return (
     <section id="portfolio" className="border-t border-teal-primary/10 bg-[#2DD4E3] py-20 relative" style={backgroundStyle}>
@@ -47,7 +58,7 @@ function Portfolio({ items, bgImage }) {
             ))}
           </div>
         </div>
-        <div className="mt-12 grid gap-6 md:grid-cols-3">
+        <div ref={gridRef} className="mt-12 grid gap-6 md:grid-cols-3">
           {filteredItems.map((item) => (
             <button
               key={item.id}
