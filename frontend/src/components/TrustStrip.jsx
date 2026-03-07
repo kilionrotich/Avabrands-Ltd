@@ -12,7 +12,7 @@ function TrustStrip() {
           <div key={stat.label} className="flex items-center justify-between">
             <div>
               <p className="text-xs uppercase tracking-[0.3em] text-teal-primary/60">{stat.label}</p>
-              <p className="mt-2 text-2xl font-heading text-teal-secondary font-bold">{stat.value}</p>
+              <p className="mt-2 text-2xl font-heading text-teal-primary font-bold">{stat.value}</p>
             </div>
             <div className="h-10 w-px bg-teal-secondary/20" aria-hidden="true" />
           </div>

@@ -15,8 +15,8 @@ function Services({ services, bgImages }) {
       <div className="relative mx-auto max-w-6xl px-6">
         <div className="flex flex-col gap-8 md:flex-row md:items-end md:justify-between bg-[#26C6DA]/70 backdrop-blur-sm rounded-2xl p-6 -mx-6">
           <div>
-            <p className="text-xs uppercase tracking-[0.35em] text-teal-secondary font-semibold drop-shadow-sm">Capabilities</p>
-            <h2 className="mt-4 text-4xl font-heading uppercase tracking-[0.08em] md:text-6xl text-teal-secondary font-bold drop-shadow-sm">
+            <p className="text-xs uppercase tracking-[0.35em] text-teal-primary font-semibold drop-shadow-sm">Capabilities</p>
+            <h2 className="mt-4 text-4xl font-heading uppercase tracking-[0.08em] md:text-6xl text-teal-primary font-bold drop-shadow-sm">
               Services built for consistency, speed, and precision.
             </h2>
           </div>
@@ -26,8 +26,8 @@ function Services({ services, bgImages }) {
         </div>
         <div className="mt-16 grid gap-8 md:grid-cols-2">
           {services.map((service) => (
-            <div key={service.title} className="rounded-2xl border border-teal-secondary/20 bg-[#26C6DA]/95 backdrop-blur-sm p-10 hover:border-teal-secondary/40 transition shadow-md">
-              <h3 className="text-xl font-heading uppercase tracking-[0.08em] text-teal-secondary font-bold drop-shadow-sm">
+            <div key={service.title} className="rounded-2xl border border-teal-primary/20 bg-[#26C6DA]/95 backdrop-blur-sm p-10 hover:border-teal-primary/40 transition shadow-md">
+              <h3 className="text-xl font-heading uppercase tracking-[0.08em] text-teal-primary font-bold drop-shadow-sm">
                 {service.title}
               </h3>
               <p className="mt-4 text-base text-teal-primary font-medium">{service.description}</p>

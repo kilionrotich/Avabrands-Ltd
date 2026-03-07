@@ -25,8 +25,8 @@ function Portfolio({ items, bgImage }) {
       <div className="relative mx-auto max-w-6xl px-6">
         <div className="flex flex-wrap items-end justify-between gap-6 bg-[#26C6DA]/80 backdrop-blur-sm rounded-2xl p-6 -mx-6">
           <div>
-            <p className="text-xs uppercase tracking-[0.35em] text-teal-secondary font-semibold drop-shadow-sm animate-pulse-slow">Portfolio</p>
-            <h2 className="mt-4 text-3xl font-heading uppercase tracking-[0.08em] md:text-5xl font-bold drop-shadow-sm animate-color-pulse">
+            <p className="text-xs uppercase tracking-[0.35em] text-teal-primary font-semibold drop-shadow-sm animate-pulse-slow">Portfolio</p>
+            <h2 className="mt-4 text-3xl font-heading uppercase tracking-[0.08em] md:text-5xl font-bold drop-shadow-sm">
               Evidence of execution.
             </h2>
           </div>
@@ -38,8 +38,8 @@ function Portfolio({ items, bgImage }) {
                 onClick={() => setActiveFilter(filter)}
                 className={`rounded-full px-4 py-2 text-xs uppercase tracking-[0.2em] transition ${
                   activeFilter === filter
-                    ? "bg-teal-secondary text-white font-bold"
-                    : "border border-teal-secondary/30 text-teal-secondary/70 hover:border-teal-secondary hover:text-teal-secondary"
+                    ? "bg-teal-primary text-white font-bold"
+                    : "border border-teal-primary/30 text-teal-primary/70 hover:border-teal-primary hover:text-teal-primary"
                 }`}
               >
                 {filter}
@@ -53,11 +53,11 @@ function Portfolio({ items, bgImage }) {
               key={item.id}
               type="button"
               onClick={() => setActiveItem(item)}
-              className="group flex h-full flex-col justify-between rounded-2xl border border-teal-secondary/20 bg-teal-primary/5 p-6 text-left transition hover:border-teal-secondary/60 hover:bg-teal-primary/10 hover:animate-pulse-slow"
+              className="group flex h-full flex-col justify-between rounded-2xl border border-teal-primary/20 bg-teal-primary/5 p-6 text-left transition hover:border-teal-primary/60 hover:bg-teal-primary/10 hover:animate-pulse-slow"
             >
               <div>
                 <p className="text-xs uppercase tracking-[0.3em] text-teal-primary/60">{item.category}</p>
-                <h3 className="mt-4 text-xl font-heading uppercase tracking-[0.08em] font-bold animate-color-pulse">
+                <h3 className="mt-4 text-xl font-heading uppercase tracking-[0.08em] font-bold">
                   {item.title}
                 </h3>
                 <p className="mt-3 text-sm text-teal-primary/80">{item.summary}</p>
@@ -79,12 +79,12 @@ function Portfolio({ items, bgImage }) {
                 <button
                   type="button"
                   onClick={() => setActiveItem(null)}
-                  className="text-xs uppercase tracking-[0.3em] text-teal-secondary font-bold hover:text-teal-secondary/80"
+                  className="text-xs uppercase tracking-[0.3em] text-teal-primary font-bold hover:text-teal-primary/80"
                 >
                   Close
                 </button>
               </div>
-            <h3 className="text-2xl font-heading uppercase tracking-[0.08em] text-teal-secondary font-bold">
+            <h3 className="text-2xl font-heading uppercase tracking-[0.08em] text-teal-primary font-bold">
               {activeItem.title}
             </h3>
             <p className="mt-4 text-sm text-teal-primary/80">{activeItem.summary}</p>
@@ -93,7 +93,7 @@ function Portfolio({ items, bgImage }) {
               <div className="mt-8 grid gap-8 md:grid-cols-2 lg:grid-cols-3">
                 {activeItem.images.map((item, idx) => (
                   <div key={idx} className="flex flex-col">
-                    <div className="overflow-hidden rounded-xl border border-teal-secondary/30 bg-[#1FB8C8] aspect-square">
+                    <div className="overflow-hidden rounded-xl border border-teal-primary/30 bg-[#1FB8C8] aspect-square">
                       <img 
                         src={`${import.meta.env.BASE_URL}images/${item.image_name}`} 
                         alt={item.description || `Project image ${idx + 1}`}
@@ -109,7 +109,7 @@ function Portfolio({ items, bgImage }) {
                 ))}
               </div>
             ) : (
-                <div className="mt-8 rounded-2xl border border-teal-secondary/30 bg-[#1FB8C8] p-6 text-sm text-teal-primary/70">
+                <div className="mt-8 rounded-2xl border border-teal-primary/30 bg-[#1FB8C8] p-6 text-sm text-teal-primary/70">
                 Images coming soon for this project.
               </div>
             )}

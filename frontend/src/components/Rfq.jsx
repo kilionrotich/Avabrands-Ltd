@@ -53,8 +53,8 @@ function Rfq({ bgImages }) {
       )}
       <div className="relative mx-auto grid max-w-6xl gap-10 px-6 md:grid-cols-[0.9fr_1.1fr]">
         <div className="bg-[#26C6DA]/70 backdrop-blur-sm rounded-2xl p-6 -mx-6">
-          <p className="text-xs uppercase tracking-[0.35em] text-teal-secondary font-semibold drop-shadow-sm">Request for Quotation</p>
-          <h2 className="mt-4 text-4xl font-heading uppercase tracking-[0.08em] md:text-6xl text-teal-secondary font-bold drop-shadow-sm">
+          <p className="text-xs uppercase tracking-[0.35em] text-teal-primary font-semibold drop-shadow-sm">Request for Quotation</p>
+          <h2 className="mt-4 text-4xl font-heading uppercase tracking-[0.08em] md:text-6xl text-teal-primary font-bold drop-shadow-sm">
             Tell us what you need. We deliver with precision.
           </h2>
           <p className="mt-4 text-base text-teal-primary font-medium drop-shadow-sm">
@@ -65,9 +65,9 @@ function Rfq({ bgImages }) {
             <p>Dedicated project lead assigned after submission.</p>
           </div>
         </div>
-        <form onSubmit={handleSubmit} className="rounded-2xl border border-teal-secondary/20 bg-[#26C6DA]/95 backdrop-blur-sm p-8 shadow-md">
+        <form onSubmit={handleSubmit} className="rounded-2xl border border-teal-primary/20 bg-[#26C6DA]/95 backdrop-blur-sm p-8 shadow-md">
           {status === "success" && (
-            <div className="mb-4 rounded-lg bg-teal-secondary/20 border border-teal-secondary/40 p-4 text-sm text-teal-secondary">
+            <div className="mb-4 rounded-lg bg-teal-primary/20 border border-teal-primary/40 p-4 text-sm text-teal-primary">
               ✓ Thank you! Your RFQ has been submitted. We'll respond within one business day.
             </div>
           )}
@@ -79,27 +79,27 @@ function Rfq({ bgImages }) {
           
           <div className="grid gap-4 md:grid-cols-2">
             <input
-              className="w-full rounded-lg border border-teal-secondary/25 bg-[#1FB8C8] px-4 py-3 text-sm text-teal-primary placeholder-teal-primary/45 focus:border-teal-secondary focus:outline-none"
+              className="w-full rounded-lg border border-teal-primary/25 bg-[#1FB8C8] px-4 py-3 text-sm text-teal-primary placeholder-teal-primary/45 focus:border-teal-primary focus:outline-none"
               placeholder="Full name"
               type="text"
               name="name"
               required
             />
             <input
-              className="w-full rounded-lg border border-teal-secondary/25 bg-[#1FB8C8] px-4 py-3 text-sm text-teal-primary placeholder-teal-primary/45 focus:border-teal-secondary focus:outline-none"
+              className="w-full rounded-lg border border-teal-primary/25 bg-[#1FB8C8] px-4 py-3 text-sm text-teal-primary placeholder-teal-primary/45 focus:border-teal-primary focus:outline-none"
               placeholder="Company"
               type="text"
               name="company"
             />
             <input
-              className="w-full rounded-lg border border-teal-secondary/25 bg-[#1FB8C8] px-4 py-3 text-sm text-teal-primary placeholder-teal-primary/45 focus:border-teal-secondary focus:outline-none"
+              className="w-full rounded-lg border border-teal-primary/25 bg-[#1FB8C8] px-4 py-3 text-sm text-teal-primary placeholder-teal-primary/45 focus:border-teal-primary focus:outline-none"
               placeholder="Email"
               type="email"
               name="email"
               required
             />
             <input
-              className="w-full rounded-lg border border-teal-secondary/25 bg-[#1FB8C8] px-4 py-3 text-sm text-teal-primary placeholder-teal-primary/45 focus:border-teal-secondary focus:outline-none"
+              className="w-full rounded-lg border border-teal-primary/25 bg-[#1FB8C8] px-4 py-3 text-sm text-teal-primary placeholder-teal-primary/45 focus:border-teal-primary focus:outline-none"
               placeholder="Phone"
               type="tel"
               name="phone"
@@ -108,28 +108,28 @@ function Rfq({ bgImages }) {
           </div>
           <div className="mt-4 grid gap-4 md:grid-cols-2">
             <input
-              className="w-full rounded-lg border border-teal-secondary/25 bg-[#1FB8C8] px-4 py-3 text-sm text-teal-primary placeholder-teal-primary/45 focus:border-teal-secondary focus:outline-none"
+              className="w-full rounded-lg border border-teal-primary/25 bg-[#1FB8C8] px-4 py-3 text-sm text-teal-primary placeholder-teal-primary/45 focus:border-teal-primary focus:outline-none"
               placeholder="Service needed"
               type="text"
               name="service"
               required
             />
             <input
-              className="w-full rounded-lg border border-teal-secondary/25 bg-[#1FB8C8] px-4 py-3 text-sm text-teal-primary placeholder-teal-primary/45 focus:border-teal-secondary focus:outline-none"
+              className="w-full rounded-lg border border-teal-primary/25 bg-[#1FB8C8] px-4 py-3 text-sm text-teal-primary placeholder-teal-primary/45 focus:border-teal-primary focus:outline-none"
               placeholder="Estimated budget"
               type="text"
               name="budget"
             />
           </div>
           <textarea
-            className="mt-4 h-32 w-full rounded-lg border border-teal-secondary/25 bg-[#1FB8C8] px-4 py-3 text-sm text-teal-primary placeholder-teal-primary/45 focus:border-teal-secondary focus:outline-none"
+            className="mt-4 h-32 w-full rounded-lg border border-teal-primary/25 bg-[#1FB8C8] px-4 py-3 text-sm text-teal-primary placeholder-teal-primary/45 focus:border-teal-primary focus:outline-none"
             placeholder="Tell us about your scope"
             name="message"
             required
           />
           <div className="mt-4 flex items-center justify-between gap-4">
             <input
-              className="w-full text-xs uppercase tracking-[0.2em] text-teal-primary/60 file:text-teal-secondary file:font-bold file:cursor-pointer"
+              className="w-full text-xs uppercase tracking-[0.2em] text-teal-primary/60 file:text-teal-primary file:font-bold file:cursor-pointer"
               type="file"
               name="attachment"
             />

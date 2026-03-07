@@ -17,7 +17,7 @@ function Hero({ bgImage }) {
       {/* Background images displayed on the right */}
       {images.length > 0 ? (
         <div className="absolute right-0 top-1/2 -translate-y-1/2 z-0 opacity-95 flex gap-6">
-          <div className="w-72 h-96 rounded-lg overflow-hidden border border-teal-secondary/35 shadow-lg">
+          <div className="w-72 h-96 rounded-lg overflow-hidden border border-teal-primary/35 shadow-lg">
             <img 
               src={`${import.meta.env.BASE_URL}images/${images[0]}`} 
               alt="Portfolio showcase"
@@ -29,8 +29,8 @@ function Hero({ bgImage }) {
 
       <div className="relative mx-auto grid max-w-6xl gap-10 px-6 py-20 md:grid-cols-[1.3fr_0.7fr] z-10">
         <div className="bg-[#26C6DA]/60 backdrop-blur-sm rounded-2xl p-6 -m-6">
-          <p className="text-sm uppercase tracking-[0.4em] text-teal-secondary font-semibold drop-shadow-sm">Branding + Production</p>
-          <h1 className="mt-6 text-balance text-4xl font-heading uppercase tracking-[0.08em] text-teal-secondary md:text-6xl font-bold drop-shadow-sm animate-color-pulse">
+          <p className="text-sm uppercase tracking-[0.4em] text-teal-primary font-semibold drop-shadow-sm">Branding + Production</p>
+          <h1 className="mt-6 text-balance text-4xl font-heading uppercase tracking-[0.08em] text-teal-primary md:text-6xl font-bold drop-shadow-sm">
             We build brands that command attention and trust at scale.
           </h1>
           <p className="mt-6 max-w-xl text-lg text-teal-primary font-semibold animate-breathe drop-shadow-sm">
@@ -47,25 +47,25 @@ function Hero({ bgImage }) {
             </a>
             <a
               href="#contact"
-              className="rounded-full border border-teal-primary/25 px-8 py-4 text-sm font-semibold uppercase tracking-[0.25em] text-teal-primary transition hover:border-teal-secondary hover:bg-teal-secondary/10"
+              className="rounded-full border border-teal-primary/25 px-8 py-4 text-sm font-semibold uppercase tracking-[0.25em] text-teal-primary transition hover:border-teal-primary hover:bg-teal-primary/10"
             >
               Talk to Us
             </a>
           </div>
         </div>
         <div className="self-end rounded-2xl border border-teal-primary/20 bg-[#1FB8C8]/98 backdrop-blur-md p-6 shadow-lg">
-          <p className="text-xs uppercase tracking-[0.3em] text-teal-secondary/80 font-semibold">Credibility</p>
+          <p className="text-xs uppercase tracking-[0.3em] text-teal-primary/80 font-semibold">Credibility</p>
           <div className="mt-4 space-y-5">
             <div>
-              <p className="text-3xl font-heading text-teal-secondary font-bold drop-shadow-sm">18+ Years</p>
+              <p className="text-3xl font-heading text-teal-primary font-bold drop-shadow-sm">18+ Years</p>
               <p className="text-sm text-teal-primary font-medium">Delivering premium brand environments.</p>
             </div>
             <div>
-              <p className="text-3xl font-heading text-teal-secondary font-bold drop-shadow-sm">120+ Projects</p>
+              <p className="text-3xl font-heading text-teal-primary font-bold drop-shadow-sm">120+ Projects</p>
               <p className="text-sm text-teal-primary font-medium">Across corporate, retail, and civic sectors.</p>
             </div>
             <div>
-              <p className="text-3xl font-heading text-teal-secondary font-bold drop-shadow-sm">24/7 Oversight</p>
+              <p className="text-3xl font-heading text-teal-primary font-bold drop-shadow-sm">24/7 Oversight</p>
               <p className="text-sm text-teal-primary font-medium">Dedicated production and QA leadership.</p>
             </div>
           </div>

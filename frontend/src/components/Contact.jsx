@@ -54,8 +54,8 @@ function Contact({ bgImages }) {
       <div className="relative mx-auto max-w-6xl px-6">
         <div className="grid gap-10 md:grid-cols-2">
           <div className="bg-[#26C6DA]/70 backdrop-blur-sm rounded-2xl p-6 -mx-6">
-            <p className="text-xs uppercase tracking-[0.35em] text-teal-secondary font-semibold drop-shadow-sm">Contact</p>
-            <h2 className="mt-4 text-4xl font-heading uppercase tracking-[0.08em] md:text-6xl text-teal-secondary font-bold drop-shadow-sm">
+            <p className="text-xs uppercase tracking-[0.35em] text-teal-primary font-semibold drop-shadow-sm">Contact</p>
+            <h2 className="mt-4 text-4xl font-heading uppercase tracking-[0.08em] md:text-6xl text-teal-primary font-bold drop-shadow-sm">
               Let us design your next statement.
             </h2>
             <p className="mt-4 text-base text-teal-primary font-medium drop-shadow-sm">
@@ -73,7 +73,7 @@ function Contact({ bgImages }) {
               <div>
                 <p className="text-xs uppercase tracking-[0.3em] text-teal-primary/70 font-medium">WhatsApp</p>
                 <a
-                  className="inline-flex items-center gap-2 text-teal-secondary font-bold hover:text-teal-secondary/80"
+                  className="inline-flex items-center gap-2 text-teal-primary font-bold hover:text-teal-primary/80"
                   href="https://wa.me/254792724721?text=Hello%20Avabrands%2C%20I%20need%20a%20quote."
                   target="_blank"
                   rel="noreferrer"
@@ -83,8 +83,8 @@ function Contact({ bgImages }) {
               </div>
             </div>
             
-            <div className="mt-8 rounded-2xl border border-teal-secondary/20 bg-teal-primary/5 p-4">
-              <div className="overflow-hidden rounded-xl border border-teal-secondary/20">
+            <div className="mt-8 rounded-2xl border border-teal-primary/20 bg-teal-primary/5 p-4">
+              <div className="overflow-hidden rounded-xl border border-teal-primary/20">
                 <iframe
                   title="Avabrands Map"
                   className="h-64 w-full"
@@ -101,13 +101,13 @@ function Contact({ bgImages }) {
           </div>
           
           <div>
-            <form onSubmit={handleSubmit} className="rounded-2xl border border-teal-secondary/20 bg-teal-primary/5 p-8">
-              <h3 className="text-xl font-heading uppercase tracking-[0.08em] text-teal-secondary font-bold">
+            <form onSubmit={handleSubmit} className="rounded-2xl border border-teal-primary/20 bg-teal-primary/5 p-8">
+              <h3 className="text-xl font-heading uppercase tracking-[0.08em] text-teal-primary font-bold">
                 Send us a message
               </h3>
               
               {status === "success" && (
-                <div className="mt-4 rounded-lg bg-teal-secondary/20 border border-teal-secondary/40 p-4 text-sm text-teal-secondary">
+                <div className="mt-4 rounded-lg bg-teal-primary/20 border border-teal-primary/40 p-4 text-sm text-teal-primary">
                   ✓ Thank you! We'll get back to you soon.
                 </div>
               )}
@@ -119,27 +119,27 @@ function Contact({ bgImages }) {
               
               <div className="mt-6 space-y-4">
                 <input
-                  className="w-full rounded-lg border border-teal-secondary/25 bg-[#1FB8C8] px-4 py-3 text-sm text-teal-primary placeholder-teal-primary/45 focus:border-teal-secondary focus:outline-none"
+                  className="w-full rounded-lg border border-teal-primary/25 bg-[#1FB8C8] px-4 py-3 text-sm text-teal-primary placeholder-teal-primary/45 focus:border-teal-primary focus:outline-none"
                   placeholder="Your name"
                   type="text"
                   name="name"
                   required
                 />
                 <input
-                  className="w-full rounded-lg border border-teal-secondary/25 bg-[#1FB8C8] px-4 py-3 text-sm text-teal-primary placeholder-teal-primary/45 focus:border-teal-secondary focus:outline-none"
+                  className="w-full rounded-lg border border-teal-primary/25 bg-[#1FB8C8] px-4 py-3 text-sm text-teal-primary placeholder-teal-primary/45 focus:border-teal-primary focus:outline-none"
                   placeholder="Email address"
                   type="email"
                   name="email"
                   required
                 />
                 <input
-                  className="w-full rounded-lg border border-teal-secondary/25 bg-[#1FB8C8] px-4 py-3 text-sm text-teal-primary placeholder-teal-primary/45 focus:border-teal-secondary focus:outline-none"
+                  className="w-full rounded-lg border border-teal-primary/25 bg-[#1FB8C8] px-4 py-3 text-sm text-teal-primary placeholder-teal-primary/45 focus:border-teal-primary focus:outline-none"
                   placeholder="Phone number"
                   type="tel"
                   name="phone"
                 />
                 <textarea
-                  className="h-32 w-full rounded-lg border border-teal-secondary/25 bg-[#1FB8C8] px-4 py-3 text-sm text-teal-primary placeholder-teal-primary/45 focus:border-teal-secondary focus:outline-none"
+                  className="h-32 w-full rounded-lg border border-teal-primary/25 bg-[#1FB8C8] px-4 py-3 text-sm text-teal-primary placeholder-teal-primary/45 focus:border-teal-primary focus:outline-none"
                   placeholder="Your message"
                   name="message"
                   required

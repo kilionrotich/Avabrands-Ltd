@@ -45,12 +45,23 @@ html.dark [class*="text-teal-primary"] {
 }
 
 html.dark [class*="text-teal-secondary"] {
-  color: #7dd3fc !important;
+  color: #dbe7f5 !important;
 }
 
 html.dark [class*="border-teal-primary"],
-html.dark [class*="border-teal-secondary"] {
+html.dark [class*="border-teal-secondary"],
+html.dark [class*="border-teal-primary/"],
+html.dark [class*="border-teal-secondary/"] {
   border-color: rgba(125, 211, 252, 0.35) !important;
+}
+
+/* Dark mode: revert turquoise backgrounds to dark */
+html.dark [class*="bg-[#26C6DA]"],
+html.dark [class*="bg-[#2DD4E3]"],
+html.dark [class*="bg-[#1FB8C8]"],
+html.dark [class*="bg-[#1AA5B5]"],
+html.dark [class*="bg-[#178A98]"] {
+  background-color: rgba(15, 23, 42, 0.86) !important;
 }
 
 html.dark .hero-backdrop {
