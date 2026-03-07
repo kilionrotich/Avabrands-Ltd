@@ -48,6 +48,15 @@ html.dark [class*="text-teal-secondary"] {
   color: #dbe7f5 !important;
 }
 
+/* RFQ section: lighter text in dark mode */
+html.dark #rfq [class*="text-teal-primary"] {
+  color: #f0f7fc !important;
+}
+
+html.dark #rfq [class*="placeholder-teal-primary"] {
+  color: rgba(240, 247, 252, 0.5) !important;
+}
+
 html.dark [class*="border-teal-primary"],
 html.dark [class*="border-teal-secondary"],
 html.dark [class*="border-teal-primary/"],
