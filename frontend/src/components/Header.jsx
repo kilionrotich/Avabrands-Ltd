@@ -8,7 +8,7 @@ const navLinks = [
 
 function Header({ theme, onToggleTheme }) {
   return (
-    <header className="sticky top-0 z-50 border-b border-teal-primary/15 bg-[#f8f4ed]/95 backdrop-blur">
+    <header className="sticky top-0 z-50 border-b border-teal-primary/15 bg-[#26C6DA]/95 backdrop-blur">
       <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
         <a href="#" className="inline-flex items-center" aria-label="Avabrands home">
           <img

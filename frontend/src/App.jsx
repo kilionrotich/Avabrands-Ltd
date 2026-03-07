@@ -263,7 +263,7 @@ function App() {
   const imagePairs = getImagePairs(shuffledImages);
   
   return (
-    <div className="bg-[#f8f4ed] text-teal-primary">
+    <div className="bg-[#26C6DA] text-teal-primary">
       <Header theme={theme} onToggleTheme={handleThemeToggle} />
       <Hero bgImage={shuffledImages[0]} />
       <Services services={services} bgImages={imagePairs[0]} />

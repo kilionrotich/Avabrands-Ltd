@@ -28,7 +28,8 @@ export default {
         breathe: "breathe 4s ease-in-out infinite",
         "color-shift": "colorShift 6s ease-in-out infinite",
         "pulse-slow": "pulseSlow 3s ease-in-out infinite",
-        "color-pulse": "colorShift 6s ease-in-out infinite, pulseSlow 2.2s ease-in-out infinite"
+        "color-pulse": "colorShift 6s ease-in-out infinite, pulseSlow 2.2s ease-in-out infinite",
+        "bounce-cta": "bounceCta 2s ease-in-out infinite"
       },
       keyframes: {
         breathe: {
@@ -64,6 +65,14 @@ export default {
           "50%": {
             opacity: "0.7",
             transform: "scale(1.05)"
+          }
+        },
+        bounceCta: {
+          "0%, 100%": {
+            transform: "translateY(0) scale(1)"
+          },
+          "50%": {
+            transform: "translateY(-8px) scale(1.05)"
           }
         }
       }

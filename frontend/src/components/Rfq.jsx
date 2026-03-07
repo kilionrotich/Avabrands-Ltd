@@ -12,7 +12,7 @@ function Rfq({ bgImages }) {
     const formData = new FormData(e.target);
     
     // Add Web3Forms access key
-    formData.append("access_key", "ec748a1d-53a9-4adb-aa72-da09bd1dad93");
+    formData.append("access_key", "8f5f5c31-6162-44cb-8b94-f8d993e81c45");
     formData.append("subject", "New RFQ from Avabrands Website");
     formData.append("from_name", "Avabrands RFQ Form");
 

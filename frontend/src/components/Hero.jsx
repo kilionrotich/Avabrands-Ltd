@@ -30,7 +30,7 @@ function Hero({ bgImage }) {
       <div className="relative mx-auto grid max-w-6xl gap-10 px-6 py-20 md:grid-cols-[1.3fr_0.7fr] z-10">
         <div className="bg-[#f8f4ed]/60 backdrop-blur-sm rounded-2xl p-6 -m-6">
           <p className="text-sm uppercase tracking-[0.4em] text-teal-secondary font-semibold drop-shadow-sm">Branding + Production</p>
-          <h1 className="mt-6 text-balance text-4xl font-heading uppercase tracking-[0.08em] text-teal-secondary md:text-6xl font-bold drop-shadow-sm">
+          <h1 className="mt-6 text-balance text-4xl font-heading uppercase tracking-[0.08em] text-teal-secondary md:text-6xl font-bold drop-shadow-sm animate-color-pulse">
             We build brands that command attention and trust at scale.
           </h1>
           <p className="mt-6 max-w-xl text-lg text-teal-primary font-semibold animate-breathe drop-shadow-sm">
@@ -40,7 +40,7 @@ function Hero({ bgImage }) {
           <div className="mt-10 flex flex-wrap gap-4">
             <a
               href="#portfolio"
-              className="btn-cta rounded-full bg-teal-secondary px-8 py-4 text-sm font-bold uppercase tracking-[0.25em] text-white hover:bg-teal-primary hover:shadow-lg inline-flex items-center gap-2"
+              className="btn-cta rounded-full bg-teal-secondary px-8 py-4 text-sm font-bold uppercase tracking-[0.25em] text-white hover:bg-teal-primary hover:shadow-lg inline-flex items-center gap-2 animate-bounce-cta"
             >
               View Portfolio
               <span className="text-lg">→</span>
