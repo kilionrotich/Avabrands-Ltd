@@ -29,7 +29,7 @@ export default {
         "color-shift": "colorShift 6s ease-in-out infinite",
         "pulse-slow": "pulseSlow 3s ease-in-out infinite",
         "color-pulse": "colorShift 6s ease-in-out infinite, pulseSlow 2.2s ease-in-out infinite",
-        "bounce-cta": "bounceCta 2s ease-in-out infinite"
+        "bounce-cta": "bounceCta 1.5s ease-in-out infinite"
       },
       keyframes: {
         breathe: {
@@ -69,10 +69,12 @@ export default {
         },
         bounceCta: {
           "0%, 100%": {
-            transform: "translateY(0) scale(1)"
+            transform: "translateY(0) scale(1)",
+            boxShadow: "0 4px 6px -1px rgba(0, 0, 0, 0.1)"
           },
           "50%": {
-            transform: "translateY(-8px) scale(1.05)"
+            transform: "translateY(-12px) scale(1.08)",
+            boxShadow: "0 20px 25px -5px rgba(46, 125, 154, 0.3), 0 10px 10px -5px rgba(46, 125, 154, 0.2)"
           }
         }
       }

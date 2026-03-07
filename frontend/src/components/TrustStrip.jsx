@@ -6,7 +6,7 @@ const stats = [
 
 function TrustStrip() {
   return (
-    <section className="border-y border-teal-primary/10 bg-[#ede6d8]">
+    <section className="border-y border-teal-primary/10 bg-[#178A98]">
       <div className="mx-auto grid max-w-6xl gap-8 px-6 py-10 md:grid-cols-3">
         {stats.map((stat) => (
           <div key={stat.label} className="flex items-center justify-between">

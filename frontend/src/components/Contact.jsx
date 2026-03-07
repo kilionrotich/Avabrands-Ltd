@@ -39,8 +39,8 @@ function Contact({ bgImages }) {
   };
 
   return (
-    <section id="contact" className="section-glow border-t border-teal-primary/10 bg-[#f8f4ed] py-20 relative overflow-hidden">
-      <div className="absolute inset-0 bg-[#f8f4ed]/45" aria-hidden="true" />
+    <section id="contact" className="section-glow border-t border-teal-primary/10 bg-[#26C6DA] py-20 relative overflow-hidden">
+      <div className="absolute inset-0 bg-[#26C6DA]/45" aria-hidden="true" />
       {bgImages && bgImages[0] && (
         <div className="absolute right-0 top-0 opacity-60 h-[28rem] w-[28rem]">
           <img src={`${import.meta.env.BASE_URL}images/${bgImages[0]}`} alt="" className="w-full h-full object-cover" />
@@ -53,7 +53,7 @@ function Contact({ bgImages }) {
       )}
       <div className="relative mx-auto max-w-6xl px-6">
         <div className="grid gap-10 md:grid-cols-2">
-          <div className="bg-[#f8f4ed]/70 backdrop-blur-sm rounded-2xl p-6 -mx-6">
+          <div className="bg-[#26C6DA]/70 backdrop-blur-sm rounded-2xl p-6 -mx-6">
             <p className="text-xs uppercase tracking-[0.35em] text-teal-secondary font-semibold drop-shadow-sm">Contact</p>
             <h2 className="mt-4 text-4xl font-heading uppercase tracking-[0.08em] md:text-6xl text-teal-secondary font-bold drop-shadow-sm">
               Let us design your next statement.
@@ -119,27 +119,27 @@ function Contact({ bgImages }) {
               
               <div className="mt-6 space-y-4">
                 <input
-                  className="w-full rounded-lg border border-teal-secondary/25 bg-[#f2ece3] px-4 py-3 text-sm text-teal-primary placeholder-teal-primary/45 focus:border-teal-secondary focus:outline-none"
+                  className="w-full rounded-lg border border-teal-secondary/25 bg-[#1FB8C8] px-4 py-3 text-sm text-teal-primary placeholder-teal-primary/45 focus:border-teal-secondary focus:outline-none"
                   placeholder="Your name"
                   type="text"
                   name="name"
                   required
                 />
                 <input
-                  className="w-full rounded-lg border border-teal-secondary/25 bg-[#f2ece3] px-4 py-3 text-sm text-teal-primary placeholder-teal-primary/45 focus:border-teal-secondary focus:outline-none"
+                  className="w-full rounded-lg border border-teal-secondary/25 bg-[#1FB8C8] px-4 py-3 text-sm text-teal-primary placeholder-teal-primary/45 focus:border-teal-secondary focus:outline-none"
                   placeholder="Email address"
                   type="email"
                   name="email"
                   required
                 />
                 <input
-                  className="w-full rounded-lg border border-teal-secondary/25 bg-[#f2ece3] px-4 py-3 text-sm text-teal-primary placeholder-teal-primary/45 focus:border-teal-secondary focus:outline-none"
+                  className="w-full rounded-lg border border-teal-secondary/25 bg-[#1FB8C8] px-4 py-3 text-sm text-teal-primary placeholder-teal-primary/45 focus:border-teal-secondary focus:outline-none"
                   placeholder="Phone number"
                   type="tel"
                   name="phone"
                 />
                 <textarea
-                  className="h-32 w-full rounded-lg border border-teal-secondary/25 bg-[#f2ece3] px-4 py-3 text-sm text-teal-primary placeholder-teal-primary/45 focus:border-teal-secondary focus:outline-none"
+                  className="h-32 w-full rounded-lg border border-teal-secondary/25 bg-[#1FB8C8] px-4 py-3 text-sm text-teal-primary placeholder-teal-primary/45 focus:border-teal-secondary focus:outline-none"
                   placeholder="Your message"
                   name="message"
                   required
