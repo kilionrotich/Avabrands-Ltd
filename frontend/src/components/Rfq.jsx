@@ -136,7 +136,7 @@ function Rfq({ bgImages }) {
             <button
               type="submit"
               disabled={loading}
-              className="rounded-full bg-teal-secondary px-6 py-3 text-xs font-bold uppercase tracking-[0.25em] text-black hover:bg-teal-secondary/90 hover:shadow-lg transition disabled:opacity-50 disabled:cursor-not-allowed whitespace-nowrap"
+              className="rounded-full bg-teal-secondary px-6 py-3 text-xs font-bold uppercase tracking-[0.25em] text-white hover:bg-teal-secondary/90 hover:shadow-lg transition disabled:opacity-50 disabled:cursor-not-allowed whitespace-nowrap"
             >
               {loading ? "Sending..." : "Submit RFQ"}
             </button>

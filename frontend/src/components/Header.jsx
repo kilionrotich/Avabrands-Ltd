@@ -28,7 +28,7 @@ function Header({ theme, onToggleTheme }) {
           <button
             type="button"
             onClick={onToggleTheme}
-            className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-teal-secondary/60 text-lg text-teal-secondary transition hover:bg-teal-secondary hover:text-white"
+            className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-teal-secondary/60 text-lg text-teal-secondary transition hover:bg-teal-secondary hover:text-teal-primary"
             aria-label={theme === "light" ? "Switch to dark mode" : "Switch to light mode"}
             title={theme === "light" ? "Switch to dark mode" : "Switch to light mode"}
           >
@@ -36,7 +36,7 @@ function Header({ theme, onToggleTheme }) {
           </button>
           <a
             href="#rfq"
-            className="rounded-full border border-teal-secondary/60 px-4 py-2 text-xs font-bold uppercase tracking-[0.25em] text-teal-secondary transition hover:bg-teal-secondary hover:text-white"
+            className="rounded-full border border-teal-secondary/60 px-4 py-2 text-xs font-bold uppercase tracking-[0.25em] text-teal-secondary transition hover:bg-teal-secondary hover:text-teal-primary"
           >
             Request Quote
           </a>

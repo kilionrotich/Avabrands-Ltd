@@ -38,7 +38,7 @@ function Portfolio({ items, bgImage }) {
                 onClick={() => setActiveFilter(filter)}
                 className={`rounded-full px-4 py-2 text-xs uppercase tracking-[0.2em] transition ${
                   activeFilter === filter
-                    ? "bg-teal-secondary text-black font-bold"
+                    ? "bg-teal-secondary text-white font-bold"
                     : "border border-teal-secondary/30 text-teal-secondary/70 hover:border-teal-secondary hover:text-teal-secondary"
                 }`}
               >
