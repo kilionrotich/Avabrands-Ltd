@@ -57,6 +57,19 @@ html.dark #rfq [class*="placeholder-teal-primary"] {
   color: rgba(240, 247, 252, 0.5) !important;
 }
 
+/* RFQ form inputs: even lighter text for better visibility */
+html.dark #rfq input,
+html.dark #rfq textarea,
+html.dark #rfq select {
+  color: #ffffff !important;
+}
+
+html.dark #rfq input::placeholder,
+html.dark #rfq textarea::placeholder,
+html.dark #rfq select::placeholder {
+  color: rgba(255, 255, 255, 0.6) !important;
+}
+
 html.dark [class*="border-teal-primary"],
 html.dark [class*="border-teal-secondary"],
 html.dark [class*="border-teal-primary/"],
