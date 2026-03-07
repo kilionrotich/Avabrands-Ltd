@@ -1,3 +1,4 @@
+import { useEffect, useState } from "react";
 import Header from "./components/Header.jsx";
 import Hero from "./components/Hero.jsx";
 import Services from "./components/Services.jsx";
@@ -241,12 +242,29 @@ const newsPosts = [
 ];
 
 function App() {
+  const [theme, setTheme] = useState(() => {
+    const savedTheme = localStorage.getItem("avabrands-theme");
+    if (savedTheme === "light" || savedTheme === "dark") {
+      return savedTheme;
+    }
+    return "light";
+  });
+
+  useEffect(() => {
+    document.documentElement.classList.toggle("dark", theme === "dark");
+    localStorage.setItem("avabrands-theme", theme);
+  }, [theme]);
+
+  const handleThemeToggle = () => {
+    setTheme((currentTheme) => (currentTheme === "light" ? "dark" : "light"));
+  };
+
   const shuffledImages = [...latestImages].sort(() => Math.random() - 0.5);
   const imagePairs = getImagePairs(shuffledImages);
   
   return (
-    <div className="bg-black text-text-light">
-      <Header />
+    <div className="bg-[#f8f4ed] text-teal-primary">
+      <Header theme={theme} onToggleTheme={handleThemeToggle} />
       <Hero bgImage={shuffledImages[0]} />
       <Services services={services} bgImages={imagePairs[0]} />
       <TrustStrip />

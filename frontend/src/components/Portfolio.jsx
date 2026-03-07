@@ -20,13 +20,13 @@ function Portfolio({ items, bgImage }) {
   }, [activeFilter, items]);
 
   return (
-    <section id="portfolio" className="border-t border-white/10 bg-[#0a0a0a] py-20 relative" style={backgroundStyle}>
-      <div className="absolute inset-0 bg-black/75" aria-hidden="true" />
+    <section id="portfolio" className="border-t border-teal-primary/10 bg-[#f6f2e9] py-20 relative" style={backgroundStyle}>
+      <div className="absolute inset-0 bg-[#f8f4ed]/65" aria-hidden="true" />
       <div className="relative mx-auto max-w-6xl px-6">
-        <div className="flex flex-wrap items-end justify-between gap-6">
+        <div className="flex flex-wrap items-end justify-between gap-6 bg-[#f8f4ed]/80 backdrop-blur-sm rounded-2xl p-6 -mx-6">
           <div>
-            <p className="text-xs uppercase tracking-[0.35em] text-teal-secondary">Portfolio</p>
-            <h2 className="mt-4 text-3xl font-heading uppercase tracking-[0.08em] md:text-5xl text-teal-secondary font-bold">
+            <p className="text-xs uppercase tracking-[0.35em] text-teal-secondary font-semibold drop-shadow-sm animate-pulse-slow">Portfolio</p>
+            <h2 className="mt-4 text-3xl font-heading uppercase tracking-[0.08em] md:text-5xl font-bold drop-shadow-sm animate-color-pulse">
               Evidence of execution.
             </h2>
           </div>
@@ -53,11 +53,11 @@ function Portfolio({ items, bgImage }) {
               key={item.id}
               type="button"
               onClick={() => setActiveItem(item)}
-              className="group flex h-full flex-col justify-between rounded-2xl border border-teal-secondary/20 bg-teal-primary/5 p-6 text-left transition hover:border-teal-secondary/60 hover:bg-teal-primary/10"
+              className="group flex h-full flex-col justify-between rounded-2xl border border-teal-secondary/20 bg-teal-primary/5 p-6 text-left transition hover:border-teal-secondary/60 hover:bg-teal-primary/10 hover:animate-pulse-slow"
             >
               <div>
                 <p className="text-xs uppercase tracking-[0.3em] text-teal-primary/60">{item.category}</p>
-                <h3 className="mt-4 text-xl font-heading uppercase tracking-[0.08em] text-teal-secondary font-bold">
+                <h3 className="mt-4 text-xl font-heading uppercase tracking-[0.08em] font-bold animate-color-pulse">
                   {item.title}
                 </h3>
                 <p className="mt-3 text-sm text-teal-primary/80">{item.summary}</p>
@@ -71,7 +71,7 @@ function Portfolio({ items, bgImage }) {
       </div>
 
       {activeItem ? (
-        <div className="fixed inset-0 z-50 bg-black/90">
+        <div className="fixed inset-0 z-50 bg-[#f8f4ed]/92 backdrop-blur-sm">
           <div className="h-full w-full overflow-y-auto">
             <div className="mx-auto w-full max-w-6xl px-6 py-10">
               <div className="flex items-center justify-between">
@@ -93,7 +93,7 @@ function Portfolio({ items, bgImage }) {
               <div className="mt-8 grid gap-8 md:grid-cols-2 lg:grid-cols-3">
                 {activeItem.images.map((item, idx) => (
                   <div key={idx} className="flex flex-col">
-                    <div className="overflow-hidden rounded-xl border border-teal-secondary/30 bg-black/60 aspect-square">
+                    <div className="overflow-hidden rounded-xl border border-teal-secondary/30 bg-[#f2ece3] aspect-square">
                       <img 
                         src={`${import.meta.env.BASE_URL}images/${item.image_name}`} 
                         alt={item.description || `Project image ${idx + 1}`}
@@ -109,7 +109,7 @@ function Portfolio({ items, bgImage }) {
                 ))}
               </div>
             ) : (
-                <div className="mt-8 rounded-2xl border border-teal-secondary/30 bg-black/60 p-6 text-sm text-teal-primary/70">
+                <div className="mt-8 rounded-2xl border border-teal-secondary/30 bg-[#f2ece3] p-6 text-sm text-teal-primary/70">
                 Images coming soon for this project.
               </div>
             )}

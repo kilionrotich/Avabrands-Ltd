@@ -3,25 +3,74 @@
 @tailwind utilities;
 
 :root {
+  color-scheme: light;
+}
+
+html.dark {
   color-scheme: dark;
 }
 
 body {
   font-family: "Source Sans 3", sans-serif;
-  background: #070707;
+  background: #f8f4ed;
+  color: #0D3B66;
+}
+
+html.dark body {
+  background: #0b1220;
+  color: #dbe7f5;
+}
+
+/* Global dark-mode overrides for existing section/card styles. */
+html.dark header {
+  background: rgba(11, 18, 32, 0.94) !important;
+  border-color: rgba(125, 211, 252, 0.25) !important;
+}
+
+html.dark section,
+html.dark footer {
+  color: #dbe7f5;
+}
+
+html.dark [class*="bg-[#f8f4ed]"],
+html.dark [class*="bg-[#f6f2e9]"],
+html.dark [class*="bg-[#f2ece3]"],
+html.dark [class*="bg-[#f0e9dc]"],
+html.dark [class*="bg-[#ede6d8]"] {
+  background-color: rgba(15, 23, 42, 0.86) !important;
+}
+
+html.dark [class*="text-teal-primary"] {
+  color: #dbe7f5 !important;
+}
+
+html.dark [class*="text-teal-secondary"] {
+  color: #7dd3fc !important;
+}
+
+html.dark [class*="border-teal-primary"],
+html.dark [class*="border-teal-secondary"] {
+  border-color: rgba(125, 211, 252, 0.35) !important;
+}
+
+html.dark .hero-backdrop {
+  background-image:
+    linear-gradient(120deg, rgba(11, 18, 32, 0.95) 10%, rgba(15, 23, 42, 0.92) 55%, rgba(125, 211, 252, 0.16) 100%),
+    radial-gradient(circle at 10% 10%, rgba(125, 211, 252, 0.12), transparent 55%),
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1200' height='800' viewBox='0 0 1200 800'%3E%3Crect width='1200' height='800' fill='%230b1220'/%3E%3Cpath d='M0 600 C 200 520 420 540 650 450 C 820 382 1000 300 1200 280 L1200 800 L0 800 Z' fill='%23172133'/%3E%3Cpath d='M0 500 C 220 420 460 470 700 390 C 880 330 1060 260 1200 220 L1200 800 L0 800 Z' fill='%231e2a3d'/%3E%3C/svg%3E");
 }
 
 .hero-backdrop {
   background-image:
-    linear-gradient(120deg, rgba(0, 0, 0, 0.92) 10%, rgba(0, 0, 0, 0.55) 55%, rgba(214, 177, 94, 0.12) 100%),
-    radial-gradient(circle at 10% 10%, rgba(214, 177, 94, 0.12), transparent 50%),
-    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1200' height='800' viewBox='0 0 1200 800'%3E%3Crect width='1200' height='800' fill='%230b0b0b'/%3E%3Cpath d='M0 600 C 200 520 420 540 650 450 C 820 382 1000 300 1200 280 L1200 800 L0 800 Z' fill='%23111111'/%3E%3Cpath d='M0 500 C 220 420 460 470 700 390 C 880 330 1060 260 1200 220 L1200 800 L0 800 Z' fill='%23161616'/%3E%3C/svg%3E");
+    linear-gradient(120deg, rgba(248, 244, 237, 0.96) 10%, rgba(246, 242, 233, 0.92) 55%, rgba(46, 125, 154, 0.12) 100%),
+    radial-gradient(circle at 10% 10%, rgba(46, 125, 154, 0.14), transparent 55%),
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1200' height='800' viewBox='0 0 1200 800'%3E%3Crect width='1200' height='800' fill='%23f8f4ed'/%3E%3Cpath d='M0 600 C 200 520 420 540 650 450 C 820 382 1000 300 1200 280 L1200 800 L0 800 Z' fill='%23f6f2e9'/%3E%3Cpath d='M0 500 C 220 420 460 470 700 390 C 880 330 1060 260 1200 220 L1200 800 L0 800 Z' fill='%23f0e9dc'/%3E%3C/svg%3E");
   background-size: cover;
   background-position: center;
 }
 
 .section-glow {
-  background: radial-gradient(circle at 20% 20%, rgba(214, 177, 94, 0.18), transparent 55%);
+  background: radial-gradient(circle at 20% 20%, rgba(46, 125, 154, 0.1), transparent 60%);
 }
 
 .text-balance {
