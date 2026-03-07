@@ -29,43 +29,44 @@ function Hero({ bgImage }) {
 
       <div className="relative mx-auto grid max-w-6xl gap-10 px-6 py-20 md:grid-cols-[1.3fr_0.7fr] z-10">
         <div>
-          <p className="text-sm uppercase tracking-[0.4em] text-gold">Branding + Production</p>
-          <h1 className="mt-6 text-balance text-4xl font-heading uppercase tracking-[0.08em] text-text-light md:text-6xl font-bold">
+          <p className="text-sm uppercase tracking-[0.4em] text-teal-secondary">Branding + Production</p>
+          <h1 className="mt-6 text-balance text-4xl font-heading uppercase tracking-[0.08em] text-teal-secondary md:text-6xl font-bold">
             We build brands that command attention and trust at scale.
           </h1>
-          <p className="mt-6 max-w-xl text-lg text-text-light/80 font-medium">
+          <p className="mt-6 max-w-xl text-lg text-teal-primary/90 font-medium animate-breathe">
             Avabrands unifies strategy, production, and civil works into a single, accountable partner for
             high-impact brand environments.
           </p>
           <div className="mt-10 flex flex-wrap gap-4">
             <a
               href="#portfolio"
-              className="rounded-full bg-gold px-6 py-3 text-xs font-semibold uppercase tracking-[0.25em] text-black hover:bg-gold/90 transition"
+              className="btn-cta rounded-full bg-teal-secondary px-8 py-4 text-sm font-bold uppercase tracking-[0.25em] text-black hover:bg-teal-secondary hover:shadow-lg inline-flex items-center gap-2"
             >
               View Portfolio
+              <span className="text-lg">→</span>
             </a>
             <a
               href="#contact"
-              className="rounded-full border border-text-light/30 px-6 py-3 text-xs font-semibold uppercase tracking-[0.25em] text-text-light transition hover:border-gold hover:text-gold"
+              className="rounded-full border border-teal-secondary/50 px-8 py-4 text-sm font-semibold uppercase tracking-[0.25em] text-teal-secondary transition hover:border-teal-secondary hover:bg-teal-secondary/10"
             >
               Talk to Us
             </a>
           </div>
         </div>
-        <div className="self-end rounded-2xl border border-white/10 bg-black/70 p-6 shadow-glow">
-          <p className="text-xs uppercase tracking-[0.3em] text-text-light/60">Credibility</p>
+        <div className="self-end rounded-2xl border border-teal-secondary/30 bg-teal-primary/10 p-6 shadow-glow">
+          <p className="text-xs uppercase tracking-[0.3em] text-teal-secondary/70">Credibility</p>
           <div className="mt-4 space-y-5">
             <div>
-              <p className="text-3xl font-heading text-gold">18+ Years</p>
-              <p className="text-sm text-text-light/70">Delivering premium brand environments.</p>
+              <p className="text-3xl font-heading text-teal-secondary font-bold">18+ Years</p>
+              <p className="text-sm text-teal-primary/80">Delivering premium brand environments.</p>
             </div>
             <div>
-              <p className="text-3xl font-heading text-gold">120+ Projects</p>
-              <p className="text-sm text-text-light/70">Across corporate, retail, and civic sectors.</p>
+              <p className="text-3xl font-heading text-teal-secondary font-bold">120+ Projects</p>
+              <p className="text-sm text-teal-primary/80">Across corporate, retail, and civic sectors.</p>
             </div>
             <div>
-              <p className="text-3xl font-heading text-gold">24/7 Oversight</p>
-              <p className="text-sm text-text-light/70">Dedicated production and QA leadership.</p>
+              <p className="text-3xl font-heading text-teal-secondary font-bold">24/7 Oversight</p>
+              <p className="text-sm text-teal-primary/80">Dedicated production and QA leadership.</p>
             </div>
           </div>
         </div>

@@ -25,8 +25,8 @@ function Portfolio({ items, bgImage }) {
       <div className="relative mx-auto max-w-6xl px-6">
         <div className="flex flex-wrap items-end justify-between gap-6">
           <div>
-            <p className="text-xs uppercase tracking-[0.35em] text-gold">Portfolio</p>
-            <h2 className="mt-4 text-3xl font-heading uppercase tracking-[0.08em] md:text-5xl text-text-light">
+            <p className="text-xs uppercase tracking-[0.35em] text-teal-secondary">Portfolio</p>
+            <h2 className="mt-4 text-3xl font-heading uppercase tracking-[0.08em] md:text-5xl text-teal-secondary font-bold">
               Evidence of execution.
             </h2>
           </div>
@@ -38,8 +38,8 @@ function Portfolio({ items, bgImage }) {
                 onClick={() => setActiveFilter(filter)}
                 className={`rounded-full px-4 py-2 text-xs uppercase tracking-[0.2em] transition ${
                   activeFilter === filter
-                    ? "bg-gold text-black"
-                    : "border border-white/20 text-white/70 hover:border-gold hover:text-gold"
+                    ? "bg-teal-secondary text-black font-bold"
+                    : "border border-teal-secondary/30 text-teal-secondary/70 hover:border-teal-secondary hover:text-teal-secondary"
                 }`}
               >
                 {filter}
@@ -53,17 +53,17 @@ function Portfolio({ items, bgImage }) {
               key={item.id}
               type="button"
               onClick={() => setActiveItem(item)}
-              className="group flex h-full flex-col justify-between rounded-2xl border border-white/10 bg-white/5 p-6 text-left transition hover:border-gold"
+              className="group flex h-full flex-col justify-between rounded-2xl border border-teal-secondary/20 bg-teal-primary/5 p-6 text-left transition hover:border-teal-secondary/60 hover:bg-teal-primary/10"
             >
               <div>
-                <p className="text-xs uppercase tracking-[0.3em] text-text-light/50">{item.category}</p>
-                <h3 className="mt-4 text-xl font-heading uppercase tracking-[0.08em] text-gold">
+                <p className="text-xs uppercase tracking-[0.3em] text-teal-primary/60">{item.category}</p>
+                <h3 className="mt-4 text-xl font-heading uppercase tracking-[0.08em] text-teal-secondary font-bold">
                   {item.title}
                 </h3>
-                <p className="mt-3 text-sm text-text-light/70">{item.summary}</p>
+                <p className="mt-3 text-sm text-teal-primary/80">{item.summary}</p>
               </div>
-              <span className="mt-6 text-xs uppercase tracking-[0.3em] text-text-light/40 group-hover:text-gold">
-                View Project
+              <span className="mt-6 text-xs uppercase tracking-[0.3em] text-teal-primary/50 group-hover:text-teal-secondary transition">
+                View Project →
               </span>
             </button>
           ))}
@@ -75,25 +75,25 @@ function Portfolio({ items, bgImage }) {
           <div className="h-full w-full overflow-y-auto">
             <div className="mx-auto w-full max-w-6xl px-6 py-10">
               <div className="flex items-center justify-between">
-                <p className="text-xs uppercase tracking-[0.3em] text-text-light/50 font-gold">{activeItem.category}</p>
+                <p className="text-xs uppercase tracking-[0.3em] text-teal-primary/60 font-bold">{activeItem.category}</p>
                 <button
                   type="button"
                   onClick={() => setActiveItem(null)}
-                  className="text-xs uppercase tracking-[0.3em] text-gold"
+                  className="text-xs uppercase tracking-[0.3em] text-teal-secondary font-bold hover:text-teal-secondary/80"
                 >
                   Close
                 </button>
               </div>
-            <h3 className="text-2xl font-heading uppercase tracking-[0.08em] text-text-light">
+            <h3 className="text-2xl font-heading uppercase tracking-[0.08em] text-teal-secondary font-bold">
               {activeItem.title}
             </h3>
-            <p className="mt-4 text-sm text-text-light/70">{activeItem.summary}</p>
+            <p className="mt-4 text-sm text-teal-primary/80">{activeItem.summary}</p>
             
             {activeItem.images && activeItem.images.length > 0 ? (
               <div className="mt-8 grid gap-8 md:grid-cols-2 lg:grid-cols-3">
                 {activeItem.images.map((item, idx) => (
                   <div key={idx} className="flex flex-col">
-                    <div className="overflow-hidden rounded-xl border border-white/10 bg-black/60 aspect-square">
+                    <div className="overflow-hidden rounded-xl border border-teal-secondary/30 bg-black/60 aspect-square">
                       <img 
                         src={`${import.meta.env.BASE_URL}images/${item.image_name}`} 
                         alt={item.description || `Project image ${idx + 1}`}
@@ -101,7 +101,7 @@ function Portfolio({ items, bgImage }) {
                       />
                     </div>
                     <div className="mt-4">
-                      <p className="text-sm text-text-light/70">
+                      <p className="text-sm text-teal-primary/80">
                         {item.description || `Project image ${idx + 1}`}
                       </p>
                     </div>
@@ -109,7 +109,7 @@ function Portfolio({ items, bgImage }) {
                 ))}
               </div>
             ) : (
-                <div className="mt-8 rounded-2xl border border-white/10 bg-black/60 p-6 text-sm text-text-light/60">
+                <div className="mt-8 rounded-2xl border border-teal-secondary/30 bg-black/60 p-6 text-sm text-teal-primary/70">
                 Images coming soon for this project.
               </div>
             )}

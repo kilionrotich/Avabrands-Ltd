@@ -13,24 +13,24 @@ function Services({ services, bgImages }) {
         </div>
       )}
       <div className="relative mx-auto max-w-6xl px-6">
-        <div className="flex flex-col gap-6 md:flex-row md:items-end md:justify-between">
+        <div className="flex flex-col gap-8 md:flex-row md:items-end md:justify-between">
           <div>
-            <p className="text-xs uppercase tracking-[0.35em] text-gold">Capabilities</p>
-            <h2 className="mt-4 text-4xl font-heading uppercase tracking-[0.08em] md:text-6xl text-text-light">
+            <p className="text-xs uppercase tracking-[0.35em] text-teal-secondary">Capabilities</p>
+            <h2 className="mt-4 text-4xl font-heading uppercase tracking-[0.08em] md:text-6xl text-teal-secondary font-bold">
               Services built for consistency, speed, and precision.
             </h2>
           </div>
-          <p className="max-w-md text-base text-text-light/70">
+          <p className="max-w-md text-base text-teal-primary/80">
             Integrated delivery reduces risk and ensures brand fidelity from concept to on-site execution.
           </p>
         </div>
-        <div className="mt-12 grid gap-6 md:grid-cols-2">
+        <div className="mt-16 grid gap-8 md:grid-cols-2">
           {services.map((service) => (
-            <div key={service.title} className="rounded-2xl border border-white/10 bg-white/5 p-8">
-              <h3 className="text-xl font-heading uppercase tracking-[0.08em] text-gold">
+            <div key={service.title} className="rounded-2xl border border-teal-secondary/20 bg-teal-primary/5 p-10 hover:border-teal-secondary/40 transition">
+              <h3 className="text-xl font-heading uppercase tracking-[0.08em] text-teal-secondary font-bold">
                 {service.title}
               </h3>
-              <p className="mt-4 text-base text-text-light/70">{service.description}</p>
+              <p className="mt-4 text-base text-teal-primary/80">{service.description}</p>
             </div>
           ))}
         </div>

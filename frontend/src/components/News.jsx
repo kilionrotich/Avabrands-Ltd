@@ -15,27 +15,27 @@ function News({ posts, bgImages }) {
       <div className="relative mx-auto max-w-6xl px-6">
         <div className="flex flex-col gap-6 md:flex-row md:items-end md:justify-between">
           <div>
-            <p className="text-xs uppercase tracking-[0.35em] text-gold">News & Updates</p>
-            <h2 className="mt-4 text-4xl font-heading uppercase tracking-[0.08em] md:text-6xl text-text-light">
+            <p className="text-xs uppercase tracking-[0.35em] text-teal-secondary">News & Updates</p>
+            <h2 className="mt-4 text-4xl font-heading uppercase tracking-[0.08em] md:text-6xl text-teal-secondary font-bold">
               Latest from the studio.
             </h2>
           </div>
           <button
             type="button"
-            className="rounded-full border border-white/20 px-4 py-2 text-xs uppercase tracking-[0.25em] text-white/70 hover:border-gold hover:text-gold"
+            className="rounded-full border border-teal-secondary/30 px-4 py-2 text-xs uppercase tracking-[0.25em] text-teal-primary/70 hover:border-teal-secondary hover:text-teal-secondary font-medium"
           >
             View All
           </button>
         </div>
         <div className="mt-12 grid gap-6 md:grid-cols-3">
           {posts.map((post) => (
-            <article key={post.id} className="rounded-2xl border border-white/10 bg-white/5 p-6">
-              <p className="text-xs uppercase tracking-[0.25em] text-text-light/50">{post.date}</p>
-              <h3 className="mt-4 text-xl font-heading uppercase tracking-[0.08em] text-gold">
+            <article key={post.id} className="rounded-2xl border border-teal-secondary/20 bg-teal-primary/5 p-6 hover:border-teal-secondary/40 transition">
+              <p className="text-xs uppercase tracking-[0.25em] text-teal-primary/60">{post.date}</p>
+              <h3 className="mt-4 text-xl font-heading uppercase tracking-[0.08em] text-teal-secondary font-bold">
                 {post.title}
               </h3>
-              <p className="mt-3 text-base text-text-light/70">{post.excerpt}</p>
-              <button type="button" className="mt-6 text-xs uppercase tracking-[0.3em] text-gold">
+              <p className="mt-3 text-base text-teal-primary/80">{post.excerpt}</p>
+              <button type="button" className="mt-6 text-xs uppercase tracking-[0.3em] text-teal-secondary font-bold hover:text-teal-secondary/80">
                 Read More
               </button>
             </article>
