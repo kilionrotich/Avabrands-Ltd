@@ -29,13 +29,13 @@ function Hero({ bgImage }) {
 
       <div className="relative mx-auto grid max-w-6xl gap-10 px-6 py-20 md:grid-cols-[1.3fr_0.7fr] z-10">
         <div className="bg-[#26C6DA]/60 backdrop-blur-sm rounded-2xl p-6 -m-6">
-          <p className="text-sm uppercase tracking-[0.4em] text-teal-primary font-semibold drop-shadow-sm">Branding + Production</p>
+          <p className="text-sm uppercase tracking-[0.4em] text-teal-primary font-semibold drop-shadow-sm">Branding + Production + Development</p>
           <h1 className="mt-6 text-balance text-4xl font-heading uppercase tracking-[0.08em] text-teal-primary md:text-6xl font-bold drop-shadow-sm">
             We build brands that command attention and trust at scale.
           </h1>
           <p className="mt-6 max-w-xl text-lg text-teal-primary font-semibold animate-breathe drop-shadow-sm">
-            Avabrands unifies strategy, production, and civil works into a single, accountable partner for
-            high-impact brand environments.
+            Avabrands unifies strategy, production, civil works, and digital development into a single,
+            accountable partner for high-impact brand environments and scalable platforms.
           </p>
           <div className="mt-10 flex flex-wrap gap-4">
             <a
@@ -44,6 +44,15 @@ function Hero({ bgImage }) {
             >
               View Portfolio
               <span className="text-lg">→</span>
+            </a>
+            <a
+              href="https://kilionrotich.github.io/portfolio-kilion/"
+              target="_blank"
+              rel="noreferrer"
+              className="rounded-full bg-teal-primary px-8 py-4 text-sm font-bold uppercase tracking-[0.25em] text-white transition hover:bg-teal-secondary hover:shadow-2xl inline-flex items-center gap-2"
+            >
+              View Digital Portfolio
+              <span className="text-lg">↗</span>
             </a>
             <a
               href="#contact"

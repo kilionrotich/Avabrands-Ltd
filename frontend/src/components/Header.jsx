@@ -1,6 +1,7 @@
 const navLinks = [
   { label: "Services", href: "#services" },
   { label: "Portfolio", href: "#portfolio" },
+  { label: "Digital Studio", href: "#digital-studio" },
   { label: "RFQ", href: "#rfq" },
   { label: "News", href: "#news" },
   { label: "Contact", href: "#contact" }
