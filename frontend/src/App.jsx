@@ -40,10 +40,12 @@ const services = [
 const portfolioItems = [
   // Corporate Branding
   {
+    id: 1,
     title: "Corporate Branding",
     category: "Corporate Branding",
     summary: "Logo design and brand identity development, office interior and exterior branding, wall branding and frosted window graphics, reception and lobby branding.",
     images: [
+      { video_name: "Corporate branding.mp4", description: "Corporate branding showcase video" },
       { image_name: "corporate-branding-1.jpeg.jpeg", description: "Corporate brand identity execution" },
       { image_name: "corporate-branding-2.jpeg.jpeg", description: "Office interior branding showcase" },
       { image_name: "corporate-branding-3.jpeg.jpeg", description: "Wall branding and window graphics" },
@@ -115,6 +117,7 @@ const portfolioItems = [
     category: "Large Format Printing",
     summary: "Banners and roll-up banners, posters and promotional displays, exhibition stands and backdrops with high-quality large-scale printing solutions.",
     images: [
+      { video_name: "Large format printing.mp4", description: "Large format printing process video" },
       { image_name: "large format printing1.jpeg.jpeg", description: "Large format banners and backdrops" },
       { image_name: "large format printing2.jpeg.jpeg", description: "Promotional display print" },
       { image_name: "large format printing3.jpeg.jpeg", description: "High-impact poster print" },
@@ -197,6 +200,24 @@ const portfolioItems = [
     summary: "Custom magnetic sticker branding solutions for vehicles, appliances, and temporary promotional needs.",
     images: [
       { image_name: "magnetic stickers.jpeg.jpeg", description: "Custom magnetic sticker branding" }
+    ]
+  },
+  {
+    id: 11,
+    title: "Gondola Branding",
+    category: "Gondola Branding",
+    summary: "Retail shelf and gondola branding solutions designed to improve visibility, guide shoppers, and elevate in-store campaigns.",
+    images: [
+      { image_name: "Gondola branding.jpeg", description: "Gondola branding retail display" },
+      { image_name: "Gondola brandings1.jpeg.jpeg", description: "Primary gondola branding setup" },
+      { image_name: "Gondola branding2.jpeg.jpeg", description: "Gondola shelving brand panel" },
+      { image_name: "Gondola branding3.jpeg.jpeg", description: "In-aisle gondola branding view" },
+      { image_name: "Gondola branding4.jpeg.jpeg", description: "Gondola side panel branding" },
+      { image_name: "Gondola branding5.jpeg.jpeg", description: "Promotional gondola feature" },
+      { image_name: "Gondola branding6.jpeg.jpeg", description: "Retail gondola campaign installation" },
+      { image_name: "Gondola branding7.jpeg.jpeg", description: "Product bay gondola branding" },
+      { image_name: "Gondola branding8.jpeg.jpeg", description: "Aisle gondola visual execution" },
+      { image_name: "Gondola branding9.jpeg.jpeg", description: "Completed gondola branding rollout" }
     ]
   }
 ];

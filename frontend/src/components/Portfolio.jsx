@@ -105,11 +105,24 @@ function Portfolio({ items, bgImage }) {
                 {activeItem.images.map((item, idx) => (
                   <div key={idx} className="flex flex-col">
                     <div className="overflow-hidden rounded-xl border border-teal-primary/30 bg-[#1FB8C8] aspect-square">
-                      <img 
-                        src={`${import.meta.env.BASE_URL}images/${item.image_name}`} 
-                        alt={item.description || `Project image ${idx + 1}`}
-                        className="w-full h-full object-cover hover:scale-105 transition duration-300"
-                      />
+                      {item.video_name ? (
+                        <video
+                          src={`${import.meta.env.BASE_URL}images/${item.video_name}`}
+                          className="w-full h-full object-cover"
+                          controls
+                          playsInline
+                          autoPlay
+                          muted
+                          loop
+                          preload="metadata"
+                        />
+                      ) : (
+                        <img
+                          src={`${import.meta.env.BASE_URL}images/${item.image_name}`}
+                          alt={item.description || `Project image ${idx + 1}`}
+                          className="w-full h-full object-cover hover:scale-105 transition duration-300"
+                        />
+                      )}
                     </div>
                     <div className="mt-4">
                       <p className="text-sm text-teal-primary/80">
