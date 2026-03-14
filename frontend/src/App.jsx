@@ -4,6 +4,7 @@ import Hero from "./components/Hero.jsx";
 import Services from "./components/Services.jsx";
 import TrustStrip from "./components/TrustStrip.jsx";
 import Portfolio from "./components/Portfolio.jsx";
+import DigitalStudio from "./components/DigitalStudio.jsx";
 import Rfq from "./components/Rfq.jsx";
 import News from "./components/News.jsx";
 import Contact from "./components/Contact.jsx";
@@ -290,6 +291,7 @@ function App() {
       <Services services={services} bgImages={imagePairs[0]} />
       <TrustStrip />
       <Portfolio items={portfolioItems} bgImage={shuffledImages[1]} />
+      <DigitalStudio />
       <Rfq bgImages={imagePairs[1]} />
       <News posts={newsPosts} bgImages={imagePairs[2]} />
       <Contact bgImages={imagePairs[3]} />
