@@ -68,7 +68,7 @@ function Contact({ bgImages }) {
               </div>
               <div>
                 <p className="text-xs uppercase tracking-[0.3em] text-teal-primary/70 font-medium">Phone</p>
-                <p>+254 792 724 721</p>
+                <p>+254 793820817</p>
               </div>
               <div>
                 <p className="text-xs uppercase tracking-[0.3em] text-teal-primary/70 font-medium">WhatsApp</p>
