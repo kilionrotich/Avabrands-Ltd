@@ -42,14 +42,15 @@ function Portfolio({ items, bgImage }) {
             </h2>
           </div>
           <div className="flex flex-wrap gap-3">
-            {filters.map((filter) => (
+            {filters.map((filter, index) => (
               <button
                 key={filter}
                 type="button"
                 onClick={() => setActiveFilter(filter)}
-                className={`rounded-full px-4 py-2 text-xs uppercase tracking-[0.2em] transition ${
+                style={{ animationDelay: `${index * 70}ms` }}
+                className={`portfolio-filter-chip rounded-full px-4 py-2 text-xs uppercase tracking-[0.2em] transition ${
                   activeFilter === filter
-                    ? "bg-teal-primary text-white font-bold"
+                    ? "portfolio-filter-chip-active bg-teal-primary text-white font-bold"
                     : "border border-teal-primary/30 text-teal-primary/70 hover:border-teal-primary hover:text-teal-primary"
                 }`}
               >
@@ -60,11 +61,9 @@ function Portfolio({ items, bgImage }) {
         </div>
         <div ref={gridRef} className="mt-12 grid gap-6 md:grid-cols-3">
           {filteredItems.map((item) => (
-            <button
+            <article
               key={item.id}
-              type="button"
-              onClick={() => setActiveItem(item)}
-              className="group flex h-full flex-col justify-between rounded-2xl border border-teal-primary/20 bg-teal-primary/5 p-6 text-left transition hover:border-teal-primary/60 hover:bg-teal-primary/10 hover:animate-pulse-slow"
+              className="group flex h-full flex-col justify-between rounded-2xl border border-teal-primary/20 bg-teal-primary/5 p-6 text-left transition duration-200 hover:-translate-y-1 hover:border-teal-primary/60 hover:bg-teal-primary/10 hover:animate-pulse-slow motion-reduce:hover:translate-y-0"
             >
               <div>
                 <p className="text-xs uppercase tracking-[0.3em] text-teal-primary/60">{item.category}</p>
@@ -73,15 +72,20 @@ function Portfolio({ items, bgImage }) {
                 </h3>
                 <p className="mt-3 text-sm text-teal-primary/80">{item.summary}</p>
               </div>
-              <span className="mt-6 inline-flex items-center gap-2 text-xs uppercase tracking-[0.3em] text-teal-primary/50 transition-colors duration-200 group-hover:text-teal-secondary group-focus-visible:text-teal-secondary motion-reduce:transition-none">
-                <span className="transition-transform duration-200 ease-out group-hover:-translate-y-[1px] group-focus-visible:-translate-y-[1px] motion-reduce:transition-none motion-reduce:transform-none">
+              <button
+                type="button"
+                onClick={() => setActiveItem(item)}
+                className="portfolio-view-button mt-6 inline-flex w-fit items-center gap-2 rounded-full border border-teal-primary/35 px-4 py-2 text-xs uppercase tracking-[0.3em] text-teal-primary/65 transition-all duration-200 hover:border-teal-primary hover:bg-teal-primary/10 hover:text-teal-secondary focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-teal-primary/60 active:scale-[0.97] active:bg-teal-primary/15 motion-reduce:transition-none motion-reduce:active:scale-100"
+                aria-label={`View project ${item.title}`}
+              >
+                <span>
                   View Project
                 </span>
-                <span aria-hidden="true" className="transition-transform duration-[250ms] ease-out group-hover:translate-x-1.5 group-focus-visible:translate-x-1.5 motion-reduce:transition-none motion-reduce:transform-none">
+                <span aria-hidden="true" className="portfolio-cta-arrow transition-transform duration-[180ms] ease-out group-hover:translate-x-1.5 group-focus-visible:translate-x-1.5 motion-reduce:transition-none motion-reduce:transform-none">
                   →
                 </span>
-              </span>
-            </button>
+              </button>
+            </article>
           ))}
         </div>
       </div>
