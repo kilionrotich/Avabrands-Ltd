@@ -74,7 +74,7 @@ function Contact({ bgImages }) {
                 <p className="text-xs uppercase tracking-[0.3em] text-teal-primary/70 font-medium">WhatsApp</p>
                 <a
                   className="inline-flex items-center gap-2 text-teal-primary font-bold hover:text-teal-primary/80"
-                  href="https://wa.me/254792724721?text=Hello%20Avabrands%2C%20I%20need%20a%20quote."
+                  href="https://wa.me/254793820817?text=Hello%20Avabrands%2C%20I%20need%20a%20quote."
                   target="_blank"
                   rel="noreferrer"
                 >
