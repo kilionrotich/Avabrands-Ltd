@@ -37,15 +37,15 @@ Open [http://localhost:5173](http://localhost:5173) and:
 2. Fill out and submit the form
 3. Check your email inbox! 📬
 
-## ✨ Features Included
+##  Features Included
 
-- ✅ **Success/Error Messages** - Users get instant feedback
-- ✅ **Loading States** - "Sending..." appears during submission
-- ✅ **Form Validation** - Required fields are enforced
-- ✅ **File Uploads** - RFQ form supports attachments
-- ✅ **Auto-Reset** - Forms clear after successful submission
-- ✅ **Spam Protection** - Built-in honeypot protection
-- ✅ **No Backend Needed** - 100% static site
+-  **Success/Error Messages** - Users get instant feedback
+-  **Loading States** - "Sending..." appears during submission
+-  **Form Validation** - Required fields are enforced
+-  **File Uploads** - RFQ form supports attachments
+-  **Auto-Reset** - Forms clear after successful submission
+-  **Spam Protection** - Built-in honeypot protection
+-  **No Backend Needed** - 100% static site
 
 ## 🎨 Customization
 

@@ -73,8 +73,13 @@ function Portfolio({ items, bgImage }) {
                 </h3>
                 <p className="mt-3 text-sm text-teal-primary/80">{item.summary}</p>
               </div>
-              <span className="mt-6 text-xs uppercase tracking-[0.3em] text-teal-primary/50 group-hover:text-teal-secondary transition">
-                View Project →
+              <span className="mt-6 inline-flex items-center gap-2 text-xs uppercase tracking-[0.3em] text-teal-primary/50 transition-colors duration-200 group-hover:text-teal-secondary group-focus-visible:text-teal-secondary motion-reduce:transition-none">
+                <span className="transition-transform duration-200 ease-out group-hover:-translate-y-[1px] group-focus-visible:-translate-y-[1px] motion-reduce:transition-none motion-reduce:transform-none">
+                  View Project
+                </span>
+                <span aria-hidden="true" className="transition-transform duration-[250ms] ease-out group-hover:translate-x-1.5 group-focus-visible:translate-x-1.5 motion-reduce:transition-none motion-reduce:transform-none">
+                  →
+                </span>
               </span>
             </button>
           ))}
