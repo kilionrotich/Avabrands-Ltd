@@ -148,19 +148,6 @@ function Portfolio({ items, bgImage }) {
             )}
             </div>
           </div>
-          {/* Fixed close button at bottom for easy access */}
-          <div className="fixed bottom-0 left-0 right-0 z-10 bg-gradient-to-t from-[#26C6DA] to-transparent p-6 pointer-events-none">
-            <div className="mx-auto max-w-6xl pointer-events-auto">
-              <button
-                type="button"
-                onClick={() => setActiveItem(null)}
-                className="w-full rounded-full bg-teal-primary px-6 py-4 text-sm font-bold uppercase tracking-[0.25em] text-white hover:bg-teal-primary/90 hover:shadow-2xl transition-all duration-300 flex items-center justify-center gap-2"
-              >
-                Close
-                <span className="text-lg">✕</span>
-              </button>
-            </div>
-          </div>
         </div>
       ) : null}
     </section>
