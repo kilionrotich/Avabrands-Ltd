@@ -220,6 +220,26 @@ const portfolioItems = [
       { image_name: "Gondola branding8.jpeg.jpeg", description: "Aisle gondola visual execution" },
       { image_name: "Gondola branding9.jpeg.jpeg", description: "Completed gondola branding rollout" }
     ]
+  },
+  {
+    id: 12,
+    title: "Web Development",
+    category: "Web Development",
+    summary: "Custom websites, dashboards, and web applications built for performance, scalability, and measurable business outcomes.",
+    images: [
+      { image_name: "corporate branding10.jpeg.jpeg", description: "Web platform design and interface execution" },
+      { image_name: "large format printing14.jpeg.jpeg", description: "Digital product visuals and campaign asset integration" }
+    ]
+  },
+  {
+    id: 13,
+    title: "Android Development",
+    category: "Android Development",
+    summary: "Business-ready Android applications with robust architecture, smooth user experience, and secure API integrations.",
+    images: [
+      { image_name: "vehicle branding2.jpeg.jpeg", description: "Android app workflow and system integration" },
+      { image_name: "signage solutions14.jpeg.jpeg", description: "Mobile-ready product execution and deployment" }
+    ]
   }
 ];
 
