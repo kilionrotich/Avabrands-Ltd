@@ -81,7 +81,7 @@ function Portfolio({ items, bgImage }) {
                 <span>
                   View Project
                 </span>
-                <span aria-hidden="true" className="portfolio-cta-arrow text-[1.15em] font-bold leading-none text-teal-primary/90 transition-all duration-[180ms] ease-out group-hover:translate-x-1.5 group-hover:text-teal-primary group-focus-visible:translate-x-1.5 group-focus-visible:text-teal-primary motion-reduce:transition-none motion-reduce:transform-none">
+                <span aria-hidden="true" className="portfolio-cta-arrow transition-transform duration-[180ms] ease-out group-hover:translate-x-1.5 group-focus-visible:translate-x-1.5 motion-reduce:transition-none motion-reduce:transform-none">
                   →
                 </span>
               </button>

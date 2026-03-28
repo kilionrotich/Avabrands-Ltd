@@ -33,15 +33,6 @@ function DigitalStudio() {
               <p className="mt-5 max-w-2xl text-base font-medium text-teal-primary/85">
                 Alongside brand execution, Avabrands also delivers digital products and technical strategy for organizations that need dependable web platforms, Android applications, and clear systems thinking.
               </p>
-              <a
-                href="https://kilionrotich.github.io/portfolio-kilion/"
-                target="_blank"
-                rel="noreferrer"
-                className="mt-8 inline-flex items-center gap-3 rounded-full bg-teal-primary px-8 py-4 text-sm font-bold uppercase tracking-[0.25em] text-white transition hover:bg-teal-secondary hover:shadow-2xl"
-              >
-                View Digital Portfolio
-                <span className="text-lg">↗</span>
-              </a>
             </div>
             <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-1">
               {tracks.map((track) => (

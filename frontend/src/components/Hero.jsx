@@ -46,15 +46,6 @@ function Hero({ bgImage }) {
               <span className="text-lg">→</span>
             </a>
             <a
-              href="https://kilionrotich.github.io/portfolio-kilion/"
-              target="_blank"
-              rel="noreferrer"
-              className="rounded-full bg-teal-primary px-8 py-4 text-sm font-bold uppercase tracking-[0.25em] text-white transition hover:bg-teal-secondary hover:shadow-2xl inline-flex items-center gap-2"
-            >
-              View Digital Portfolio
-              <span className="text-lg">↗</span>
-            </a>
-            <a
               href="#contact"
               className="rounded-full border border-teal-primary/25 px-8 py-4 text-sm font-semibold uppercase tracking-[0.25em] text-teal-primary transition hover:border-teal-primary hover:bg-teal-primary/10"
             >
