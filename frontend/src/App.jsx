@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useState } from "react";
 import Header from "./components/Header.jsx";
 import Hero from "./components/Hero.jsx";
 import Services from "./components/Services.jsx";
@@ -283,14 +283,11 @@ function App() {
     if (savedThemeMode === "light" || savedThemeMode === "dark" || savedThemeMode === "system") {
       return savedThemeMode;
     }
-    return "system";
-  });
-  const [systemTheme, setSystemTheme] = useState(() => {
     return "light";
   });
-  const hasInitializedSystemTheme = useRef(savedThemeMode === "system");
 
-  const theme = themeMode === "system" ? systemTheme : themeMode;
+  // System mode is intentionally mapped to light mode by product decision.
+  const theme = themeMode === "dark" ? "dark" : "light";
 
   useEffect(() => {
     document.documentElement.classList.toggle("dark", theme === "dark");
@@ -299,27 +296,6 @@ function App() {
 
   useEffect(() => {
     localStorage.setItem("avabrands-theme-mode", themeMode);
-  }, [themeMode]);
-
-  useEffect(() => {
-    const mediaQuery = window.matchMedia("(prefers-color-scheme: dark)");
-
-    const handleChange = (event) => {
-      setSystemTheme(event.matches ? "dark" : "light");
-    };
-
-    if (themeMode !== "system") {
-      return undefined;
-    }
-
-    if (hasInitializedSystemTheme.current) {
-      setSystemTheme(mediaQuery.matches ? "dark" : "light");
-    }
-
-    hasInitializedSystemTheme.current = true;
-    mediaQuery.addEventListener("change", handleChange);
-
-    return () => mediaQuery.removeEventListener("change", handleChange);
   }, [themeMode]);
 
   const handleThemeModeChange = (nextMode) => {
