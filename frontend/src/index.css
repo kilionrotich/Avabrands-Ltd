@@ -211,6 +211,10 @@ html.dark .hero-backdrop {
   outline-color: #001f3f;
 }
 
+.portfolio-cta-arrow-wrap {
+  animation: ctaArrowNudge 1.15s ease-in-out infinite;
+}
+
 .portfolio-view-button:hover {
   border-color: #003366;
   background-color: #003366;
@@ -221,21 +225,10 @@ html.dark .hero-backdrop {
   background-color: #003366;
 }
 
-/* Mobile-first cue for touch users who don't get hover interactions */
-@media (hover: none) and (pointer: coarse) {
-  .portfolio-cta-arrow {
-    animation: ctaArrowNudge 1.15s ease-in-out infinite;
-  }
-
-  .portfolio-view-button:active .portfolio-cta-arrow {
-    animation: none;
-    transform: translateX(0.5rem);
-  }
-}
-
 @media (prefers-reduced-motion: reduce) {
   .portfolio-filter-chip,
   .portfolio-filter-chip-active,
+  .portfolio-cta-arrow-wrap,
   .portfolio-cta-arrow {
     animation: none !important;
   }
