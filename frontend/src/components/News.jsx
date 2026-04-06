@@ -1,4 +1,12 @@
+import { useState } from "react";
+
 function News({ posts, bgImages }) {
+  const [expandedPostId, setExpandedPostId] = useState(null);
+
+  const handleReadMore = (postId) => {
+    setExpandedPostId((currentId) => (currentId === postId ? null : postId));
+  };
+
   return (
     <section id="news" className="border-t border-teal-primary/10 bg-[#1AA5B5] py-20 relative overflow-hidden">
       <div className="absolute inset-0 bg-[#26C6DA]/45" aria-hidden="true" />
@@ -28,18 +36,36 @@ function News({ posts, bgImages }) {
           </button>
         </div>
         <div className="mt-12 grid gap-6 md:grid-cols-3">
-          {posts.map((post) => (
+          {posts.map((post) => {
+            const isExpanded = expandedPostId === post.id;
+
+            return (
             <article key={post.id} className="rounded-2xl border border-teal-primary/20 bg-[#26C6DA]/95 backdrop-blur-sm p-6 hover:border-teal-primary/40 transition shadow-md">
               <p className="text-xs uppercase tracking-[0.25em] text-teal-primary/70 font-medium">{post.date}</p>
               <h3 className="mt-4 text-xl font-heading uppercase tracking-[0.08em] text-teal-primary font-bold drop-shadow-sm">
                 {post.title}
               </h3>
               <p className="mt-3 text-base text-teal-primary font-medium">{post.excerpt}</p>
-              <button type="button" className="mt-6 text-xs uppercase tracking-[0.3em] text-teal-primary font-bold hover:text-teal-primary/80">
-                Read More
+              {isExpanded && post.content ? (
+                <div className="mt-4 space-y-3 border-t border-teal-primary/20 pt-4">
+                  {post.content.map((paragraph, idx) => (
+                    <p key={idx} className="text-sm leading-relaxed text-teal-primary/85">
+                      {paragraph}
+                    </p>
+                  ))}
+                </div>
+              ) : null}
+              <button
+                type="button"
+                onClick={() => handleReadMore(post.id)}
+                className="mt-6 text-xs uppercase tracking-[0.3em] text-teal-primary font-bold hover:text-teal-primary/80"
+                aria-expanded={isExpanded}
+              >
+                {isExpanded ? "Read Less" : "Read More"}
               </button>
             </article>
-          ))}
+            );
+          })}
         </div>
       </div>
     </section>

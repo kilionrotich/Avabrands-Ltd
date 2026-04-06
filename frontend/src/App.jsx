@@ -261,19 +261,34 @@ const newsPosts = [
     id: 1,
     title: "Studio Roundup: New Work Across Brand Touchpoints",
     excerpt: "A quick look at recent rollouts spanning signage, print, and promotional branding.",
-    date: "Feb 21, 2026"
+    date: "Feb 21, 2026",
+    content: [
+      "Over the past month, our studio completed multi-format deployments for retail, service, and events clients, including storefront signage, vehicle wraps, product labels, and high-turnaround promotional kits.",
+      "What made these projects successful was alignment across channels: color consistency, messaging hierarchy, and practical install-ready outputs that reduced back-and-forth during production.",
+      "We are now packaging these learnings into a repeatable rollout checklist so brand managers can launch new campaigns faster while keeping every touchpoint visually coherent."
+    ]
   },
   {
     id: 2,
     title: "From Concept to Install: How We Keep Projects Moving",
     excerpt: "Our studio process for fast, consistent delivery across multiple locations.",
-    date: "Feb 10, 2026"
+    date: "Feb 10, 2026",
+    content: [
+      "Every project begins with a discovery brief that captures objective, environment, dimensions, and durability requirements. This allows us to avoid redesign loops and approve practical concepts earlier.",
+      "After concept sign-off, we move into a production map with milestones for artwork finalization, proofing, print windows, and installation scheduling. Clients get one clear timeline with decision points highlighted.",
+      "For multi-site rollouts, we standardize specs and handoff packs so each location receives the same quality output. The result is fewer delays, cleaner installation, and more predictable campaign launches."
+    ]
   },
   {
     id: 3,
     title: "Material Matters: Finishes That Elevate Brand Presence",
     excerpt: "Why quality substrates and precision finishing make the difference on-site.",
-    date: "Jan 29, 2026"
+    date: "Jan 29, 2026",
+    content: [
+      "A strong design can still underperform if materials are mismatched to the environment. We evaluate UV exposure, traffic level, cleaning frequency, and expected lifespan before locking substrate recommendations.",
+      "For indoor brand visibility, matte and satin finishes help reduce glare while preserving color clarity. For outdoor assets, lamination and weather-resistant films protect both impact and legibility over time.",
+      "Precision finishing, from trim accuracy to edge sealing, is what makes final outputs feel premium. These small details improve durability and preserve the brand impression long after installation day."
+    ]
   }
 ];
 
