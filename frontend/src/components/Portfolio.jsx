@@ -75,7 +75,7 @@ function Portfolio({ items, bgImage }) {
               <button
                 type="button"
                 onClick={() => setActiveItem(item)}
-                className="portfolio-view-button mt-6 inline-flex w-fit items-center gap-2 rounded-full border border-[#001f3f] bg-[#001f3f] px-4 py-2 text-xs uppercase tracking-[0.3em] text-white transition-all duration-200 hover:border-[#003366] hover:bg-[#003366] hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#001f3f]/60 active:scale-[0.97] active:bg-[#003366] motion-reduce:transition-none motion-reduce:active:scale-100"
+                className="portfolio-view-button mt-6 inline-flex w-fit items-center gap-2 rounded-full px-4 py-2 text-xs uppercase tracking-[0.3em] transition-all duration-200 focus-visible:outline-none focus-visible:ring-2 motion-reduce:transition-none motion-reduce:active:scale-100"
                 aria-label={`View project ${item.title}`}
               >
                 <span>

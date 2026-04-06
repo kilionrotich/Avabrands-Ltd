@@ -205,6 +205,20 @@ html.dark .hero-backdrop {
 
 .portfolio-view-button {
   -webkit-tap-highlight-color: transparent;
+  border: 1px solid #001f3f;
+  background-color: #001f3f;
+  color: #ffffff;
+  outline-color: #001f3f;
+}
+
+.portfolio-view-button:hover {
+  border-color: #003366;
+  background-color: #003366;
+  color: #ffffff;
+}
+
+.portfolio-view-button:active {
+  background-color: #003366;
 }
 
 /* Mobile-first cue for touch users who don't get hover interactions */
