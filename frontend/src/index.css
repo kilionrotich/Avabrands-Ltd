@@ -231,6 +231,33 @@ html.dark .hero-backdrop {
   color: #0d3b66;
 }
 
+.theme-menu-hamburger {
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 0.2rem;
+}
+
+.theme-menu-hamburger-line {
+  width: 1rem;
+  height: 2px;
+  border-radius: 999px;
+  background: currentColor;
+  transition: transform 160ms ease, opacity 160ms ease;
+}
+
+.theme-menu-hamburger.is-open .theme-menu-hamburger-line:nth-child(1) {
+  transform: translateY(0.35rem) rotate(45deg);
+}
+
+.theme-menu-hamburger.is-open .theme-menu-hamburger-line:nth-child(2) {
+  opacity: 0;
+}
+
+.theme-menu-hamburger.is-open .theme-menu-hamburger-line:nth-child(3) {
+  transform: translateY(-0.35rem) rotate(-45deg);
+}
+
 .theme-menu-trigger:hover {
   background: #0d3b66;
   color: #ffffff;

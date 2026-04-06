@@ -59,14 +59,21 @@ function Header({ themeMode, onThemeModeChange }) {
             <button
               type="button"
               onClick={() => setIsThemeMenuOpen((current) => !current)}
-              className="theme-menu-trigger inline-flex h-10 items-center gap-2 rounded-full px-4 text-xs font-bold uppercase tracking-[0.22em] transition"
+              className="theme-menu-trigger inline-flex h-10 w-10 items-center justify-center rounded-full transition"
               aria-haspopup="menu"
               aria-expanded={isThemeMenuOpen}
               aria-label={`Theme mode: ${activeTheme.label}`}
               title={`Theme mode: ${activeTheme.label}`}
             >
-              <span aria-hidden="true">{activeTheme.icon}</span>
-              <span>{activeTheme.label}</span>
+              <span className="sr-only">Theme options</span>
+              <span
+                aria-hidden="true"
+                className={`theme-menu-hamburger ${isThemeMenuOpen ? "is-open" : ""}`}
+              >
+                <span className="theme-menu-hamburger-line" />
+                <span className="theme-menu-hamburger-line" />
+                <span className="theme-menu-hamburger-line" />
+              </span>
             </button>
             {isThemeMenuOpen ? (
               <div className="theme-menu-panel absolute right-0 top-full z-50 mt-3 min-w-40 overflow-hidden rounded-2xl p-1 shadow-[0_18px_45px_rgba(13,59,102,0.14)]">
