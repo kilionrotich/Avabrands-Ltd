@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import Header from "./components/Header.jsx";
 import Hero from "./components/Hero.jsx";
 import Services from "./components/Services.jsx";
@@ -278,21 +278,52 @@ const newsPosts = [
 ];
 
 function App() {
-  const [theme, setTheme] = useState(() => {
-    const savedTheme = localStorage.getItem("avabrands-theme");
-    if (savedTheme === "light" || savedTheme === "dark") {
-      return savedTheme;
+  const savedThemeMode = localStorage.getItem("avabrands-theme-mode");
+  const [themeMode, setThemeMode] = useState(() => {
+    if (savedThemeMode === "light" || savedThemeMode === "dark" || savedThemeMode === "system") {
+      return savedThemeMode;
     }
+    return "system";
+  });
+  const [systemTheme, setSystemTheme] = useState(() => {
     return "light";
   });
+  const hasInitializedSystemTheme = useRef(savedThemeMode === "system");
+
+  const theme = themeMode === "system" ? systemTheme : themeMode;
 
   useEffect(() => {
     document.documentElement.classList.toggle("dark", theme === "dark");
-    localStorage.setItem("avabrands-theme", theme);
+    document.documentElement.style.colorScheme = theme;
   }, [theme]);
 
-  const handleThemeToggle = () => {
-    setTheme((currentTheme) => (currentTheme === "light" ? "dark" : "light"));
+  useEffect(() => {
+    localStorage.setItem("avabrands-theme-mode", themeMode);
+  }, [themeMode]);
+
+  useEffect(() => {
+    const mediaQuery = window.matchMedia("(prefers-color-scheme: dark)");
+
+    const handleChange = (event) => {
+      setSystemTheme(event.matches ? "dark" : "light");
+    };
+
+    if (themeMode !== "system") {
+      return undefined;
+    }
+
+    if (hasInitializedSystemTheme.current) {
+      setSystemTheme(mediaQuery.matches ? "dark" : "light");
+    }
+
+    hasInitializedSystemTheme.current = true;
+    mediaQuery.addEventListener("change", handleChange);
+
+    return () => mediaQuery.removeEventListener("change", handleChange);
+  }, [themeMode]);
+
+  const handleThemeModeChange = (nextMode) => {
+    setThemeMode(nextMode);
   };
 
   const shuffledImages = [...latestImages].sort(() => Math.random() - 0.5);
@@ -300,7 +331,7 @@ function App() {
   
   return (
     <div className="bg-[#26C6DA] text-teal-primary">
-      <Header theme={theme} onToggleTheme={handleThemeToggle} />
+      <Header themeMode={themeMode} onThemeModeChange={handleThemeModeChange} />
       <Hero bgImage={shuffledImages[0]} />
       <Services services={services} bgImages={imagePairs[0]} />
       <TrustStrip />

@@ -225,6 +225,59 @@ html.dark .hero-backdrop {
   background-color: #003366;
 }
 
+.theme-menu-trigger {
+  border: 1px solid rgba(13, 59, 102, 0.6);
+  background: #ecfcfb;
+  color: #0d3b66;
+}
+
+.theme-menu-trigger:hover {
+  background: #0d3b66;
+  color: #ffffff;
+}
+
+.theme-menu-panel {
+  border: 1px solid rgba(13, 59, 102, 0.2);
+  background: #ecfcfb;
+}
+
+.theme-menu-option {
+  color: #0d3b66;
+}
+
+.theme-menu-option:hover {
+  background: rgba(13, 59, 102, 0.1);
+}
+
+html.dark .theme-menu-trigger {
+  border-color: rgba(125, 211, 252, 0.35);
+  background: rgba(15, 23, 42, 0.94);
+  color: #dbe7f5;
+}
+
+html.dark .theme-menu-trigger:hover {
+  background: rgba(125, 211, 252, 0.18);
+  color: #ffffff;
+}
+
+html.dark .theme-menu-panel {
+  border-color: rgba(125, 211, 252, 0.25);
+  background: rgba(15, 23, 42, 0.98);
+}
+
+html.dark .theme-menu-option {
+  color: #dbe7f5;
+}
+
+html.dark .theme-menu-option:hover {
+  background: rgba(125, 211, 252, 0.12);
+}
+
+html.dark .theme-menu-option.bg-teal-primary {
+  background: rgba(125, 211, 252, 0.2);
+  color: #ffffff;
+}
+
 @media (prefers-reduced-motion: reduce) {
   .portfolio-filter-chip,
   .portfolio-filter-chip-active,
