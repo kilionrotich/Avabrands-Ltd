@@ -274,28 +274,7 @@ html.dark .hero-backdrop {
   border-color: #003366;
   background-color: #003366;
   color: #ffffff;
-}
-
-.portfolio-view-button,
-.portfolio-view-button:hover,
-.portfolio-view-button:focus-visible,
-.portfolio-view-button:active {
-  transform: none;
-  box-shadow: none;
-}
-
-.portfolio-view-button::before,
-.portfolio-view-button:hover::before,
-.portfolio-view-button:focus-visible::before {
-  opacity: 0;
-  animation: none;
-}
-
-.portfolio-view-button .portfolio-cta-arrow,
-.portfolio-view-button:hover .portfolio-cta-arrow,
-.portfolio-view-button:focus-visible .portfolio-cta-arrow {
-  animation: none;
-  transform: none;
+  animation: ctaButtonNudge 720ms ease-in-out infinite;
 }
 
 .portfolio-view-button:active {
