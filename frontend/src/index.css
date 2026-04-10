@@ -224,6 +224,16 @@ html.dark .hero-backdrop {
   }
 }
 
+@keyframes ctaButtonNudge {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(0.35rem);
+  }
+}
+
 @keyframes filterChipRise {
   0% {
     opacity: 0;
@@ -264,6 +274,14 @@ html.dark .hero-backdrop {
   border-color: #003366;
   background-color: #003366;
   color: #ffffff;
+  animation: ctaButtonNudge 720ms ease-in-out infinite;
+}
+
+.portfolio-view-button .portfolio-cta-arrow,
+.portfolio-view-button:hover .portfolio-cta-arrow,
+.portfolio-view-button:focus-visible .portfolio-cta-arrow {
+  animation: none;
+  transform: none;
 }
 
 .portfolio-view-button:active {
@@ -356,7 +374,7 @@ html.dark .theme-menu-option.bg-teal-primary {
   .btn-cta,
   .portfolio-filter-chip,
   .portfolio-filter-chip-active,
-  .portfolio-cta-arrow {
+  .portfolio-view-button {
     animation: none !important;
   }
 
