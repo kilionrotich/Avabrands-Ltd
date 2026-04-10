@@ -30,7 +30,7 @@ function News({ posts, bgImages }) {
           </div>
           <button
             type="button"
-            className="rounded-full border border-teal-primary/30 px-4 py-2 text-xs uppercase tracking-[0.25em] text-teal-primary/70 hover:border-teal-primary hover:text-teal-primary font-medium"
+            className="interactive-button rounded-full border border-teal-primary/30 px-4 py-2 text-xs uppercase tracking-[0.25em] text-teal-primary/70 hover:border-teal-primary hover:text-teal-primary font-medium"
           >
             View All
           </button>
@@ -58,7 +58,7 @@ function News({ posts, bgImages }) {
               <button
                 type="button"
                 onClick={() => handleReadMore(post.id)}
-                className="mt-6 text-xs uppercase tracking-[0.3em] text-teal-primary font-bold hover:text-teal-primary/80"
+                className="interactive-button mt-6 text-xs uppercase tracking-[0.3em] text-teal-primary font-bold hover:text-teal-primary/80"
                 aria-expanded={isExpanded}
               >
                 {isExpanded ? "Read Less" : "Read More"}

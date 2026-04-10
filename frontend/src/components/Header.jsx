@@ -59,7 +59,7 @@ function Header({ themeMode, onThemeModeChange }) {
             <button
               type="button"
               onClick={() => setIsThemeMenuOpen((current) => !current)}
-              className="theme-menu-trigger inline-flex h-10 w-10 items-center justify-center rounded-full transition"
+              className="interactive-button theme-menu-trigger inline-flex h-10 w-10 items-center justify-center rounded-full transition"
               aria-haspopup="menu"
               aria-expanded={isThemeMenuOpen}
               aria-label={`Theme mode: ${activeTheme.label}`}
@@ -85,7 +85,7 @@ function Header({ themeMode, onThemeModeChange }) {
                       onThemeModeChange(option.value);
                       setIsThemeMenuOpen(false);
                     }}
-                    className={`theme-menu-option flex w-full items-center justify-between rounded-xl px-4 py-3 text-left text-sm font-semibold transition ${
+                    className={`interactive-button theme-menu-option flex w-full items-center justify-between rounded-xl px-4 py-3 text-left text-sm font-semibold transition ${
                       themeMode === option.value
                         ? "bg-teal-primary text-white"
                         : "text-teal-primary hover:bg-teal-primary/10"
@@ -100,7 +100,7 @@ function Header({ themeMode, onThemeModeChange }) {
           </div>
           <a
             href="#rfq"
-            className="rounded-full border border-teal-primary/60 px-4 py-2 text-xs font-bold uppercase tracking-[0.25em] text-teal-primary transition hover:bg-teal-primary hover:text-white"
+            className="interactive-button rounded-full border border-teal-primary/60 px-4 py-2 text-xs font-bold uppercase tracking-[0.25em] text-teal-primary transition hover:bg-teal-primary hover:text-white"
           >
             Request Quote
           </a>

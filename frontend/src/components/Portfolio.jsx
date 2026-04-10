@@ -48,7 +48,7 @@ function Portfolio({ items, bgImage }) {
                 type="button"
                 onClick={() => setActiveFilter(filter)}
                 style={{ animationDelay: `${index * 70}ms` }}
-                className={`portfolio-filter-chip rounded-full px-4 py-2 text-xs uppercase tracking-[0.2em] transition ${
+                className={`interactive-button portfolio-filter-chip rounded-full px-4 py-2 text-xs uppercase tracking-[0.2em] transition ${
                   activeFilter === filter
                     ? "portfolio-filter-chip-active bg-teal-primary text-white font-bold"
                     : "border border-teal-primary/30 text-teal-primary/70 hover:border-teal-primary hover:text-teal-primary"
@@ -75,16 +75,14 @@ function Portfolio({ items, bgImage }) {
               <button
                 type="button"
                 onClick={() => setActiveItem(item)}
-                className="portfolio-view-button group mt-6 inline-flex w-fit items-center gap-2 rounded-full px-4 py-2 text-xs uppercase tracking-[0.3em] transition-all duration-200 focus-visible:outline-none focus-visible:ring-2 motion-reduce:transition-none motion-reduce:active:scale-100"
+                className="interactive-button portfolio-view-button mt-6 inline-flex w-fit items-center gap-2 rounded-full px-4 py-2 text-xs uppercase tracking-[0.3em] transition-all duration-200 focus-visible:outline-none focus-visible:ring-2 motion-reduce:transition-none motion-reduce:active:scale-100"
                 aria-label={`View project ${item.title}`}
               >
                 <span>
                   View Project
                 </span>
-                <span aria-hidden="true" className="portfolio-cta-arrow-wrap inline-flex motion-reduce:animate-none">
-                  <span className="portfolio-cta-arrow transition-transform duration-[180ms] ease-out group-hover:translate-x-1.5 group-focus-visible:translate-x-1.5 motion-reduce:transition-none motion-reduce:transform-none">
-                    →
-                  </span>
+                <span aria-hidden="true" className="portfolio-cta-arrow inline-flex motion-reduce:animate-none">
+                  →
                 </span>
               </button>
             </article>
@@ -101,7 +99,7 @@ function Portfolio({ items, bgImage }) {
                 <button
                   type="button"
                   onClick={() => setActiveItem(null)}
-                  className="text-xs uppercase tracking-[0.3em] text-teal-primary font-bold hover:text-teal-primary/80"
+                  className="interactive-button text-xs uppercase tracking-[0.3em] text-teal-primary font-bold hover:text-teal-primary/80"
                 >
                   Close
                 </button>

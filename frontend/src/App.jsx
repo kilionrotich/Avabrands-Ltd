@@ -108,7 +108,11 @@ const portfolioItems = [
       { image_name: "vehicle branding4.jpeg.jpeg", description: "Reflective branding details" },
       { image_name: "vehicle branding5.jpeg.jpeg", description: "Partial vehicle branding" },
       { image_name: "vehicle branding6.jpeg.jpeg", description: "Fleet branding application" },
-      { image_name: "vehicle branding7.jpeg.jpeg", description: "Final vehicle branding showcase" }
+      { image_name: "vehicle branding7.jpeg.jpeg", description: "Final vehicle branding showcase" },
+      { image_name: "vehicle branding8.jpeg.jpeg", description: "Vehicle branding side profile" },
+      { image_name: "vehicle branding9.jpeg.jpeg", description: "Vehicle branding wrap detail" },
+      { image_name: "vehicle branding10.jpeg.jpeg", description: "Fleet branding installation" },
+      { image_name: "vehicle branding11.jpeg.jpeg", description: "Completed vehicle branding rollout" }
     ]
   },
   // Large Format Printing
@@ -134,7 +138,9 @@ const portfolioItems = [
       { image_name: "large format printing13.jpeg.jpeg", description: "Premium substrate print" },
       { image_name: "large format printing14.jpeg.jpeg", description: "Brand event graphics" },
       { image_name: "large format printing15.jpeg.jpeg", description: "Large format installation preview" },
-      { image_name: "large format printing16.jpeg.jpeg", description: "Completed large format rollout" }
+      { image_name: "large format printing16.jpeg.jpeg", description: "Completed large format rollout" },
+      { image_name: "Large format printing17.jpeg.jpeg", description: "Large format finishing detail" },
+      { image_name: "Large format printing18.jpeg.jpeg", description: "Large format campaign output" }
     ]
   },
   // Printing Services
@@ -161,6 +167,13 @@ const portfolioItems = [
       { image_name: "Apparel & promotional branding3.jpeg.jpeg", description: "Different colored caps" },
       { image_name: "Apparel & promotional branding4.jpeg.jpeg", description: "Caps" },
       { image_name: "Apparel & promotional branding5.jpeg.jpeg", description: "Promotional branding showcase" },
+      { image_name: "Apparel promotion 9.jpeg.jpeg", description: "Promotional branding display" },
+      { image_name: "Apparell and branding 10.jpeg.jpeg", description: "Apparel and branding showcase" },
+      { image_name: "Apparell branding and promotion 6.jpeg.jpeg", description: "Branded apparel promotion" },
+      { image_name: "Apparell promotion and branding.jpeg.jpeg", description: "Promotional branding detail" },
+      { image_name: "Apparell promotion and branding 7.jpeg.jpeg", description: "Apparel promotion execution" },
+      { image_name: "Apparell promotion and branding8.jpeg.jpeg", description: "Promotional apparel setup" },
+      { image_name: "Apparell promotion and branding12.jpeg.jpeg", description: "Branding and promotion finish" },
       { image_name: "Apparel & promotional branding12.jpeg.jpeg", description: "Branded plastic tins" },
       { image_name: "Apparel & promotional branding13.jpeg.jpeg", description: "Beauty products showcase" }
     ]
@@ -182,7 +195,11 @@ const portfolioItems = [
     summary: "Branded and promotional display photo frames for office, event, and experiential brand setups.",
     images: [
       { image_name: "Photo frames1.jpeg.jpeg", description: "Branded photo frame display" },
-      { image_name: "photo frames2.jpeg.jpeg", description: "Photo frame branding concept" }
+      { image_name: "photo frames2.jpeg.jpeg", description: "Photo frame branding concept" },
+      { image_name: "photo frames3.jpeg.jpeg", description: "Photo frame display detail" },
+      { image_name: "photo frames4.jpeg.jpeg", description: "Photo frame branding finish" },
+      { image_name: "photo frames5.jpeg.jpeg", description: "Photo frame installation" },
+      { image_name: "photo frames6.jpeg.jpeg", description: "Photo frame showcase" }
     ]
   },
   {

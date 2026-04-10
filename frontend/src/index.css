@@ -157,13 +157,62 @@ html.dark .hero-backdrop {
   animation: breathe 4s ease-in-out infinite;
 }
 
-/* Enhanced button hover effect */
+/* Shared button motion */
+.interactive-button {
+  position: relative;
+  overflow: hidden;
+  transform: translateZ(0);
+  transition:
+    transform 220ms cubic-bezier(0.2, 0.7, 0.25, 1),
+    box-shadow 220ms cubic-bezier(0.2, 0.7, 0.25, 1),
+    background-color 220ms cubic-bezier(0.2, 0.7, 0.25, 1),
+    color 220ms cubic-bezier(0.2, 0.7, 0.25, 1),
+    border-color 220ms cubic-bezier(0.2, 0.7, 0.25, 1),
+    opacity 220ms cubic-bezier(0.2, 0.7, 0.25, 1);
+}
+
+.interactive-button::before {
+  content: "";
+  position: absolute;
+  inset: -45% -60%;
+  background: linear-gradient(120deg, transparent 35%, rgba(255, 255, 255, 0.34) 50%, transparent 65%);
+  transform: translateX(-120%) skewX(-18deg);
+  opacity: 0;
+  pointer-events: none;
+}
+
+.interactive-button:hover,
+.interactive-button:focus-visible {
+  transform: translateY(-2px) scale(1.02);
+  box-shadow: 0 14px 28px rgba(13, 59, 102, 0.18);
+}
+
+.interactive-button:hover::before,
+.interactive-button:focus-visible::before {
+  opacity: 1;
+  animation: buttonSheen 700ms ease;
+}
+
+.interactive-button:active {
+  transform: translateY(0) scale(0.98);
+  box-shadow: 0 8px 18px rgba(13, 59, 102, 0.14);
+}
+
 .btn-cta {
   transition: all 0.3s ease;
 }
 
 .btn-cta:hover {
   transform: scale(1.08);
+}
+
+@keyframes buttonSheen {
+  0% {
+    transform: translateX(-120%) skewX(-18deg);
+  }
+  100% {
+    transform: translateX(120%) skewX(-18deg);
+  }
 }
 
 @keyframes ctaArrowNudge {
@@ -209,10 +258,6 @@ html.dark .hero-backdrop {
   background-color: #001f3f;
   color: #ffffff;
   outline-color: #001f3f;
-}
-
-.portfolio-cta-arrow-wrap {
-  animation: ctaArrowNudge 1.15s ease-in-out infinite;
 }
 
 .portfolio-view-button:hover {
@@ -306,10 +351,16 @@ html.dark .theme-menu-option.bg-teal-primary {
 }
 
 @media (prefers-reduced-motion: reduce) {
+  .interactive-button,
+  .interactive-button::before,
+  .btn-cta,
   .portfolio-filter-chip,
   .portfolio-filter-chip-active,
-  .portfolio-cta-arrow-wrap,
   .portfolio-cta-arrow {
     animation: none !important;
+  }
+
+  .interactive-button {
+    transition: none;
   }
 }

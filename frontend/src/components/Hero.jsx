@@ -40,14 +40,14 @@ function Hero({ bgImage }) {
           <div className="mt-10 flex flex-wrap gap-4">
             <a
               href="#portfolio"
-              className="btn-cta rounded-full bg-teal-secondary px-8 py-4 text-sm font-bold uppercase tracking-[0.25em] text-white hover:bg-teal-primary hover:shadow-2xl transition-all duration-300 inline-flex items-center gap-2 animate-bounce-cta"
+              className="interactive-button btn-cta rounded-full bg-teal-secondary px-8 py-4 text-sm font-bold uppercase tracking-[0.25em] text-white hover:bg-teal-primary hover:shadow-2xl transition-all duration-300 inline-flex items-center gap-2 animate-bounce-cta"
             >
               View Portfolio
               <span className="text-lg">→</span>
             </a>
             <a
               href="#contact"
-              className="rounded-full border border-teal-primary/25 px-8 py-4 text-sm font-semibold uppercase tracking-[0.25em] text-teal-primary transition hover:border-teal-primary hover:bg-teal-primary/10"
+              className="interactive-button rounded-full border border-teal-primary/25 px-8 py-4 text-sm font-semibold uppercase tracking-[0.25em] text-teal-primary transition hover:border-teal-primary hover:bg-teal-primary/10"
             >
               Talk to Us
             </a>

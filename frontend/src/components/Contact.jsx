@@ -73,7 +73,7 @@ function Contact({ bgImages }) {
               <div>
                 <p className="text-xs uppercase tracking-[0.3em] text-teal-primary/70 font-medium">WhatsApp</p>
                 <a
-                  className="inline-flex items-center gap-2 text-teal-primary font-bold hover:text-teal-primary/80"
+                  className="interactive-button inline-flex items-center gap-2 text-teal-primary font-bold hover:text-teal-primary/80"
                   href="https://wa.me/254793820817?text=Hello%20Avabrands%2C%20I%20need%20a%20quote."
                   target="_blank"
                   rel="noreferrer"
@@ -147,7 +147,7 @@ function Contact({ bgImages }) {
                 <button
                   type="submit"
                   disabled={loading}
-                  className="w-full rounded-full bg-teal-secondary px-6 py-3 text-xs font-bold uppercase tracking-[0.25em] text-white hover:bg-teal-secondary/90 hover:shadow-lg transition disabled:opacity-50 disabled:cursor-not-allowed"
+                  className="interactive-button w-full rounded-full bg-teal-secondary px-6 py-3 text-xs font-bold uppercase tracking-[0.25em] text-white hover:bg-teal-secondary/90 hover:shadow-lg transition disabled:opacity-50 disabled:cursor-not-allowed"
                 >
                   {loading ? "Sending..." : "Send Message"}
                 </button>
