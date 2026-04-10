@@ -227,10 +227,10 @@ html.dark .hero-backdrop {
 @keyframes ctaButtonNudge {
   0%,
   100% {
-    transform: translateX(0);
+    transform: translateY(0) scale(1);
   }
   50% {
-    transform: translateX(0.35rem);
+    transform: translateY(-2px) scale(1.04);
   }
 }
 
@@ -274,7 +274,8 @@ html.dark .hero-backdrop {
   border-color: #003366;
   background-color: #003366;
   color: #ffffff;
-  animation: ctaButtonNudge 720ms ease-in-out infinite;
+  animation: ctaButtonNudge 620ms ease-in-out infinite;
+  box-shadow: 0 12px 24px rgba(13, 59, 102, 0.22);
 }
 
 .portfolio-view-button:active {
