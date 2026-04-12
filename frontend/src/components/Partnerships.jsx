@@ -21,7 +21,7 @@ function Partnerships() {
 
           <figure className="overflow-hidden rounded-[1.75rem] border border-white/30 bg-white shadow-xl">
             <img
-              src={`${import.meta.env.BASE_URL}images/partnerships.jpeg.jpeg`}
+              src={`${import.meta.env.BASE_URL}images/partnerships.jpeg`}
               alt="Collage of brand partnerships and client logos"
               className="h-full w-full object-contain bg-white p-4 animate-breathe-subtle motion-reduce:animate-none md:p-6"
             />
