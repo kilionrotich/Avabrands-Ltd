@@ -10,7 +10,7 @@ function Partnerships() {
               Trusted by brands that move markets.
             </h2>
             <p className="mt-6 max-w-xl text-base font-medium text-teal-primary/85 md:text-lg">
-              The new partnerships visual works best as a social-proof block. It can introduce the range of organizations Avabrands has worked with before visitors reach the portfolio.
+              The new partnerships visual works best as a social-proof block. It highlights trusted collaborations and reinforces credibility.
             </p>
             <div className="mt-8 flex flex-wrap gap-3 text-xs font-semibold uppercase tracking-[0.25em] text-teal-primary/80">
               <span className="rounded-full border border-teal-primary/20 bg-teal-primary/5 px-4 py-2">Corporate clients</span>
