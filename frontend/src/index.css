@@ -293,7 +293,7 @@ html.dark .hero-backdrop {
   background-color: #001f3f;
   color: #ffffff;
   outline-color: #001f3f;
-  animation: viewButtonBreathe 2.8s ease-in-out infinite;
+  animation: viewButtonBreathe 620ms ease-in-out infinite;
 }
 
 .portfolio-view-button:hover {
