@@ -249,6 +249,16 @@ html.dark .hero-backdrop {
   }
 }
 
+@keyframes viewButtonBreathe {
+  0%,
+  100% {
+    transform: translateY(0) scale(1);
+  }
+  50% {
+    transform: translateY(-1px) scale(1.03);
+  }
+}
+
 @keyframes filterChipRise {
   0% {
     opacity: 0;
@@ -283,6 +293,7 @@ html.dark .hero-backdrop {
   background-color: #001f3f;
   color: #ffffff;
   outline-color: #001f3f;
+  animation: viewButtonBreathe 2.8s ease-in-out infinite;
 }
 
 .portfolio-view-button:hover {
@@ -291,6 +302,10 @@ html.dark .hero-backdrop {
   color: #ffffff;
   animation: ctaButtonNudge 620ms ease-in-out infinite;
   box-shadow: 0 12px 24px rgba(13, 59, 102, 0.22);
+}
+
+.portfolio-view-button:hover .portfolio-view-button-arrow {
+  animation: ctaArrowNudge 620ms ease-in-out infinite;
 }
 
 .portfolio-view-button:active {
@@ -385,7 +400,7 @@ html.dark .theme-menu-option.bg-teal-primary {
   .portfolio-filter-chip-active,
   .portfolio-view-button,
   .portfolio-view-button::before,
-  .portfolio-view-button .portfolio-cta-arrow {
+  .portfolio-view-button .portfolio-view-button-arrow {
     animation: none !important;
   }
 

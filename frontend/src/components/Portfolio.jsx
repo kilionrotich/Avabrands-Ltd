@@ -81,7 +81,7 @@ function Portfolio({ items, bgImage }) {
                 <span>
                   View Project
                 </span>
-                <span aria-hidden="true" className="inline-flex">
+                <span aria-hidden="true" className="portfolio-view-button-arrow inline-flex">
                   →
                 </span>
               </button>
