@@ -10,7 +10,7 @@ function Partnerships() {
               Trusted by brands that move markets.
             </h2>
             <p className="mt-6 max-w-xl text-base font-medium text-teal-primary/85 md:text-lg">
-              The new partnerships visual works best as a social-proof block. It highlights trusted collaborations and reinforces credibility.
+              Trusted by leading brands across Kenya and beyond, we deliver consistent quality through long-term collaboration and proven execution.
             </p>
             <div className="mt-8 flex flex-wrap gap-3 text-xs font-semibold uppercase tracking-[0.25em] text-teal-primary/80">
               <span className="rounded-full border border-teal-primary/20 bg-teal-primary/5 px-4 py-2">Corporate clients</span>
