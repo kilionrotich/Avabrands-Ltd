@@ -157,6 +157,21 @@ html.dark .hero-backdrop {
   animation: breathe 4s ease-in-out infinite;
 }
 
+@keyframes breatheSubtle {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.02);
+  }
+}
+
+.animate-breathe-subtle {
+  animation: breatheSubtle 5.2s ease-in-out infinite;
+  transform-origin: center;
+}
+
 /* Shared button motion */
 .interactive-button {
   position: relative;

@@ -23,7 +23,7 @@ function Partnerships() {
             <img
               src={`${import.meta.env.BASE_URL}images/partnerships.jpeg.jpeg`}
               alt="Collage of brand partnerships and client logos"
-              className="h-full w-full object-contain bg-white p-4 md:p-6"
+              className="h-full w-full object-contain bg-white p-4 animate-breathe-subtle motion-reduce:animate-none md:p-6"
             />
             <figcaption className="border-t border-teal-primary/10 bg-[#26C6DA]/60 px-5 py-4 text-sm font-medium text-teal-primary/80">
               A clear visual ledger of client relationships, best placed as proof of trust before the work gallery.
