@@ -3,6 +3,7 @@ import Header from "./components/Header.jsx";
 import Hero from "./components/Hero.jsx";
 import Services from "./components/Services.jsx";
 import TrustStrip from "./components/TrustStrip.jsx";
+import Partnerships from "./components/Partnerships.jsx";
 import Portfolio from "./components/Portfolio.jsx";
 import DigitalStudio from "./components/DigitalStudio.jsx";
 import Rfq from "./components/Rfq.jsx";
@@ -343,6 +344,7 @@ function App() {
       <Hero bgImage={shuffledImages[0]} />
       <Services services={services} bgImages={imagePairs[0]} />
       <TrustStrip />
+      <Partnerships />
       <Portfolio items={portfolioItems} bgImage={shuffledImages[1]} />
       <DigitalStudio />
       <Rfq bgImages={imagePairs[1]} />
