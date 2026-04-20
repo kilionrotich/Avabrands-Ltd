@@ -4,6 +4,21 @@ function Contact({ bgImages }) {
   const [status, setStatus] = useState("");
   const [loading, setLoading] = useState(false);
 
+  const locations = [
+    {
+      name: "Dr. Tanui's location",
+      code: "84JV+PP3",
+      embed:
+        "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3988.8202815568446!2d35.14170731093628!3d0.33176980000000003!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x178059953673aaf3%3A0x62c0e46e25b74da!2sDr.Tanui's!5e0!3m2!1sen!2ske!4v1740883200000",
+    },
+    {
+      name: "Second working location",
+      code: "Update with your second branch address",
+      embed:
+        "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3988.8202815568446!2d35.14170731093628!3d0.33176980000000003!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x178059953673aaf3%3A0x62c0e46e25b74da!2sDr.Tanui's!5e0!3m2!1sen!2ske!4v1740883200000",
+    },
+  ];
+
   const handleSubmit = async (e) => {
     e.preventDefault();
     setLoading(true);
@@ -59,7 +74,7 @@ function Contact({ bgImages }) {
               Let us design your next statement.
             </h2>
             <p className="mt-4 text-base text-teal-primary font-medium drop-shadow-sm">
-              Corporate offices in Nairobi Kenya with nationwide delivery teams.
+              Corporate offices in Nairobi, Kenya with nationwide delivery teams and two working locations.
             </p>
             <div className="mt-8 grid gap-4 text-base text-teal-primary font-medium">
               <div>
@@ -83,20 +98,23 @@ function Contact({ bgImages }) {
               </div>
             </div>
             
-            <div className="mt-8 rounded-2xl border border-teal-primary/20 bg-teal-primary/5 p-4">
-              <div className="overflow-hidden rounded-xl border border-teal-primary/20">
-                <iframe
-                  title="Avabrands Map"
-                  className="h-64 w-full"
-                  loading="lazy"
-                  allowFullScreen
-                  referrerPolicy="no-referrer-when-downgrade"
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3988.8202815568446!2d35.14170731093628!3d0.33176980000000003!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x178059953673aaf3%3A0x62c0e46e25b74da!2sDr.Tanui's!5e0!3m2!1sen!2ske!4v1740883200000"
-                />
-              </div>
-              <p className="mt-4 text-xs text-teal-primary/60">
-                Dr. Tanui's location (84JV+PP3)
-              </p>
+            <div className="mt-8 grid gap-4 md:grid-cols-2">
+              {locations.map((location) => (
+                <div key={location.name} className="rounded-2xl border border-teal-primary/20 bg-teal-primary/5 p-4">
+                  <div className="overflow-hidden rounded-xl border border-teal-primary/20">
+                    <iframe
+                      title={`Avabrands ${location.name}`}
+                      className="h-64 w-full"
+                      loading="lazy"
+                      allowFullScreen
+                      referrerPolicy="no-referrer-when-downgrade"
+                      src={location.embed}
+                    />
+                  </div>
+                  <p className="mt-4 text-sm font-semibold text-teal-primary">{location.name}</p>
+                  <p className="mt-1 text-xs text-teal-primary/60">{location.code}</p>
+                </div>
+              ))}
             </div>
           </div>
           
