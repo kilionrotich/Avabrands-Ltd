@@ -47,7 +47,7 @@ function Hero({ bgImage }) {
             </a>
             <a
               href="#contact"
-              className="interactive-button rounded-full border border-teal-primary/25 px-8 py-4 text-sm font-semibold uppercase tracking-[0.25em] text-teal-primary transition hover:border-teal-primary hover:bg-teal-primary/10"
+              className="interactive-button btn-cta rounded-full border border-teal-primary/25 px-8 py-4 text-sm font-semibold uppercase tracking-[0.25em] text-teal-primary transition hover:border-teal-primary hover:bg-teal-primary/10 animate-bounce-cta"
             >
               Talk to Us
             </a>

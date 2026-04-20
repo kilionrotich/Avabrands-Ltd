@@ -235,7 +235,7 @@ html.dark .hero-backdrop {
     transform: translateX(0);
   }
   50% {
-    transform: translateX(0.5rem);
+    transform: translateX(0.78rem);
   }
 }
 
@@ -245,7 +245,7 @@ html.dark .hero-backdrop {
     transform: translateY(0) scale(1);
   }
   50% {
-    transform: translateY(-2px) scale(1.04);
+    transform: translateY(-4px) scale(1.08);
   }
 }
 
@@ -255,7 +255,7 @@ html.dark .hero-backdrop {
     transform: translateY(0) scale(1);
   }
   50% {
-    transform: translateY(-1px) scale(1.03);
+    transform: translateY(-3px) scale(1.07);
   }
 }
 
@@ -293,19 +293,19 @@ html.dark .hero-backdrop {
   background-color: #001f3f;
   color: #ffffff;
   outline-color: #001f3f;
-  animation: viewButtonBreathe 620ms ease-in-out infinite;
+  animation: viewButtonBreathe 460ms ease-in-out infinite;
 }
 
 .portfolio-view-button:hover {
   border-color: #003366;
   background-color: #003366;
   color: #ffffff;
-  animation: ctaButtonNudge 620ms ease-in-out infinite;
+  animation: ctaButtonNudge 420ms ease-in-out infinite;
   box-shadow: 0 12px 24px rgba(13, 59, 102, 0.22);
 }
 
 .portfolio-view-button:hover .portfolio-view-button-arrow {
-  animation: ctaArrowNudge 620ms ease-in-out infinite;
+  animation: ctaArrowNudge 420ms ease-in-out infinite;
 }
 
 .portfolio-view-button:active {
