@@ -13,9 +13,9 @@ function Contact({ bgImages }) {
     },
     {
       name: "Branch",
-      code: "Update with your second branch address",
+      code: "G77H+P8J",
       embed:
-        "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3988.8202815568446!2d35.14170731093628!3d0.33176980000000003!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x178059953673aaf3%3A0x62c0e46e25b74da!2sDr.Tanui's!5e0!3m2!1sen!2ske!4v1740883200000",
+        "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3988.8210282867432!2d35.27829!3d0.514338!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1sG77H%2BP8J%2C%20Nandi%20Rd%2C%20Eldoret!5e0!3m2!1sen!2ske!4v1740883200000",
     },
   ];
 
