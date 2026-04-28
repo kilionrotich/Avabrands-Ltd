@@ -15,7 +15,7 @@ function Contact({ bgImages }) {
       name: "Branch",
       code: "G77H+P8J",
       embed:
-        "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3988.8210282867432!2d35.27829!3d0.514338!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1sG77H%2BP8J%2C%20Nandi%20Rd%2C%20Eldoret!5e0!3m2!1sen!2ske!4v1740883200000",
+        "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3461.821271740794!2d35.285222176324!3d0.5098198731174522!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x17810193e0907913%3A0xd22485f94a898904!2sNandi%20Rd%2C%20Eldoret!5e1!3m2!1sen!2ske!4v1777409304111!5m2!1sen!2ske",
     },
   ];
 
