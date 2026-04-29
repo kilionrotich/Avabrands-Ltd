@@ -9,7 +9,7 @@ function Contact({ bgImages }) {
       name: "Main office",
       code: "84JV+PP3",
       embed:
-        "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3988.8202815568446!2d35.14170731093628!3d0.33176980000000003!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x178059953673aaf3%3A0x62c0e46e25b74da!2sDr.Tanui's!5e0!3m2!1sen!2ske!4v1740883200000",
+        "https://www.google.com/maps/place/1%C2%B019'57.7%22S+36%C2%B051'30.6%22E/@-1.3326803,36.8559184,810m/data=!3m2!1e3!4b1!4m4!3m3!8m2!3d-1.3326803!4d36.8584933?hl=en&entry=ttu&g_ep=EgoyMDI2MDQyNi4wIKXMDSoASAFQAw%3D%3D"
     },
     {
       name: "Branch",
