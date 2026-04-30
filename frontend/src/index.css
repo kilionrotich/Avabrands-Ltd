@@ -4,11 +4,11 @@
 
 :root {
   color-scheme: light;
-  --light-teal-base: #d9f6f4;
-  --light-teal-soft: #ecfcfb;
-  --light-teal-surface: #c6efec;
-  --light-teal-surface-strong: #afe5e1;
-  --light-teal-accent: #96d8d3;
+  --light-teal-base: #26C6DA;
+  --light-teal-soft: #2DD4E3;
+  --light-teal-surface: #1FB8C8;
+  --light-teal-surface-strong: #1AA5B5;
+  --light-teal-accent: #178A98;
   --light-teal-border: rgba(13, 59, 102, 0.12);
 }
 
@@ -23,7 +23,7 @@ body {
 }
 
 header {
-  background: rgba(236, 252, 251, 0.94) !important;
+  background: rgba(38, 198, 218, 0.94) !important;
   border-color: var(--light-teal-border) !important;
 }
 
