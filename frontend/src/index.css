@@ -4,11 +4,11 @@
 
 :root {
   color-scheme: light;
-  --light-teal-base: #5FE3FF;
+  --light-teal-base: #B3F0FF;
   --light-teal-soft: #B3F0FF;
-  --light-teal-surface: #40D9FF;
-  --light-teal-surface-strong: #2FD4FF;
-  --light-teal-accent: #1FC9FF;
+  --light-teal-surface: #B3F0FF;
+  --light-teal-surface-strong: #B3F0FF;
+  --light-teal-accent: #B3F0FF;
   --light-teal-border: rgba(13, 59, 102, 0.12);
 }
 
@@ -18,12 +18,12 @@ html.dark {
 
 body {
   font-family: "Source Sans 3", sans-serif;
-  background: var(--light-teal-base);
+  background: #B3F0FF;
   color: #0D3B66;
 }
 
 header {
-  background: rgba(95, 227, 255, 0.94) !important;
+  background: #B3F0FF !important;
   border-color: var(--light-teal-border) !important;
 }
 
@@ -125,10 +125,8 @@ html.dark .hero-backdrop {
 }
 
 .hero-backdrop {
-  background-image:
-    linear-gradient(120deg, rgba(217, 246, 244, 0.96) 8%, rgba(173, 229, 224, 0.94) 55%, rgba(13, 59, 102, 0.1) 100%),
-    radial-gradient(circle at 10% 10%, rgba(13, 59, 102, 0.1), transparent 55%),
-    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1200' height='800' viewBox='0 0 1200 800'%3E%3Crect width='1200' height='800' fill='%23d9f6f4'/%3E%3Cpath d='M0 600 C 200 520 420 540 650 450 C 820 382 1000 300 1200 280 L1200 800 L0 800 Z' fill='%23b7ebe7'/%3E%3Cpath d='M0 500 C 220 420 460 470 700 390 C 880 330 1060 260 1200 220 L1200 800 L0 800 Z' fill='%239bdcd7'/%3E%3C/svg%3E");
+  background-image: none !important;
+  background-color: #B3F0FF !important;
   background-size: cover;
   background-position: center;
 }
