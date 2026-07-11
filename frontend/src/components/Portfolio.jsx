@@ -63,29 +63,32 @@ function Portfolio({ items, bgImage }) {
           {filteredItems.map((item) => (
             <article
               key={item.id}
-              className="group flex h-full flex-col justify-between rounded-2xl border border-teal-primary/20 bg-teal-primary/5 p-6 text-left transition duration-200 hover:-translate-y-1 hover:border-teal-primary/60 hover:bg-teal-primary/10 hover:animate-pulse-slow motion-reduce:hover:translate-y-0"
+              type="button"
+              onClick={() => setActiveItem(item)}
+              className="group flex h-full flex-col justify-between rounded-2xl border border-white/10 bg-white/5 text-left transition hover:border-gold overflow-hidden"
             >
-              <div>
-                <p className="text-xs uppercase tracking-[0.3em] text-teal-primary/60">{item.category}</p>
-                <h3 className="mt-4 text-xl font-heading uppercase tracking-[0.08em] font-bold">
-                  {item.title}
-                </h3>
-                <p className="mt-3 text-sm text-teal-primary/80">{item.summary}</p>
-              </div>
-              <button
-                type="button"
-                onClick={() => setActiveItem(item)}
-                className="interactive-button portfolio-view-button mt-6 inline-flex w-fit items-center gap-2 rounded-full px-4 py-2 text-xs uppercase tracking-[0.3em] transition-all duration-200 focus-visible:outline-none focus-visible:ring-2 motion-reduce:transition-none motion-reduce:active:scale-100"
-                aria-label={`View project ${item.title}`}
-              >
-                <span>
+              {item.image_url && (
+                <div className="w-full overflow-hidden">
+                  <img
+                    src={item.image_url}
+                    alt={`Project image for ${item.title}`}
+                    className="w-full h-48 object-cover transition-transform duration-500 group-hover:scale-105"
+                  />
+                </div>
+              )}
+              <div className="p-6 flex flex-col flex-1 justify-between">
+                <div>
+                  <p className="text-xs uppercase tracking-[0.3em] text-white/50">{item.category}</p>
+                  <h3 className="mt-4 text-xl font-heading uppercase tracking-[0.08em] text-gold">
+                    {item.title}
+                  </h3>
+                  <p className="mt-3 text-sm text-white/70">{item.summary}</p>
+                </div>
+                <span className="mt-6 text-xs uppercase tracking-[0.3em] text-white/40 group-hover:text-gold">
                   View Project
                 </span>
-                <span aria-hidden="true" className="portfolio-view-button-arrow inline-flex">
-                  →
-                </span>
-              </button>
-            </article>
+              </div>
+            </button>
           ))}
         </div>
       </div>
@@ -107,46 +110,20 @@ function Portfolio({ items, bgImage }) {
             <h3 className="text-2xl font-heading uppercase tracking-[0.08em] text-teal-primary font-bold">
               {activeItem.title}
             </h3>
-            <p className="mt-4 text-sm text-teal-primary/80">{activeItem.summary}</p>
-            
-            {activeItem.images && activeItem.images.length > 0 ? (
-              <div className="mt-8 grid gap-8 md:grid-cols-2 lg:grid-cols-3">
-                {activeItem.images.map((item, idx) => (
-                  <div key={idx} className="flex flex-col">
-                    <div className="overflow-hidden rounded-xl border border-teal-primary/30 bg-[#1FB8C8] aspect-square">
-                      {item.video_name ? (
-                        <video
-                          src={`${import.meta.env.BASE_URL}images/${item.video_name}`}
-                          className="w-full h-full object-cover"
-                          controls
-                          playsInline
-                          autoPlay
-                          muted
-                          loop
-                          preload="metadata"
-                        />
-                      ) : (
-                        <img
-                          src={`${import.meta.env.BASE_URL}images/${item.image_name}`}
-                          alt={item.description || `Project image ${idx + 1}`}
-                          className="w-full h-full object-cover hover:scale-105 transition duration-300"
-                        />
-                      )}
-                    </div>
-                    <div className="mt-4">
-                      <p className="text-sm text-teal-primary/80">
-                        {item.description || `Project image ${idx + 1}`}
-                      </p>
-                    </div>
-                  </div>
-                ))}
+            <p className="mt-4 text-sm text-white/70">{activeItem.summary}</p>
+            {activeItem.image_url ? (
+              <div className="mt-6 overflow-hidden rounded-xl border border-white/10">
+                <img
+                  src={activeItem.image_url}
+                  alt={`Full view of ${activeItem.title} project`}
+                  className="w-full object-cover"
+                />
               </div>
             ) : (
-                <div className="mt-8 rounded-2xl border border-teal-primary/30 bg-[#1FB8C8] p-6 text-sm text-teal-primary/70">
-                Images coming soon for this project.
+              <div className="mt-6 rounded-xl border border-white/10 bg-black/60 p-6 text-sm text-white/60">
+                No project images available.
               </div>
             )}
-            </div>
           </div>
         </div>
       ) : null}
