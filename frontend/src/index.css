@@ -8,8 +8,10 @@
   --bg: #000000;
   --text: #FFD700;
   --gold: #FFD700;
+  /* Metallic silver gradient (as specified) */
   --metal-1: #C0C0C0;
   --metal-2: #808080;
+
 
   --light-teal-base: #B3F0FF;
   --light-teal-soft: #B3F0FF;
@@ -24,12 +26,24 @@ html.dark {
   color-scheme: dark;
 }
 
+html,
+body {
+  height: 100%;
+}
+
 body {
   font-family: "Source Sans 3", sans-serif;
   background: var(--bg);
   color: var(--text);
   font-weight: 700;
 }
+
+main {
+  background: #000000;
+  color: #FFD700;
+  font-weight: 700;
+}
+
 
 
 header {
@@ -345,12 +359,13 @@ html.dark .hero-backdrop {
 
 /* Metallic gradients for headings/highlights */
 .metallic-text {
-  background: linear-gradient(90deg, var(--metal-1) 0%, var(--metal-2) 100%);
+  background: linear-gradient(90deg, #C0C0C0 0%, #808080 100%);
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
   color: transparent;
 }
+
 
 .metallic-text-shadow {
   text-shadow: 0 1px 0 rgba(255, 255, 255, 0.18);
