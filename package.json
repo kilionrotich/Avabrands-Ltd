@@ -1,0 +1,10 @@
+{
+  "name": "avabrands-ltd",
+  "description": "Full-stack e-commerce platform for Avabrands Ltd",
+  "scripts": {
+    "dev": "npm --prefix frontend run dev",
+    "build": "npm --prefix frontend run build",
+    "preview": "npm --prefix frontend run preview",
+    "deploy": "npm --prefix frontend run deploy"
+  }
+}

@@ -1,19 +1,6 @@
 version: "3.9"
 
 services:
-  backend:
-    build: ./backend
-    container_name: avabrands-api
-    env_file:
-      - ./backend/.env
-    environment:
-      DB_ENGINE: djongo
-    volumes:
-      - ./backend:/app
-      - ./backend/media:/app/media
-    ports:
-      - "8000:8000"
-
   frontend:
     build: ./frontend
     container_name: avabrands-web
@@ -30,5 +17,4 @@ services:
     ports:
       - "8080:80"
     depends_on:
-      - backend
       - frontend
