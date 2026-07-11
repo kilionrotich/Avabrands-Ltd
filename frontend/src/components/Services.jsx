@@ -1,6 +1,6 @@
 function Services({ services, bgImages }) {
   return (
-    <section id="services" className="section-glow border-t border-teal-primary/10 bg-[#26C6DA] py-20 relative overflow-hidden">
+<section id="services" className="section-glow border-t border-teal-primary/10 section-bg py-20 relative overflow-hidden">
       <div className="absolute inset-0 bg-[#26C6DA]/45" aria-hidden="true" />
       {bgImages && bgImages[0] && (
         <div className="absolute left-0 top-0 opacity-65 h-96 w-96">

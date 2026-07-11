@@ -11,7 +11,7 @@ function Hero({ bgImage }) {
   }, [bgImage]);
 
   return (
-    <section className="hero-backdrop relative flex min-h-[85vh] items-center bg-[#26C6DA]">
+<section className="hero-backdrop relative flex min-h-[85vh] items-center section-bg">
       <div className="absolute inset-0 bg-[#26C6DA]/45" aria-hidden="true" />
       
       {/* Background images displayed on the right */}

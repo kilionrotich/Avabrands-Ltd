@@ -33,29 +33,49 @@ body {
 
 
 header {
-  background: #B3F0FF !important;
-  border-color: var(--light-teal-border) !important;
+  background: #000000 !important;
+  border-color: rgba(255, 215, 0, 0.25) !important;
 }
 
-[class*="bg-[#26C6DA]"] {
-  background-color: var(--light-teal-base) !important;
+/* Theme-driven section styling: keep backgrounds/text consistent with App wrapper. */
+.section-bg {
+  background: #000000 !important;
 }
 
-[class*="bg-[#2DD4E3]"] {
-  background-color: var(--light-teal-soft) !important;
+.section-fg {
+  color: #FFD700 !important;
 }
 
-[class*="bg-[#1FB8C8]"] {
-  background-color: var(--light-teal-surface) !important;
+.section-desc {
+  color: #C0C0C0 !important; /* metallic silver */
 }
 
-[class*="bg-[#1AA5B5]"] {
-  background-color: var(--light-teal-surface-strong) !important;
-}
-
+/* Disable legacy hard-coded teal backgrounds so theme image change doesn't leave stale colors. */
+[class*="bg-[#26C6DA]"],
+[class*="bg-[#2DD4E3]"],
+[class*="bg-[#1FB8C8]"],
+[class*="bg-[#1AA5B5]"],
 [class*="bg-[#178A98]"] {
-  background-color: var(--light-teal-accent) !important;
+  background-color: #000000 !important;
 }
+
+/* Disable legacy teal text colors across the page. */
+[class*="text-teal-primary"],
+[class*="text-teal-secondary"] {
+  color: #FFD700 !important;
+}
+
+/* Make description paragraphs metallic silver. */
+[class*="section-desc"],
+p,
+[class*="font-medium"],
+[class*="text-base"],
+[class*="text-sm"],
+[class*="text-lg"],
+[class*="text-xs"] {
+  color: #C0C0C0;
+}
+
 
 html.dark body {
   background: #000000;
@@ -454,8 +474,7 @@ html.dark .theme-menu-option.bg-teal-primary {
   .portfolio-filter-chip-active,
   .portfolio-view-button,
   .portfolio-view-button::before,
-  .portfolio-view-button .portfolio-view-button-arrow {
-    animation: none !important;
+  .portfolio-view-button .portfolio-view-button-arrow {animation: none !important;
   }
 
   .interactive-button {
