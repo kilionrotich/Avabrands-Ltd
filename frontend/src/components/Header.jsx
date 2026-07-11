@@ -41,11 +41,10 @@ function Header({ themeMode, onThemeModeChange }) {
     <header className="sticky top-0 z-50 border-b border-teal-primary/15 bg-[#26C6DA]/95 backdrop-blur">
       <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
         <a href="#" className="inline-flex items-center" aria-label="Avabrands home">
-          <img
-            src={`${import.meta.env.BASE_URL}images/Avabrands logo.png`}
-            alt="Avabrands"
-            className="h-16 w-auto md:h-20"
-          />
+          <div className="flex items-baseline leading-none select-none">
+            <span className="metallic-text text-[2rem] sm:text-[2.4rem] md:text-[2.9rem] font-black">AVA</span>
+            <span className="ml-[0.35rem] text-[1.2rem] sm:text-[1.45rem] md:text-[1.8rem] font-black text-gold">BRANDS</span>
+          </div>
         </a>
         <nav className="hidden items-center gap-8 text-sm uppercase tracking-[0.2em] text-teal-primary/80 md:flex">
           {navLinks.map((link) => (

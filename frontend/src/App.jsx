@@ -339,7 +339,7 @@ function App() {
   const imagePairs = getImagePairs(shuffledImages);
   
   return (
-    <div className="bg-[#26C6DA] text-teal-primary">
+    <div className="bg-black text-gold min-h-screen">
       <Header themeMode={themeMode} onThemeModeChange={handleThemeModeChange} />
       <Hero bgImage={shuffledImages[0]} />
       <Services services={services} bgImages={imagePairs[0]} />
