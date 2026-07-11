@@ -4,6 +4,13 @@
 
 :root {
   color-scheme: light;
+
+  --bg: #000000;
+  --text: #FFD700;
+  --gold: #FFD700;
+  --metal-1: #C0C0C0;
+  --metal-2: #808080;
+
   --light-teal-base: #B3F0FF;
   --light-teal-soft: #B3F0FF;
   --light-teal-surface: #B3F0FF;
@@ -12,15 +19,18 @@
   --light-teal-border: rgba(13, 59, 102, 0.12);
 }
 
+
 html.dark {
   color-scheme: dark;
 }
 
 body {
   font-family: "Source Sans 3", sans-serif;
-  background: #B3F0FF;
-  color: #0D3B66;
+  background: var(--bg);
+  color: var(--text);
+  font-weight: 700;
 }
+
 
 header {
   background: #B3F0FF !important;
@@ -48,20 +58,23 @@ header {
 }
 
 html.dark body {
-  background: #0b1220;
-  color: #dbe7f5;
+  background: #000000;
+  color: #FFD700;
 }
+
 
 /* Global dark-mode overrides for existing section/card styles. */
 html.dark header {
-  background: rgba(11, 18, 32, 0.94) !important;
-  border-color: rgba(125, 211, 252, 0.25) !important;
+  background: #000000 !important;
+  border-color: rgba(255, 215, 0, 0.25) !important;
 }
+
 
 html.dark section,
 html.dark footer {
-  color: #dbe7f5;
+  color: #FFD700;
 }
+
 
 html.dark [class*="bg-[#f8f4ed]"],
 html.dark [class*="bg-[#f6f2e9]"],
@@ -310,7 +323,50 @@ html.dark .hero-backdrop {
   background-color: #003366;
 }
 
+/* Metallic gradients for headings/highlights */
+.metallic-text {
+  background: linear-gradient(90deg, var(--metal-1) 0%, var(--metal-2) 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+}
+
+.metallic-text-shadow {
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.18);
+}
+
+/* Status badges */
+.status-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.25rem 0.75rem;
+  border-radius: 9999px;
+  font-weight: 900;
+  letter-spacing: 0.06em;
+  background: var(--gold);
+  color: #000000;
+}
+
+.status-badge--completed,
+.status-badge--active,
+.status-badge--open {
+  background: var(--gold);
+  color: #000000;
+}
+
+/* Accessibility contrast helpers */
+.text-gold {
+  color: var(--gold) !important;
+}
+
+.bg-black {
+  background: #000000 !important;
+}
+
 .theme-menu-trigger {
+
   border: 1px solid rgba(13, 59, 102, 0.6);
   background: #ecfcfb;
   color: #0d3b66;
