@@ -142,7 +142,6 @@ a:focus-visible {
 /* Metallic gradient for headings/highlights (metallic silver -> dark silver) */
 .heading-gradient,
 .highlight-gradient,
-.metallic-text,
 .section-title,
 .section-heading,
 [data-heading],
@@ -152,12 +151,18 @@ h3,
 h4,
 h5,
 h6 {
+  color: #FFD700 !important;
+}
+
+/* Keep metallic gradient behavior only for elements explicitly intended to be metallic */
+.metallic-text {
   background: linear-gradient(90deg, #C0C0C0 0%, #808080 100%) !important;
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
   color: transparent !important;
 }
+
 
 /* Safety: prevent non-heading text from becoming invisible due to leaked gradient/text-fill styles */
 p, span, strong, em, li, a, button, input, textarea, select {
@@ -358,7 +363,7 @@ button,
 input[type='button'],
 input[type='submit'],
 input[type='reset'] {
-  background-color: #808080 !important;
+  background-color:#808080 !important;
   background-image: none !important;
   border: 1px solid rgba(255, 255, 255, 0.35) !important;
   color: #FFD700 !important;
