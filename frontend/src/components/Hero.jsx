@@ -11,8 +11,9 @@ function Hero({ bgImage }) {
   }, [bgImage]);
 
   return (
-    <section className="hero-backdrop relative flex min-h-[85vh] items-center bg-[#26C6DA]">
-      <div className="absolute inset-0 bg-[#26C6DA]/45" aria-hidden="true" />
+<section className="hero-backdrop relative flex min-h-[85vh] items-center section-bg">
+      <div className="absolute inset-0 bg-black/45" aria-hidden="true" />
+
       
       {/* Background images displayed on the right */}
       {images.length > 0 ? (
@@ -28,47 +29,51 @@ function Hero({ bgImage }) {
       ) : null}
 
       <div className="relative mx-auto grid max-w-6xl gap-10 px-6 py-20 md:grid-cols-[1.3fr_0.7fr] z-10">
-        <div className="bg-[#26C6DA]/60 backdrop-blur-sm rounded-2xl p-6 -m-6">
-          <p className="text-sm uppercase tracking-[0.4em] text-teal-primary font-semibold drop-shadow-sm">Branding + Production + Development</p>
-          <h1 className="mt-6 text-balance text-4xl font-heading uppercase tracking-[0.08em] text-teal-primary md:text-6xl font-bold drop-shadow-sm">
+        <div className="bg-black/40 backdrop-blur-sm rounded-2xl p-6 -m-6 border border-yellow/20">
+          <p className="text-sm uppercase tracking-[0.4em] text-gold font-semibold drop-shadow-sm">Branding + Production + Development</p>
+          <h1 className="mt-6 text-balance text-4xl font-heading uppercase tracking-[0.08em] metallic-text md:text-6xl font-bold drop-shadow-sm">
             We build brands that command attention and trust at scale.
           </h1>
-          <p className="mt-6 max-w-xl text-lg text-teal-primary font-semibold animate-breathe drop-shadow-sm">
+          <p className="mt-6 max-w-xl text-lg text-gold font-semibold animate-breathe drop-shadow-sm">
             Avabrands unifies strategy, production, civil works, and digital development into a single,
             accountable partner for high-impact brand environments and scalable platforms.
           </p>
+
           <div className="mt-10 flex flex-wrap gap-4">
             <a
               href="#portfolio"
-              className="interactive-button btn-cta rounded-full bg-teal-secondary px-8 py-4 text-sm font-bold uppercase tracking-[0.25em] text-white hover:bg-teal-primary hover:shadow-2xl transition-all duration-300 inline-flex items-center gap-2 animate-bounce-cta"
+              className="interactive-button btn-cta rounded-full bg-yellow px-8 py-4 text-sm font-bold uppercase tracking-[0.25em] text-black hover:bg-yellow/90 hover:shadow-2xl transition-all duration-300 inline-flex items-center gap-2 animate-bounce-cta"
             >
               View Portfolio
               <span className="text-lg">→</span>
             </a>
             <a
               href="#contact"
-              className="interactive-button btn-cta rounded-full border border-teal-primary/25 px-8 py-4 text-sm font-semibold uppercase tracking-[0.25em] text-teal-primary transition hover:border-teal-primary hover:bg-teal-primary/10 animate-bounce-cta"
+              className="interactive-button btn-cta rounded-full border border-yellow/25 px-8 py-4 text-sm font-semibold uppercase tracking-[0.25em] text-gold transition hover:border-yellow hover:bg-yellow/10 animate-bounce-cta"
             >
               Talk to Us
             </a>
           </div>
         </div>
-        <div className="self-end rounded-2xl border border-teal-primary/20 bg-[#1FB8C8]/98 backdrop-blur-md p-6 shadow-lg">
-          <p className="text-xs uppercase tracking-[0.3em] text-teal-primary/80 font-semibold">Credibility</p>
+        <div className="self-end rounded-2xl border border-yellow/20 bg-black/60 backdrop-blur-md p-6 shadow-lg">
+          <p className="text-xs uppercase tracking-[0.3em] text-gold/80 font-semibold">Credibility</p>
           <div className="mt-4 space-y-5">
             <div>
-              <p className="text-3xl font-heading text-teal-primary font-bold drop-shadow-sm">18+ Years</p>
-              <p className="text-sm text-teal-primary font-medium">Delivering premium brand environments.</p>
+              <p className="text-3xl font-heading metallic-text font-bold drop-shadow-sm">18+ Years</p>
+              <p className="text-sm text-gold font-medium">Delivering premium brand environments.</p>
             </div>
+
             <div>
-              <p className="text-3xl font-heading text-teal-primary font-bold drop-shadow-sm">120+ Projects</p>
-              <p className="text-sm text-teal-primary font-medium">Across corporate, retail, and civic sectors.</p>
+              <p className="text-3xl font-heading metallic-text font-bold drop-shadow-sm">120+ Projects</p>
+              <p className="text-sm text-gold font-medium">Across corporate, retail, and civic sectors.</p>
             </div>
+
             <div>
-              <p className="text-3xl font-heading text-teal-primary font-bold drop-shadow-sm">24/7 Oversight</p>
-              <p className="text-sm text-teal-primary font-medium">Dedicated production and QA leadership.</p>
+              <p className="text-3xl font-heading metallic-text font-bold drop-shadow-sm">24/7 Oversight</p>
+              <p className="text-sm text-gold font-medium">Dedicated production and QA leadership.</p>
             </div>
           </div>
+
         </div>
       </div>
     </section>

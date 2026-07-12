@@ -1,15 +1,15 @@
 # TODO
-- [x] Update global theme colors and add metallic-gradient text utilities + badge styles in `frontend/src/index.css`.
+- [x] Apply global black/yellow theme via `frontend/src/index.css` (background/text overrides, heading gradient, teal/blue removal, link/paragraph inheritance)
 
-- [x] Update app wrapper background/text defaults to pure black + bold yellow in `frontend/src/App.jsx`.
-- [x] Replace image logo in `frontend/src/components/Header.jsx` with responsive CSS text logo (AVA metallic gradient, BRANDS yellow) and remove image usage.
-
-
-- [x] Run frontend build/tests.
+- [x] Update components to remove hardcoded teal/cyan styles:
 
 
-
-- [ ] Commit with message: `style: update theme colors and replace image logo with CSS text logo`.
-
-
+  - [ ] `frontend/src/components/Footer.jsx`
+  - [ ] `frontend/src/components/Rfq.jsx`
+  - [ ] `frontend/src/components/Portfolio.jsx`
+  - [ ] `frontend/src/components/Contact.jsx`
+- [ ] Ensure status badges/messages use gold background (#FFD700) with black text (#000000)
+- [ ] Verify logo remains pure CSS text (no image) and metallic gradient works for headings/highlights
+- [ ] Build frontend (`npm run build` in `frontend/`) and do a quick smoke check
+- [ ] Commit with message: "style: enforce global black/yellow theme and finalize CSS logo"
 

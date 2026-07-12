@@ -8,8 +8,10 @@
   --bg: #000000;
   --text: #FFD700;
   --gold: #FFD700;
+  /* Metallic silver gradient (as specified) */
   --metal-1: #C0C0C0;
   --metal-2: #808080;
+
 
   --light-teal-base: #B3F0FF;
   --light-teal-soft: #B3F0FF;
@@ -24,6 +26,11 @@ html.dark {
   color-scheme: dark;
 }
 
+html,
+body {
+  height: 100%;
+}
+
 body {
   font-family: "Source Sans 3", sans-serif;
   background: var(--bg);
@@ -31,36 +38,176 @@ body {
   font-weight: 700;
 }
 
+main {
+  background: #000000;
+  color: #FFD700;
+  font-weight: 700;
+}
+
+
 
 header {
-  background: #B3F0FF !important;
-  border-color: var(--light-teal-border) !important;
+  background: #000000 !important;
+  border-color: rgba(255, 215, 0, 0.25) !important;
 }
 
-[class*="bg-[#26C6DA]"] {
-  background-color: var(--light-teal-base) !important;
+/* Theme-driven section styling: keep backgrounds/text consistent with App wrapper. */
+.section-bg {
+  background: #000000 !important;
 }
 
-[class*="bg-[#2DD4E3]"] {
-  background-color: var(--light-teal-soft) !important;
+.section-fg {
+  color: #FFD700 !important;
 }
 
-[class*="bg-[#1FB8C8]"] {
-  background-color: var(--light-teal-surface) !important;
+.section-desc {
+  color: #C0C0C0 !important; /* metallic silver */
 }
 
-[class*="bg-[#1AA5B5]"] {
-  background-color: var(--light-teal-surface-strong) !important;
-}
-
+/* Disable legacy hard-coded teal backgrounds so theme image change doesn't leave stale colors. */
+[class*="bg-[#26C6DA]"],
+[class*="bg-[#2DD4E3]"],
+[class*="bg-[#1FB8C8]"],
+[class*="bg-[#1AA5B5]"],
 [class*="bg-[#178A98]"] {
-  background-color: var(--light-teal-accent) !important;
+  background-color: #000000 !important;
 }
+
+/* Disable legacy teal text colors across the page. */
+[class*="text-teal-primary"],
+[class*="text-teal-secondary"] {
+  color: #FFD700 !important;
+}
+
+/* Make description paragraphs metallic silver. */
+[class*="section-desc"],
+p,
+[class*="font-medium"],
+[class*="text-base"],
+[class*="text-sm"],
+[class*="text-lg"],
+[class*="text-xs"] {
+  color: #C0C0C0;
+}
+
 
 html.dark body {
   background: #000000;
   color: #FFD700;
 }
+
+/* ===== Enforced global theme: pure black background + bold yellow text ===== */
+html,
+body,
+main,
+section,
+footer,
+header {
+  background: #000000 !important;
+  color: #FFD700 !important;
+}
+
+html body {
+  color: #FFD700;
+  font-weight: 700;
+}
+
+/* Ensure common elements inherit the global text color */
+p,
+span,
+strong,
+em,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+a {
+  color: inherit !important;
+}
+
+a:hover,
+a:focus-visible {
+  color: #FFD700 !important;
+}
+
+/* Metallic gradient for headings/highlights (metallic silver -> dark silver) */
+.heading-gradient,
+.highlight-gradient,
+.metallic-text,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  background: linear-gradient(90deg, #C0C0C0 0%, #808080 100%) !important;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent !important;
+}
+
+/* Remove legacy teal/cyan/blue backgrounds/text so they can't leak through */
+[class*="bg-teal"],
+[class*="bg-[#26C6DA"],
+[class*="bg-[#2DD4E3"],
+[class*="bg-[#1FB8C8"],
+[class*="bg-[#1AA5B5"],
+[class*="bg-[#178A98"],
+[class*="bg-[#0ea5e9"],
+[class*="bg-[#1d4ed8"],
+[class*="bg-[#1e40af"],
+[class*="bg-[#2563eb"],
+[class*="bg-sky"],
+[class*="bg-blue"],
+[class*="bg-cyan"],
+[class*="bg-indigo"] {
+  background-color: #000000 !important;
+  background-image: none !important;
+}
+
+[class*="text-teal"],
+[class*="text-[#26C6DA"],
+[class*="text-[#2DD4E3"],
+[class*="text-[#1FB8C8"],
+[class*="text-[#1AA5B5"],
+[class*="text-[#178A98"],
+[class*="text-sky"],
+[class*="text-blue"],
+[class*="text-cyan"],
+[class*="text-indigo"] {
+  color: #FFD700 !important;
+}
+
+/* Theme menu must also be black/yellow */
+.theme-menu-trigger {
+  border: 1px solid rgba(255, 215, 0, 0.35) !important;
+  background: #000000 !important;
+  color: #FFD700 !important;
+}
+
+.theme-menu-panel {
+  border: 1px solid rgba(255, 215, 0, 0.25) !important;
+  background: #000000 !important;
+}
+
+.theme-menu-option {
+  color: #FFD700 !important;
+}
+
+.theme-menu-option:hover {
+  background: rgba(255, 215, 0, 0.12) !important;
+}
+
+.theme-menu-option.bg-teal-primary,
+html.dark .theme-menu-option.bg-teal-primary {
+  background: #FFD700 !important;
+  color: #000000 !important;
+}
+
 
 
 /* Global dark-mode overrides for existing section/card styles. */
@@ -325,12 +472,13 @@ html.dark .hero-backdrop {
 
 /* Metallic gradients for headings/highlights */
 .metallic-text {
-  background: linear-gradient(90deg, var(--metal-1) 0%, var(--metal-2) 100%);
+  background: linear-gradient(90deg, #C0C0C0 0%, #808080 100%);
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
   color: transparent;
 }
+
 
 .metallic-text-shadow {
   text-shadow: 0 1px 0 rgba(255, 255, 255, 0.18);
@@ -454,8 +602,7 @@ html.dark .theme-menu-option.bg-teal-primary {
   .portfolio-filter-chip-active,
   .portfolio-view-button,
   .portfolio-view-button::before,
-  .portfolio-view-button .portfolio-view-button-arrow {
-    animation: none !important;
+  .portfolio-view-button .portfolio-view-button-arrow {animation: none !important;
   }
 
   .interactive-button {

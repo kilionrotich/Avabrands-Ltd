@@ -38,7 +38,7 @@ function Header({ themeMode, onThemeModeChange }) {
   const activeTheme = themeOptions.find((option) => option.value === themeMode) ?? themeOptions[2];
 
   return (
-    <header className="sticky top-0 z-50 border-b border-teal-primary/15 bg-[#26C6DA]/95 backdrop-blur">
+    <header className="sticky top-0 z-50 border-b border-yellow/20 bg-black backdrop-blur">
       <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
         <a href="#" className="inline-flex items-center" aria-label="Avabrands home">
           <div className="flex items-baseline leading-none select-none">
@@ -46,9 +46,9 @@ function Header({ themeMode, onThemeModeChange }) {
             <span className="ml-[0.35rem] text-[1.2rem] sm:text-[1.45rem] md:text-[1.8rem] font-black text-gold">BRANDS</span>
           </div>
         </a>
-        <nav className="hidden items-center gap-8 text-sm uppercase tracking-[0.2em] text-teal-primary/80 md:flex">
+        <nav className="hidden items-center gap-8 text-sm uppercase tracking-[0.2em] text-gold/80 md:flex">
           {navLinks.map((link) => (
-            <a key={link.href} href={link.href} className="transition hover:text-teal-primary font-medium">
+              <a key={link.href} href={link.href} className="transition hover:text-gold font-medium">
               {link.label}
             </a>
           ))}
@@ -84,10 +84,10 @@ function Header({ themeMode, onThemeModeChange }) {
                       onThemeModeChange(option.value);
                       setIsThemeMenuOpen(false);
                     }}
-                    className={`interactive-button theme-menu-option flex w-full items-center justify-between rounded-xl px-4 py-3 text-left text-sm font-semibold transition ${
+className={`interactive-button theme-menu-option flex w-full items-center justify-between rounded-xl px-4 py-3 text-left text-sm font-semibold transition ${
                       themeMode === option.value
-                        ? "bg-teal-primary text-white"
-                        : "text-teal-primary hover:bg-teal-primary/10"
+                        ? "bg-yellow/90 text-black"
+                        : "text-gold hover:bg-yellow/15 hover:text-gold"
                     }`}
                   >
                     <span>{option.label}</span>
@@ -99,7 +99,7 @@ function Header({ themeMode, onThemeModeChange }) {
           </div>
           <a
             href="#rfq"
-            className="interactive-button rounded-full border border-teal-primary/60 px-4 py-2 text-xs font-bold uppercase tracking-[0.25em] text-teal-primary transition hover:bg-teal-primary hover:text-white"
+            className="interactive-button rounded-full border border-yellow/60 px-4 py-2 text-xs font-bold uppercase tracking-[0.25em] text-gold transition hover:bg-yellow/20 hover:text-gold"
           >
             Request Quote
           </a>

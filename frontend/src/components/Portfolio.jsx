@@ -31,7 +31,7 @@ function Portfolio({ items, bgImage }) {
   }, [activeFilter]);
 
   return (
-    <section id="portfolio" className="border-t border-teal-primary/10 bg-[#2DD4E3] py-20 relative" style={backgroundStyle}>
+<section id="portfolio" className="border-t border-teal-primary/10 section-bg py-20 relative" style={backgroundStyle}>
       <div className="absolute inset-0 bg-[#26C6DA]/65" aria-hidden="true" />
       <div className="relative mx-auto max-w-6xl px-6">
         <div className="flex flex-wrap items-end justify-between gap-6 bg-[#26C6DA]/80 backdrop-blur-sm rounded-2xl p-6 -mx-6">
