@@ -159,9 +159,10 @@ h6 {
   background: linear-gradient(90deg, #C0C0C0 0%, #808080 100%) !important;
   -webkit-background-clip: text;
   background-clip: text;
-  -webkit-text-fill-color: transparent;
+  -webkit-text-fill-color: initial;
   color: transparent !important;
 }
+
 
 
 /* Safety: prevent non-heading text from becoming invisible due to leaked gradient/text-fill styles */
