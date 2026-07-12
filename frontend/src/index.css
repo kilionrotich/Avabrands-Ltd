@@ -96,6 +96,119 @@ html.dark body {
   color: #FFD700;
 }
 
+/* ===== Enforced global theme: pure black background + bold yellow text ===== */
+html,
+body,
+main,
+section,
+footer,
+header {
+  background: #000000 !important;
+  color: #FFD700 !important;
+}
+
+html body {
+  color: #FFD700;
+  font-weight: 700;
+}
+
+/* Ensure common elements inherit the global text color */
+p,
+span,
+strong,
+em,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+a {
+  color: inherit !important;
+}
+
+a:hover,
+a:focus-visible {
+  color: #FFD700 !important;
+}
+
+/* Metallic gradient for headings/highlights (metallic silver -> dark silver) */
+.heading-gradient,
+.highlight-gradient,
+.metallic-text,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  background: linear-gradient(90deg, #C0C0C0 0%, #808080 100%) !important;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent !important;
+}
+
+/* Remove legacy teal/cyan/blue backgrounds/text so they can't leak through */
+[class*="bg-teal"],
+[class*="bg-[#26C6DA"],
+[class*="bg-[#2DD4E3"],
+[class*="bg-[#1FB8C8"],
+[class*="bg-[#1AA5B5"],
+[class*="bg-[#178A98"],
+[class*="bg-[#0ea5e9"],
+[class*="bg-[#1d4ed8"],
+[class*="bg-[#1e40af"],
+[class*="bg-[#2563eb"],
+[class*="bg-sky"],
+[class*="bg-blue"],
+[class*="bg-cyan"],
+[class*="bg-indigo"] {
+  background-color: #000000 !important;
+  background-image: none !important;
+}
+
+[class*="text-teal"],
+[class*="text-[#26C6DA"],
+[class*="text-[#2DD4E3"],
+[class*="text-[#1FB8C8"],
+[class*="text-[#1AA5B5"],
+[class*="text-[#178A98"],
+[class*="text-sky"],
+[class*="text-blue"],
+[class*="text-cyan"],
+[class*="text-indigo"] {
+  color: #FFD700 !important;
+}
+
+/* Theme menu must also be black/yellow */
+.theme-menu-trigger {
+  border: 1px solid rgba(255, 215, 0, 0.35) !important;
+  background: #000000 !important;
+  color: #FFD700 !important;
+}
+
+.theme-menu-panel {
+  border: 1px solid rgba(255, 215, 0, 0.25) !important;
+  background: #000000 !important;
+}
+
+.theme-menu-option {
+  color: #FFD700 !important;
+}
+
+.theme-menu-option:hover {
+  background: rgba(255, 215, 0, 0.12) !important;
+}
+
+.theme-menu-option.bg-teal-primary,
+html.dark .theme-menu-option.bg-teal-primary {
+  background: #FFD700 !important;
+  color: #000000 !important;
+}
+
+
 
 /* Global dark-mode overrides for existing section/card styles. */
 html.dark header {

@@ -84,10 +84,10 @@ function Header({ themeMode, onThemeModeChange }) {
                       onThemeModeChange(option.value);
                       setIsThemeMenuOpen(false);
                     }}
-                    className={`interactive-button theme-menu-option flex w-full items-center justify-between rounded-xl px-4 py-3 text-left text-sm font-semibold transition ${
+className={`interactive-button theme-menu-option flex w-full items-center justify-between rounded-xl px-4 py-3 text-left text-sm font-semibold transition ${
                       themeMode === option.value
-                        ? "bg-teal-primary text-white"
-                        : "text-teal-primary hover:bg-teal-primary/10"
+                        ? "bg-yellow/90 text-black"
+                        : "text-gold hover:bg-yellow/15 hover:text-gold"
                     }`}
                   >
                     <span>{option.label}</span>
