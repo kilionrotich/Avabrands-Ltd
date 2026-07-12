@@ -4,6 +4,21 @@ function Contact({ bgImages }) {
   const [status, setStatus] = useState("");
   const [loading, setLoading] = useState(false);
 
+  const locations = [
+    {
+      name: "Main office",
+      code: "84JV+PP3",
+      embed:
+        "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3567.355896!2d36.8559184!3d-1.3326803!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s!2zMcKwMTknNTcuNyJTIDM2wKw1MSczMC42IkU!5e0!3m2!1sen!2ske!4v1745045851230!5m2!1sen!2ske"
+    },
+    {
+      name: "Branch",
+      code: "G77H+P8J",
+      embed:
+        "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3461.821271740794!2d35.285222176324!3d0.5098198731174522!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x17810193e0907913%3A0xd22485f94a898904!2sNandi%20Rd%2C%20Eldoret!5e1!3m2!1sen!2ske!4v1777409304111!5m2!1sen!2ske",
+    },
+  ];
+
   const handleSubmit = async (e) => {
     e.preventDefault();
     setLoading(true);
@@ -39,7 +54,7 @@ function Contact({ bgImages }) {
   };
 
   return (
-    <section id="contact" className="section-glow border-t border-teal-primary/10 bg-[#26C6DA] py-20 relative overflow-hidden">
+<section id="contact" className="section-glow border-t border-teal-primary/10 section-bg py-20 relative overflow-hidden">
       <div className="absolute inset-0 bg-[#26C6DA]/45" aria-hidden="true" />
       {bgImages && bgImages[0] && (
         <div className="absolute right-0 top-0 opacity-60 h-[28rem] w-[28rem]">
@@ -59,7 +74,7 @@ function Contact({ bgImages }) {
               Let us design your next statement.
             </h2>
             <p className="mt-4 text-base text-teal-primary font-medium drop-shadow-sm">
-              Corporate offices in Nairobi Kenya with nationwide delivery teams.
+              Corporate offices in Nairobi, Kenya with nationwide delivery teams and two working locations.
             </p>
             <div className="mt-8 grid gap-4 text-base text-teal-primary font-medium">
               <div>
@@ -68,13 +83,13 @@ function Contact({ bgImages }) {
               </div>
               <div>
                 <p className="text-xs uppercase tracking-[0.3em] text-teal-primary/70 font-medium">Phone</p>
-                <p>+254 792 724 721</p>
+                <p>+254 793820817</p>
               </div>
               <div>
                 <p className="text-xs uppercase tracking-[0.3em] text-teal-primary/70 font-medium">WhatsApp</p>
                 <a
-                  className="inline-flex items-center gap-2 text-teal-primary font-bold hover:text-teal-primary/80"
-                  href="https://wa.me/254792724721?text=Hello%20Avabrands%2C%20I%20need%20a%20quote."
+                  className="interactive-button inline-flex items-center gap-2 text-teal-primary font-bold hover:text-teal-primary/80"
+                  href="https://wa.me/254793820817?text=Hello%20Avabrands%2C%20I%20need%20a%20quote."
                   target="_blank"
                   rel="noreferrer"
                 >
@@ -83,20 +98,23 @@ function Contact({ bgImages }) {
               </div>
             </div>
             
-            <div className="mt-8 rounded-2xl border border-teal-primary/20 bg-teal-primary/5 p-4">
-              <div className="overflow-hidden rounded-xl border border-teal-primary/20">
-                <iframe
-                  title="Avabrands Map"
-                  className="h-64 w-full"
-                  loading="lazy"
-                  allowFullScreen
-                  referrerPolicy="no-referrer-when-downgrade"
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3988.8202815568446!2d35.14170731093628!3d0.33176980000000003!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x178059953673aaf3%3A0x62c0e46e25b74da!2sDr.Tanui's!5e0!3m2!1sen!2ske!4v1740883200000"
-                />
-              </div>
-              <p className="mt-4 text-xs text-teal-primary/60">
-                Dr. Tanui's location (84JV+PP3)
-              </p>
+            <div className="mt-8 grid gap-4 md:grid-cols-2">
+              {locations.map((location) => (
+                <div key={location.name} className="rounded-2xl border border-teal-primary/20 bg-teal-primary/5 p-4">
+                  <div className="overflow-hidden rounded-xl border border-teal-primary/20">
+                    <iframe
+                      title={`Avabrands ${location.name}`}
+                      className="h-64 w-full"
+                      loading="lazy"
+                      allowFullScreen
+                      referrerPolicy="no-referrer-when-downgrade"
+                      src={location.embed}
+                    />
+                  </div>
+                  <p className="mt-4 text-sm font-semibold text-teal-primary">{location.name}</p>
+                  <p className="mt-1 text-xs text-teal-primary/60">{location.code}</p>
+                </div>
+              ))}
             </div>
           </div>
           
@@ -147,7 +165,7 @@ function Contact({ bgImages }) {
                 <button
                   type="submit"
                   disabled={loading}
-                  className="w-full rounded-full bg-teal-secondary px-6 py-3 text-xs font-bold uppercase tracking-[0.25em] text-white hover:bg-teal-secondary/90 hover:shadow-lg transition disabled:opacity-50 disabled:cursor-not-allowed"
+                  className="interactive-button w-full rounded-full bg-teal-secondary px-6 py-3 text-xs font-bold uppercase tracking-[0.25em] text-white hover:bg-teal-secondary/90 hover:shadow-lg transition disabled:opacity-50 disabled:cursor-not-allowed"
                 >
                   {loading ? "Sending..." : "Send Message"}
                 </button>

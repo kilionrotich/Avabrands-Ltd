@@ -4,33 +4,226 @@
 
 :root {
   color-scheme: light;
+
+  --bg: #000000;
+  --text: #FFD700;
+  --gold: #FFD700;
+  /* Metallic silver gradient (as specified) */
+  --metal-1: #C0C0C0;
+  --metal-2: #808080;
+
+
+  --light-teal-base: #B3F0FF;
+  --light-teal-soft: #B3F0FF;
+  --light-teal-surface: #B3F0FF;
+  --light-teal-surface-strong: #B3F0FF;
+  --light-teal-accent: #B3F0FF;
+  --light-teal-border: rgba(13, 59, 102, 0.12);
 }
+
 
 html.dark {
   color-scheme: dark;
+}
+
+html,
+body {
+  height: 100%;
 }
 
 body {
   font-family: "Source Sans 3", sans-serif;
   background: #E0F7FA;
   color: #0D3B66;
+  background: var(--bg);
+  color: var(--text);
+  font-weight: 700;
 }
 
-html.dark body {
-  background: #0b1220;
-  color: #dbe7f5;
+main {
+  background: #000000;
+  color: #FFD700;
+  font-weight: 700;
 }
+
+
+
+header {
+  background: #000000 !important;
+  border-color: rgba(255, 215, 0, 0.25) !important;
+}
+
+/* Theme-driven section styling: keep backgrounds/text consistent with App wrapper. */
+.section-bg {
+  background: #000000 !important;
+}
+
+.section-fg {
+  color: #FFD700 !important;
+}
+
+.section-desc {
+  color: #C0C0C0 !important; /* metallic silver */
+}
+
+/* Disable legacy hard-coded teal backgrounds so theme image change doesn't leave stale colors. */
+[class*="bg-[#26C6DA]"],
+[class*="bg-[#2DD4E3]"],
+[class*="bg-[#1FB8C8]"],
+[class*="bg-[#1AA5B5]"],
+[class*="bg-[#178A98]"] {
+  background-color: #000000 !important;
+}
+
+/* Disable legacy teal text colors across the page. */
+[class*="text-teal-primary"],
+[class*="text-teal-secondary"] {
+  color: #FFD700 !important;
+}
+
+/* Make description paragraphs metallic silver. */
+[class*="section-desc"],
+p,
+[class*="font-medium"],
+[class*="text-base"],
+[class*="text-sm"],
+[class*="text-lg"],
+[class*="text-xs"] {
+  color: #C0C0C0;
+}
+
+
+html.dark body {
+  background: #000000;
+  color: #FFD700;
+}
+
+/* ===== Enforced global theme: pure black background + bold yellow text ===== */
+html,
+body,
+main,
+section,
+footer,
+header {
+  background: #000000 !important;
+  color: #FFD700 !important;
+}
+
+html body {
+  color: #FFD700;
+  font-weight: 700;
+}
+
+/* Ensure common elements inherit the global text color */
+p,
+span,
+strong,
+em,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+a {
+  color: inherit !important;
+}
+
+a:hover,
+a:focus-visible {
+  color: #FFD700 !important;
+}
+
+/* Metallic gradient for headings/highlights (metallic silver -> dark silver) */
+.heading-gradient,
+.highlight-gradient,
+.metallic-text,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  background: linear-gradient(90deg, #C0C0C0 0%, #808080 100%) !important;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent !important;
+}
+
+/* Remove legacy teal/cyan/blue backgrounds/text so they can't leak through */
+[class*="bg-teal"],
+[class*="bg-[#26C6DA"],
+[class*="bg-[#2DD4E3"],
+[class*="bg-[#1FB8C8"],
+[class*="bg-[#1AA5B5"],
+[class*="bg-[#178A98"],
+[class*="bg-[#0ea5e9"],
+[class*="bg-[#1d4ed8"],
+[class*="bg-[#1e40af"],
+[class*="bg-[#2563eb"],
+[class*="bg-sky"],
+[class*="bg-blue"],
+[class*="bg-cyan"],
+[class*="bg-indigo"] {
+  background-color: #000000 !important;
+  background-image: none !important;
+}
+
+[class*="text-teal"],
+[class*="text-[#26C6DA"],
+[class*="text-[#2DD4E3"],
+[class*="text-[#1FB8C8"],
+[class*="text-[#1AA5B5"],
+[class*="text-[#178A98"],
+[class*="text-sky"],
+[class*="text-blue"],
+[class*="text-cyan"],
+[class*="text-indigo"] {
+  color: #FFD700 !important;
+}
+
+/* Theme menu must also be black/yellow */
+.theme-menu-trigger {
+  border: 1px solid rgba(255, 215, 0, 0.35) !important;
+  background: #000000 !important;
+  color: #FFD700 !important;
+}
+
+.theme-menu-panel {
+  border: 1px solid rgba(255, 215, 0, 0.25) !important;
+  background: #000000 !important;
+}
+
+.theme-menu-option {
+  color: #FFD700 !important;
+}
+
+.theme-menu-option:hover {
+  background: rgba(255, 215, 0, 0.12) !important;
+}
+
+.theme-menu-option.bg-teal-primary,
+html.dark .theme-menu-option.bg-teal-primary {
+  background: #FFD700 !important;
+  color: #000000 !important;
+}
+
+
 
 /* Global dark-mode overrides for existing section/card styles. */
 html.dark header {
-  background: rgba(11, 18, 32, 0.94) !important;
-  border-color: rgba(125, 211, 252, 0.25) !important;
+  background: #000000 !important;
+  border-color: rgba(255, 215, 0, 0.25) !important;
 }
+
 
 html.dark section,
 html.dark footer {
-  color: #dbe7f5;
+  color: #FFD700;
 }
+
 
 html.dark [class*="bg-[#f8f4ed]"],
 html.dark [class*="bg-[#f6f2e9]"],
@@ -94,16 +287,14 @@ html.dark .hero-backdrop {
 }
 
 .hero-backdrop {
-  background-image:
-    linear-gradient(120deg, rgba(38, 198, 218, 0.96) 10%, rgba(46, 125, 154, 0.92) 55%, rgba(13, 59, 102, 0.12) 100%),
-    radial-gradient(circle at 10% 10%, rgba(13, 59, 102, 0.14), transparent 55%),
-    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1200' height='800' viewBox='0 0 1200 800'%3E%3Crect width='1200' height='800' fill='%2326C6DA'/%3E%3Cpath d='M0 600 C 200 520 420 540 650 450 C 820 382 1000 300 1200 280 L1200 800 L0 800 Z' fill='%232E7D9A'/%3E%3Cpath d='M0 500 C 220 420 460 470 700 390 C 880 330 1060 260 1200 220 L1200 800 L0 800 Z' fill='%231B6B7D'/%3E%3C/svg%3E");
+  background-image: none !important;
+  background-color: #B3F0FF !important;
   background-size: cover;
   background-position: center;
 }
 
 .section-glow {
-  background: radial-gradient(circle at 20% 20%, rgba(46, 125, 154, 0.1), transparent 60%);
+  background: radial-gradient(circle at 20% 20%, rgba(111, 197, 191, 0.16), transparent 60%);
 }
 
 .text-balance {
@@ -126,11 +317,297 @@ html.dark .hero-backdrop {
   animation: breathe 4s ease-in-out infinite;
 }
 
-/* Enhanced button hover effect */
+@keyframes breatheSubtle {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.02);
+  }
+}
+
+.animate-breathe-subtle {
+  animation: breatheSubtle 5.2s ease-in-out infinite;
+  transform-origin: center;
+}
+
+/* Shared button motion */
+.interactive-button {
+  position: relative;
+  overflow: hidden;
+  transform: translateZ(0);
+  transition:
+    transform 220ms cubic-bezier(0.2, 0.7, 0.25, 1),
+    box-shadow 220ms cubic-bezier(0.2, 0.7, 0.25, 1),
+    background-color 220ms cubic-bezier(0.2, 0.7, 0.25, 1),
+    color 220ms cubic-bezier(0.2, 0.7, 0.25, 1),
+    border-color 220ms cubic-bezier(0.2, 0.7, 0.25, 1),
+    opacity 220ms cubic-bezier(0.2, 0.7, 0.25, 1);
+}
+
+.interactive-button::before {
+  content: "";
+  position: absolute;
+  inset: -45% -60%;
+  background: linear-gradient(120deg, transparent 35%, rgba(255, 255, 255, 0.34) 50%, transparent 65%);
+  transform: translateX(-120%) skewX(-18deg);
+  opacity: 0;
+  pointer-events: none;
+}
+
+.interactive-button:hover,
+.interactive-button:focus-visible {
+  transform: translateY(-2px) scale(1.02);
+  box-shadow: 0 14px 28px rgba(13, 59, 102, 0.18);
+}
+
+.interactive-button:hover::before,
+.interactive-button:focus-visible::before {
+  opacity: 1;
+  animation: buttonSheen 700ms ease;
+}
+
+.interactive-button:active {
+  transform: translateY(0) scale(0.98);
+  box-shadow: 0 8px 18px rgba(13, 59, 102, 0.14);
+}
+
 .btn-cta {
   transition: all 0.3s ease;
 }
 
 .btn-cta:hover {
   transform: scale(1.08);
+}
+
+@keyframes buttonSheen {
+  0% {
+    transform: translateX(-120%) skewX(-18deg);
+  }
+  100% {
+    transform: translateX(120%) skewX(-18deg);
+  }
+}
+
+@keyframes ctaArrowNudge {
+  0%, 100% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(0.78rem);
+  }
+}
+
+@keyframes ctaButtonNudge {
+  0%,
+  100% {
+    transform: translateY(0) scale(1);
+  }
+  50% {
+    transform: translateY(-4px) scale(1.08);
+  }
+}
+
+@keyframes viewButtonBreathe {
+  0%,
+  100% {
+    transform: translateY(0) scale(1);
+  }
+  50% {
+    transform: translateY(-3px) scale(1.07);
+  }
+}
+
+@keyframes filterChipRise {
+  0% {
+    opacity: 0;
+    transform: translateY(8px) scale(0.96);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes filterChipGlow {
+  0% {
+    box-shadow: 0 0 0 0 rgba(13, 59, 102, 0.32);
+  }
+  100% {
+    box-shadow: 0 0 0 12px rgba(13, 59, 102, 0);
+  }
+}
+
+.portfolio-filter-chip {
+  animation: filterChipRise 420ms cubic-bezier(0.2, 0.7, 0.25, 1) both;
+}
+
+.portfolio-filter-chip-active {
+  animation: filterChipRise 420ms cubic-bezier(0.2, 0.7, 0.25, 1) both, filterChipGlow 1100ms ease-out 1;
+}
+
+.portfolio-view-button {
+  -webkit-tap-highlight-color: transparent;
+  border: 1px solid #001f3f;
+  background-color: #001f3f;
+  color: #ffffff;
+  outline-color: #001f3f;
+  animation: viewButtonBreathe 460ms ease-in-out infinite;
+}
+
+.portfolio-view-button:hover {
+  border-color: #003366;
+  background-color: #003366;
+  color: #ffffff;
+  animation: ctaButtonNudge 420ms ease-in-out infinite;
+  box-shadow: 0 12px 24px rgba(13, 59, 102, 0.22);
+}
+
+.portfolio-view-button:hover .portfolio-view-button-arrow {
+  animation: ctaArrowNudge 420ms ease-in-out infinite;
+}
+
+.portfolio-view-button:active {
+  background-color: #003366;
+}
+
+/* Metallic gradients for headings/highlights */
+.metallic-text {
+  background: linear-gradient(90deg, #C0C0C0 0%, #808080 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+}
+
+
+.metallic-text-shadow {
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.18);
+}
+
+/* Status badges */
+.status-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.25rem 0.75rem;
+  border-radius: 9999px;
+  font-weight: 900;
+  letter-spacing: 0.06em;
+  background: var(--gold);
+  color: #000000;
+}
+
+.status-badge--completed,
+.status-badge--active,
+.status-badge--open {
+  background: var(--gold);
+  color: #000000;
+}
+
+/* Accessibility contrast helpers */
+.text-gold {
+  color: var(--gold) !important;
+}
+
+.bg-black {
+  background: #000000 !important;
+}
+
+.theme-menu-trigger {
+
+  border: 1px solid rgba(13, 59, 102, 0.6);
+  background: #ecfcfb;
+  color: #0d3b66;
+}
+
+.theme-menu-hamburger {
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 0.2rem;
+}
+
+.theme-menu-hamburger-line {
+  width: 1rem;
+  height: 2px;
+  border-radius: 999px;
+  background: currentColor;
+  transition: transform 160ms ease, opacity 160ms ease;
+}
+
+.theme-menu-hamburger.is-open .theme-menu-hamburger-line:nth-child(1) {
+  transform: translateY(0.35rem) rotate(45deg);
+}
+
+.theme-menu-hamburger.is-open .theme-menu-hamburger-line:nth-child(2) {
+  opacity: 0;
+}
+
+.theme-menu-hamburger.is-open .theme-menu-hamburger-line:nth-child(3) {
+  transform: translateY(-0.35rem) rotate(-45deg);
+}
+
+.theme-menu-trigger:hover {
+  background: #0d3b66;
+  color: #ffffff;
+}
+
+.theme-menu-panel {
+  border: 1px solid rgba(13, 59, 102, 0.2);
+  background: #ecfcfb;
+}
+
+.theme-menu-option {
+  color: #0d3b66;
+}
+
+.theme-menu-option:hover {
+  background: rgba(13, 59, 102, 0.1);
+}
+
+html.dark .theme-menu-trigger {
+  border-color: rgba(125, 211, 252, 0.35);
+  background: rgba(15, 23, 42, 0.94);
+  color: #dbe7f5;
+}
+
+html.dark .theme-menu-trigger:hover {
+  background: rgba(125, 211, 252, 0.18);
+  color: #ffffff;
+}
+
+html.dark .theme-menu-panel {
+  border-color: rgba(125, 211, 252, 0.25);
+  background: rgba(15, 23, 42, 0.98);
+}
+
+html.dark .theme-menu-option {
+  color: #dbe7f5;
+}
+
+html.dark .theme-menu-option:hover {
+  background: rgba(125, 211, 252, 0.12);
+}
+
+html.dark .theme-menu-option.bg-teal-primary {
+  background: rgba(125, 211, 252, 0.2);
+  color: #ffffff;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .interactive-button,
+  .interactive-button::before,
+  .btn-cta,
+  .portfolio-filter-chip,
+  .portfolio-filter-chip-active,
+  .portfolio-view-button,
+  .portfolio-view-button::before,
+  .portfolio-view-button .portfolio-view-button-arrow {animation: none !important;
+  }
+
+  .interactive-button {
+    transition: none;
+  }
 }

@@ -31,7 +31,7 @@ function Portfolio({ items, bgImage }) {
   }, [activeFilter]);
 
   return (
-    <section id="portfolio" className="border-t border-teal-primary/10 bg-[#2DD4E3] py-20 relative" style={backgroundStyle}>
+<section id="portfolio" className="border-t border-teal-primary/10 section-bg py-20 relative" style={backgroundStyle}>
       <div className="absolute inset-0 bg-[#26C6DA]/65" aria-hidden="true" />
       <div className="relative mx-auto max-w-6xl px-6">
         <div className="flex flex-wrap items-end justify-between gap-6 bg-[#26C6DA]/80 backdrop-blur-sm rounded-2xl p-6 -mx-6">
@@ -42,14 +42,15 @@ function Portfolio({ items, bgImage }) {
             </h2>
           </div>
           <div className="flex flex-wrap gap-3">
-            {filters.map((filter) => (
+            {filters.map((filter, index) => (
               <button
                 key={filter}
                 type="button"
                 onClick={() => setActiveFilter(filter)}
-                className={`rounded-full px-4 py-2 text-xs uppercase tracking-[0.2em] transition ${
+                style={{ animationDelay: `${index * 70}ms` }}
+                className={`interactive-button portfolio-filter-chip rounded-full px-4 py-2 text-xs uppercase tracking-[0.2em] transition ${
                   activeFilter === filter
-                    ? "bg-teal-primary text-white font-bold"
+                    ? "portfolio-filter-chip-active bg-teal-primary text-white font-bold"
                     : "border border-teal-primary/30 text-teal-primary/70 hover:border-teal-primary hover:text-teal-primary"
                 }`}
               >
@@ -60,22 +61,33 @@ function Portfolio({ items, bgImage }) {
         </div>
         <div ref={gridRef} className="mt-12 grid gap-6 md:grid-cols-3">
           {filteredItems.map((item) => (
-            <button
+            <article
               key={item.id}
               type="button"
               onClick={() => setActiveItem(item)}
-              className="group flex h-full flex-col justify-between rounded-2xl border border-teal-primary/20 bg-teal-primary/5 p-6 text-left transition hover:border-teal-primary/60 hover:bg-teal-primary/10 hover:animate-pulse-slow"
+              className="group flex h-full flex-col justify-between rounded-2xl border border-white/10 bg-white/5 text-left transition hover:border-gold overflow-hidden"
             >
-              <div>
-                <p className="text-xs uppercase tracking-[0.3em] text-teal-primary/60">{item.category}</p>
-                <h3 className="mt-4 text-xl font-heading uppercase tracking-[0.08em] font-bold">
-                  {item.title}
-                </h3>
-                <p className="mt-3 text-sm text-teal-primary/80">{item.summary}</p>
+              {item.image_url && (
+                <div className="w-full overflow-hidden">
+                  <img
+                    src={item.image_url}
+                    alt={`Project image for ${item.title}`}
+                    className="w-full h-48 object-cover transition-transform duration-500 group-hover:scale-105"
+                  />
+                </div>
+              )}
+              <div className="p-6 flex flex-col flex-1 justify-between">
+                <div>
+                  <p className="text-xs uppercase tracking-[0.3em] text-white/50">{item.category}</p>
+                  <h3 className="mt-4 text-xl font-heading uppercase tracking-[0.08em] text-gold">
+                    {item.title}
+                  </h3>
+                  <p className="mt-3 text-sm text-white/70">{item.summary}</p>
+                </div>
+                <span className="mt-6 text-xs uppercase tracking-[0.3em] text-white/40 group-hover:text-gold">
+                  View Project
+                </span>
               </div>
-              <span className="mt-6 text-xs uppercase tracking-[0.3em] text-teal-primary/50 group-hover:text-teal-secondary transition">
-                View Project →
-              </span>
             </button>
           ))}
         </div>
@@ -90,7 +102,7 @@ function Portfolio({ items, bgImage }) {
                 <button
                   type="button"
                   onClick={() => setActiveItem(null)}
-                  className="text-xs uppercase tracking-[0.3em] text-teal-primary font-bold hover:text-teal-primary/80"
+                  className="interactive-button text-xs uppercase tracking-[0.3em] text-teal-primary font-bold hover:text-teal-primary/80"
                 >
                   Close
                 </button>
@@ -98,46 +110,20 @@ function Portfolio({ items, bgImage }) {
             <h3 className="text-2xl font-heading uppercase tracking-[0.08em] text-teal-primary font-bold">
               {activeItem.title}
             </h3>
-            <p className="mt-4 text-sm text-teal-primary/80">{activeItem.summary}</p>
-            
-            {activeItem.images && activeItem.images.length > 0 ? (
-              <div className="mt-8 grid gap-8 md:grid-cols-2 lg:grid-cols-3">
-                {activeItem.images.map((item, idx) => (
-                  <div key={idx} className="flex flex-col">
-                    <div className="overflow-hidden rounded-xl border border-teal-primary/30 bg-[#1FB8C8] aspect-square">
-                      <img 
-                        src={`${import.meta.env.BASE_URL}images/${item.image_name}`} 
-                        alt={item.description || `Project image ${idx + 1}`}
-                        className="w-full h-full object-cover hover:scale-105 transition duration-300"
-                      />
-                    </div>
-                    <div className="mt-4">
-                      <p className="text-sm text-teal-primary/80">
-                        {item.description || `Project image ${idx + 1}`}
-                      </p>
-                    </div>
-                  </div>
-                ))}
+            <p className="mt-4 text-sm text-white/70">{activeItem.summary}</p>
+            {activeItem.image_url ? (
+              <div className="mt-6 overflow-hidden rounded-xl border border-white/10">
+                <img
+                  src={activeItem.image_url}
+                  alt={`Full view of ${activeItem.title} project`}
+                  className="w-full object-cover"
+                />
               </div>
             ) : (
-                <div className="mt-8 rounded-2xl border border-teal-primary/30 bg-[#1FB8C8] p-6 text-sm text-teal-primary/70">
-                Images coming soon for this project.
+              <div className="mt-6 rounded-xl border border-white/10 bg-black/60 p-6 text-sm text-white/60">
+                No project images available.
               </div>
             )}
-            </div>
-          </div>
-          {/* Fixed close button at bottom for easy access */}
-          <div className="fixed bottom-0 left-0 right-0 z-10 bg-gradient-to-t from-[#26C6DA] to-transparent p-6 pointer-events-none">
-            <div className="mx-auto max-w-6xl pointer-events-auto">
-              <button
-                type="button"
-                onClick={() => setActiveItem(null)}
-                className="w-full rounded-full bg-teal-primary px-6 py-4 text-sm font-bold uppercase tracking-[0.25em] text-white hover:bg-teal-primary/90 hover:shadow-2xl transition-all duration-300 flex items-center justify-center gap-2"
-              >
-                Close
-                <span className="text-lg">✕</span>
-              </button>
-            </div>
           </div>
         </div>
       ) : null}
