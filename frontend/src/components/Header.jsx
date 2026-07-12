@@ -42,7 +42,7 @@ function Header({ themeMode, onThemeModeChange }) {
       <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
         <a href="#" className="inline-flex items-center" aria-label="Avabrands home">
           <div className="flex items-baseline leading-none select-none">
-            <span className="metallic-text text-[2rem] sm:text-[2.4rem] md:text-[2.9rem] font-black">AVA</span>
+<span className="text-[#C0C0C0] text-[2rem] sm:text-[2.4rem] md:text-[2.9rem] font-black !text-[#C0C0C0]">AVA</span>
             <span className="ml-[0.35rem] text-[1.2rem] sm:text-[1.45rem] md:text-[1.8rem] font-black text-gold">BRANDS</span>
           </div>
         </a>

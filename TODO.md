@@ -1,15 +1,11 @@
 # TODO
-- [x] Apply global black/yellow theme via `frontend/src/index.css` (background/text overrides, heading gradient, teal/blue removal, link/paragraph inheritance)
 
-- [x] Update components to remove hardcoded teal/cyan styles:
-
-
-  - [ ] `frontend/src/components/Footer.jsx`
-  - [ ] `frontend/src/components/Rfq.jsx`
-  - [ ] `frontend/src/components/Portfolio.jsx`
-  - [ ] `frontend/src/components/Contact.jsx`
-- [ ] Ensure status badges/messages use gold background (#FFD700) with black text (#000000)
-- [ ] Verify logo remains pure CSS text (no image) and metallic gradient works for headings/highlights
-- [ ] Build frontend (`npm run build` in `frontend/`) and do a quick smoke check
-- [ ] Commit with message: "style: enforce global black/yellow theme and finalize CSS logo"
-
+- [ ] Inspect and adjust `frontend/src/index.css` to enforce:
+  - [ ] `html, body` pure black background (#000)
+  - [ ] global default text color golden yellow (#FFD700)
+  - [ ] metallic silver gradient for headings/section titles (#C0C0C0 → #808080) using text-fill technique
+  - [ ] logo scheme: `AVA` metallic silver gradient, `BRANDS` bold golden yellow
+  - [ ] buttons: gold background (#FFD700) and black text (#000000)
+  - [ ] remove/override any styles making text invisible (e.g. transparent text)
+- [ ] Validate CSS parsing/build
+- [ ] Commit with message: "style: fix obscured text by enforcing global black background and golden/silver text colors"

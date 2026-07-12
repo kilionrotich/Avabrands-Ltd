@@ -98,13 +98,14 @@ html.dark body {
   color: #FFD700;
 }
 
-/* ===== Enforced global theme: pure black background + bold yellow text ===== */
+/* ===== Enforced global theme: pure black background + golden text ===== */
 html,
-body,
-main,
-section,
-footer,
-header {
+body {
+  background-color: #000000 !important;
+  color: #FFD700 !important;
+}
+
+html, body, main, section, footer, header {
   background: #000000 !important;
   color: #FFD700 !important;
 }
@@ -126,8 +127,12 @@ h3,
 h4,
 h5,
 h6,
-a {
-  color: inherit !important;
+a,
+button,
+input,
+textarea,
+select {
+  color: #FFD700 !important;
 }
 
 a:hover,
@@ -135,22 +140,39 @@ a:focus-visible {
   color: #FFD700 !important;
 }
 
+
 /* Metallic gradient for headings/highlights (metallic silver -> dark silver) */
 .heading-gradient,
 .highlight-gradient,
-.metallic-text,
+.section-title,
+.section-heading,
+[data-heading],
 h1,
 h2,
 h3,
 h4,
 h5,
 h6 {
+  color: #FFD700 !important;
+}
+
+/* Keep metallic gradient behavior only for elements explicitly intended to be metallic */
+.metallic-text {
   background: linear-gradient(90deg, #C0C0C0 0%, #808080 100%) !important;
   -webkit-background-clip: text;
   background-clip: text;
-  -webkit-text-fill-color: transparent;
+  -webkit-text-fill-color: initial;
   color: transparent !important;
 }
+
+
+
+/* Safety: prevent non-heading text from becoming invisible due to leaked gradient/text-fill styles */
+p, span, strong, em, li, a, button, input, textarea, select {
+  color: #FFD700 !important;
+}
+
+
 
 /* Remove legacy teal/cyan/blue backgrounds/text so they can't leak through */
 [class*="bg-teal"],
@@ -243,7 +265,7 @@ html.dark [class*="text-teal-secondary"] {
 
 /* RFQ section: lighter text in dark mode */
 html.dark #rfq [class*="text-teal-primary"] {
-  color: #f0f7fc !important;
+  color: #C0C0C0 !important;
 }
 
 html.dark #rfq [class*="placeholder-teal-primary"] {
@@ -254,13 +276,13 @@ html.dark #rfq [class*="placeholder-teal-primary"] {
 html.dark #rfq input,
 html.dark #rfq textarea,
 html.dark #rfq select {
-  color: #ffffff !important;
+  color: #FFD700 !important;
 }
 
 html.dark #rfq input::placeholder,
 html.dark #rfq textarea::placeholder,
 html.dark #rfq select::placeholder {
-  color: rgba(255, 255, 255, 0.6) !important;
+  color: rgba(192, 192, 192, 0.6) !important;
 }
 
 html.dark [class*="border-teal-primary"],
@@ -332,11 +354,66 @@ html.dark .hero-backdrop {
   transform-origin: center;
 }
 
-/* Shared button motion */
+/* Shared button motion + enforced gold/black contrast */
+.interactive-button {
+  position: relative;
+}
+
+/* Metallic silver buttons (global enforcement) */
+button,
+.btn-cta,
+.interactive-button,
+input[type='button'],
+input[type='submit'],
+input[type='reset'] {
+  background-color:#808080 !important;
+  background-image: none !important;
+  border: 1px solid rgba(255, 255, 255, 0.35) !important;
+  color: #FFD700 !important;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.35);
+}
+
+button:hover,
+.btn-cta:hover,
+.interactive-button:hover,
+input[type='button']:hover,
+input[type='submit']:hover,
+input[type='reset']:hover,
+button:focus,
+.btn-cta:focus,
+.interactive-button:focus,
+input[type='button']:focus,
+input[type='submit']:focus,
+input[type='reset']:focus {
+  filter: brightness(1.05);
+  transform: translateY(-1px);
+  color: #FFD700 !important;
+}
+
+button:active,
+.btn-cta:active,
+.interactive-button:active,
+input[type='button']:active,
+input[type='submit']:active,
+input[type='reset']:active {
+  transform: translateY(0px);
+}
+
+/* Ensure button text stays golden on all states, including :active sheen flips */
+button:active,
+.btn-cta:active,
+.interactive-button:active,
+input[type='button']:active,
+input[type='submit']:active,
+input[type='reset']:active {
+  color: #FFD700 !important;
+}
+
 .interactive-button {
   position: relative;
   overflow: hidden;
   transform: translateZ(0);
+
   transition:
     transform 220ms cubic-bezier(0.2, 0.7, 0.25, 1),
     box-shadow 220ms cubic-bezier(0.2, 0.7, 0.25, 1),
@@ -344,7 +421,12 @@ html.dark .hero-backdrop {
     color 220ms cubic-bezier(0.2, 0.7, 0.25, 1),
     border-color 220ms cubic-bezier(0.2, 0.7, 0.25, 1),
     opacity 220ms cubic-bezier(0.2, 0.7, 0.25, 1);
+
+  background-color: #808080 !important;
+  color: #FFD700 !important;
+  border-color: rgba(255, 215, 0, 0.55) !important;
 }
+
 
 .interactive-button::before {
   content: "";
@@ -360,7 +442,11 @@ html.dark .hero-backdrop {
 .interactive-button:focus-visible {
   transform: translateY(-2px) scale(1.02);
   box-shadow: 0 14px 28px rgba(13, 59, 102, 0.18);
+  background-color: #808080 !important;
+  color: #FFD700 !important;
 }
+
+
 
 .interactive-button:hover::before,
 .interactive-button:focus-visible::before {
@@ -371,7 +457,10 @@ html.dark .hero-backdrop {
 .interactive-button:active {
   transform: translateY(0) scale(0.98);
   box-shadow: 0 8px 18px rgba(13, 59, 102, 0.14);
+  background-color: #FFD700 !important;
+  color: #000000 !important;
 }
+
 
 .btn-cta {
   transition: all 0.3s ease;
@@ -516,11 +605,11 @@ html.dark .hero-backdrop {
 }
 
 .theme-menu-trigger {
-
-  border: 1px solid rgba(13, 59, 102, 0.6);
-  background: #ecfcfb;
-  color: #0d3b66;
+  border: 1px solid rgba(255, 215, 0, 0.35) !important;
+  background: #000000 !important;
+  color: #FFD700 !important;
 }
+
 
 .theme-menu-hamburger {
   display: inline-flex;
