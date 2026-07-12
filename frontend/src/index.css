@@ -349,8 +349,63 @@ html.dark .hero-backdrop {
 /* Shared button motion + enforced gold/black contrast */
 .interactive-button {
   position: relative;
+}
+
+/* Metallic silver buttons (global enforcement) */
+button,
+.btn-cta,
+.interactive-button,
+input[type='button'],
+input[type='submit'],
+input[type='reset'] {
+  background-color: #808080 !important;
+  background-image: none !important;
+  border: 1px solid rgba(255, 255, 255, 0.35) !important;
+  color: #FFD700 !important;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.35);
+}
+
+button:hover,
+.btn-cta:hover,
+.interactive-button:hover,
+input[type='button']:hover,
+input[type='submit']:hover,
+input[type='reset']:hover,
+button:focus,
+.btn-cta:focus,
+.interactive-button:focus,
+input[type='button']:focus,
+input[type='submit']:focus,
+input[type='reset']:focus {
+  filter: brightness(1.05);
+  transform: translateY(-1px);
+  color: #FFD700 !important;
+}
+
+button:active,
+.btn-cta:active,
+.interactive-button:active,
+input[type='button']:active,
+input[type='submit']:active,
+input[type='reset']:active {
+  transform: translateY(0px);
+}
+
+/* Ensure button text stays golden on all states, including :active sheen flips */
+button:active,
+.btn-cta:active,
+.interactive-button:active,
+input[type='button']:active,
+input[type='submit']:active,
+input[type='reset']:active {
+  color: #FFD700 !important;
+}
+
+.interactive-button {
+  position: relative;
   overflow: hidden;
   transform: translateZ(0);
+
   transition:
     transform 220ms cubic-bezier(0.2, 0.7, 0.25, 1),
     box-shadow 220ms cubic-bezier(0.2, 0.7, 0.25, 1),
@@ -359,9 +414,9 @@ html.dark .hero-backdrop {
     border-color 220ms cubic-bezier(0.2, 0.7, 0.25, 1),
     opacity 220ms cubic-bezier(0.2, 0.7, 0.25, 1);
 
-  background-color: #FFD700 !important;
-  color: #000000 !important;
-  border-color: rgba(255, 215, 0, 0.65) !important;
+  background-color: #808080 !important;
+  color: #FFD700 !important;
+  border-color: rgba(255, 215, 0, 0.55) !important;
 }
 
 
@@ -379,9 +434,10 @@ html.dark .hero-backdrop {
 .interactive-button:focus-visible {
   transform: translateY(-2px) scale(1.02);
   box-shadow: 0 14px 28px rgba(13, 59, 102, 0.18);
-  background-color: #FFD700 !important;
-  color: #000000 !important;
+  background-color: #808080 !important;
+  color: #FFD700 !important;
 }
+
 
 
 .interactive-button:hover::before,
