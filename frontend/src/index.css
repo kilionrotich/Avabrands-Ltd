@@ -263,7 +263,7 @@ html.dark [class*="text-teal-secondary"] {
 
 /* RFQ section: lighter text in dark mode */
 html.dark #rfq [class*="text-teal-primary"] {
-  color: #f0f7fc !important;
+  color: #C0C0C0 !important;
 }
 
 html.dark #rfq [class*="placeholder-teal-primary"] {
@@ -274,13 +274,13 @@ html.dark #rfq [class*="placeholder-teal-primary"] {
 html.dark #rfq input,
 html.dark #rfq textarea,
 html.dark #rfq select {
-  color: #ffffff !important;
+  color: #FFD700 !important;
 }
 
 html.dark #rfq input::placeholder,
 html.dark #rfq textarea::placeholder,
 html.dark #rfq select::placeholder {
-  color: rgba(255, 255, 255, 0.6) !important;
+  color: rgba(192, 192, 192, 0.6) !important;
 }
 
 html.dark [class*="border-teal-primary"],
