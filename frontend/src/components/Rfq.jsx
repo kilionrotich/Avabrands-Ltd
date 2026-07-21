@@ -88,20 +88,20 @@ function Rfq({ bgImages }) {
               required
             />
             <input
-              className="w-full rounded-lg border border-teal-primary/25 bg-[#1FB8C8] px-4 py-3 text-sm text-teal-primary placeholder-teal-primary/45 focus:border-teal-primary focus:outline-none"
+              className="w-full rounded-lg border border-yellow/25 bg-black px-4 py-3 text-sm text-gold placeholder-yellow/45 focus:border-yellow focus:outline-none"
               placeholder="Company"
               type="text"
               name="company"
             />
             <input
-              className="w-full rounded-lg border border-teal-primary/25 bg-[#1FB8C8] px-4 py-3 text-sm text-teal-primary placeholder-teal-primary/45 focus:border-teal-primary focus:outline-none"
+              className="w-full rounded-lg border border-yellow/25 bg-black px-4 py-3 text-sm text-gold placeholder-yellow/45 focus:border-yellow focus:outline-none"
               placeholder="Email"
               type="email"
               name="email"
               required
             />
             <input
-              className="w-full rounded-lg border border-teal-primary/25 bg-[#1FB8C8] px-4 py-3 text-sm text-teal-primary placeholder-teal-primary/45 focus:border-teal-primary focus:outline-none"
+              className="w-full rounded-lg border border-yellow/25 bg-black px-4 py-3 text-sm text-gold placeholder-yellow/45 focus:border-yellow focus:outline-none"
               placeholder="Phone"
               type="tel"
               name="phone"
@@ -110,35 +110,35 @@ function Rfq({ bgImages }) {
           </div>
           <div className="mt-4 grid gap-4 md:grid-cols-2">
             <input
-              className="w-full rounded-lg border border-teal-primary/25 bg-[#1FB8C8] px-4 py-3 text-sm text-teal-primary placeholder-teal-primary/45 focus:border-teal-primary focus:outline-none"
+              className="w-full rounded-lg border border-yellow/25 bg-black px-4 py-3 text-sm text-gold placeholder-yellow/45 focus:border-yellow focus:outline-none"
               placeholder="Service needed"
               type="text"
               name="service"
               required
             />
             <input
-              className="w-full rounded-lg border border-teal-primary/25 bg-[#1FB8C8] px-4 py-3 text-sm text-teal-primary placeholder-teal-primary/45 focus:border-teal-primary focus:outline-none"
+              className="w-full rounded-lg border border-yellow/25 bg-black px-4 py-3 text-sm text-gold placeholder-yellow/45 focus:border-yellow focus:outline-none"
               placeholder="Estimated budget"
               type="text"
               name="budget"
             />
           </div>
           <textarea
-            className="mt-4 h-32 w-full rounded-lg border border-teal-primary/25 bg-[#1FB8C8] px-4 py-3 text-sm text-teal-primary placeholder-teal-primary/45 focus:border-teal-primary focus:outline-none"
+            className="mt-4 h-32 w-full rounded-lg border border-yellow/25 bg-black px-4 py-3 text-sm text-gold placeholder-yellow/45 focus:border-yellow focus:outline-none"
             placeholder="Tell us about your scope"
             name="message"
             required
           />
           <div className="mt-4 flex items-center justify-between gap-4">
             <input
-              className="w-full text-xs uppercase tracking-[0.2em] text-teal-primary/60 file:text-teal-primary file:font-bold file:cursor-pointer"
+              className="w-full text-xs uppercase tracking-[0.2em] text-gold/60 file:text-gold file:font-bold file:cursor-pointer"
               type="file"
               name="attachment"
             />
             <button
               type="submit"
               disabled={loading}
-              className="interactive-button rounded-full bg-teal-secondary px-6 py-3 text-xs font-bold uppercase tracking-[0.25em] text-white hover:bg-teal-secondary/90 hover:shadow-lg transition disabled:opacity-50 disabled:cursor-not-allowed whitespace-nowrap"
+              className="interactive-button rounded-full bg-gold px-6 py-3 text-xs font-bold uppercase tracking-[0.25em] text-black hover:bg-gold/90 hover:shadow-lg transition disabled:opacity-50 disabled:cursor-not-allowed whitespace-nowrap"
             >
               {loading ? "Sending..." : "Submit RFQ"}
             </button>

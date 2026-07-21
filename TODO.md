@@ -1,11 +1,14 @@
-# TODO
+# TODO: Fix Light Mode Backgrounds to Black
 
-- [ ] Inspect and adjust `frontend/src/index.css` to enforce:
-  - [ ] `html, body` pure black background (#000)
-  - [ ] global default text color golden yellow (#FFD700)
-  - [ ] metallic silver gradient for headings/section titles (#C0C0C0 → #808080) using text-fill technique
-  - [ ] logo scheme: `AVA` metallic silver gradient, `BRANDS` bold golden yellow
-  - [ ] buttons: gold background (#FFD700) and black text (#000000)
-  - [ ] remove/override any styles making text invisible (e.g. transparent text)
-- [ ] Validate CSS parsing/build
-- [ ] Commit with message: "style: fix obscured text by enforcing global black background and golden/silver text colors"
+## Steps
+- [x] Step 0: Analyze all files and create plan
+- [x] Step 1: Update `Partnerships.jsx` — replace teal bg with black
+- [x] Step 2: Update `DigitalStudio.jsx` — replace teal bg with black
+- [x] Step 3: Update `News.jsx` — replace teal bg with black
+- [x] Step 4: Update `Portfolio.jsx` — replace teal bg with black
+- [x] Step 5: Update `Contact.jsx` — replace teal bg with black, fix input backgrounds
+- [x] Step 6: Update `TrustStrip.jsx` — replace teal bg with black
+- [x] Step 7: Update `Rfq.jsx` — fix teal input backgrounds to black
+- [x] Step 8: Clean up `index.css` — remove broken CSS selectors, update glow to gold
+- [x] Step 9: Build check — verify the project compiles
+

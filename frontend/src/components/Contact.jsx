@@ -54,8 +54,8 @@ function Contact({ bgImages }) {
   };
 
   return (
-<section id="contact" className="section-glow border-t border-teal-primary/10 section-bg py-20 relative overflow-hidden">
-      <div className="absolute inset-0 bg-[#26C6DA]/45" aria-hidden="true" />
+<section id="contact" className="section-glow border-t border-yellow/20 section-bg py-20 relative overflow-hidden">
+      <div className="absolute inset-0 bg-black/50" aria-hidden="true" />
       {bgImages && bgImages[0] && (
         <div className="absolute right-0 top-0 opacity-60 h-[28rem] w-[28rem]">
           <img src={`${import.meta.env.BASE_URL}images/${bgImages[0]}`} alt="" className="w-full h-full object-cover" />
@@ -68,27 +68,27 @@ function Contact({ bgImages }) {
       )}
       <div className="relative mx-auto max-w-6xl px-6">
         <div className="grid gap-10 md:grid-cols-2">
-          <div className="bg-[#26C6DA]/70 backdrop-blur-sm rounded-2xl p-6 -mx-6">
-            <p className="text-xs uppercase tracking-[0.35em] text-teal-primary font-semibold drop-shadow-sm">Contact</p>
-            <h2 className="mt-4 text-4xl font-heading uppercase tracking-[0.08em] md:text-6xl text-teal-primary font-bold drop-shadow-sm">
+          <div className="bg-black/60 backdrop-blur-sm rounded-2xl p-6 -mx-6 border border-yellow/15">
+            <p className="text-xs uppercase tracking-[0.35em] text-gold font-semibold drop-shadow-sm">Contact</p>
+            <h2 className="mt-4 text-4xl font-heading uppercase tracking-[0.08em] md:text-6xl text-gold font-bold drop-shadow-sm">
               Let us design your next statement.
             </h2>
-            <p className="mt-4 text-base text-teal-primary font-medium drop-shadow-sm">
+            <p className="mt-4 text-base text-gold font-medium drop-shadow-sm">
               Corporate offices in Nairobi, Kenya with nationwide delivery teams and two working locations.
             </p>
-            <div className="mt-8 grid gap-4 text-base text-teal-primary font-medium">
+            <div className="mt-8 grid gap-4 text-base text-gold font-medium">
               <div>
-                <p className="text-xs uppercase tracking-[0.3em] text-teal-primary/70 font-medium">Email</p>
+                <p className="text-xs uppercase tracking-[0.3em] text-gold/70 font-medium">Email</p>
                 <p>avabrandsltd@gmail.com</p>
               </div>
               <div>
-                <p className="text-xs uppercase tracking-[0.3em] text-teal-primary/70 font-medium">Phone</p>
+                <p className="text-xs uppercase tracking-[0.3em] text-gold/70 font-medium">Phone</p>
                 <p>+254 793820817</p>
               </div>
               <div>
-                <p className="text-xs uppercase tracking-[0.3em] text-teal-primary/70 font-medium">WhatsApp</p>
+                <p className="text-xs uppercase tracking-[0.3em] text-gold/70 font-medium">WhatsApp</p>
                 <a
-                  className="interactive-button inline-flex items-center gap-2 text-teal-primary font-bold hover:text-teal-primary/80"
+                  className="interactive-button inline-flex items-center gap-2 text-gold font-bold hover:text-gold/80"
                   href="https://wa.me/254793820817?text=Hello%20Avabrands%2C%20I%20need%20a%20quote."
                   target="_blank"
                   rel="noreferrer"
@@ -100,8 +100,8 @@ function Contact({ bgImages }) {
             
             <div className="mt-8 grid gap-4 md:grid-cols-2">
               {locations.map((location) => (
-                <div key={location.name} className="rounded-2xl border border-teal-primary/20 bg-teal-primary/5 p-4">
-                  <div className="overflow-hidden rounded-xl border border-teal-primary/20">
+                <div key={location.name} className="rounded-2xl border border-yellow/20 bg-yellow/5 p-4">
+                  <div className="overflow-hidden rounded-xl border border-yellow/20">
                     <iframe
                       title={`Avabrands ${location.name}`}
                       className="h-64 w-full"
@@ -111,21 +111,21 @@ function Contact({ bgImages }) {
                       src={location.embed}
                     />
                   </div>
-                  <p className="mt-4 text-sm font-semibold text-teal-primary">{location.name}</p>
-                  <p className="mt-1 text-xs text-teal-primary/60">{location.code}</p>
+                  <p className="mt-4 text-sm font-semibold text-gold">{location.name}</p>
+                  <p className="mt-1 text-xs text-gold/60">{location.code}</p>
                 </div>
               ))}
             </div>
           </div>
           
           <div>
-            <form onSubmit={handleSubmit} className="rounded-2xl border border-teal-primary/20 bg-teal-primary/5 p-8">
-              <h3 className="text-xl font-heading uppercase tracking-[0.08em] text-teal-primary font-bold">
+            <form onSubmit={handleSubmit} className="rounded-2xl border border-yellow/20 bg-black/60 p-8">
+              <h3 className="text-xl font-heading uppercase tracking-[0.08em] text-gold font-bold">
                 Send us a message
               </h3>
               
               {status === "success" && (
-                <div className="mt-4 rounded-lg bg-teal-primary/20 border border-teal-primary/40 p-4 text-sm text-teal-primary">
+                <div className="mt-4 rounded-lg bg-yellow/20 border border-yellow/40 p-4 text-sm text-gold">
                   ✓ Thank you! We'll get back to you soon.
                 </div>
               )}
@@ -137,27 +137,27 @@ function Contact({ bgImages }) {
               
               <div className="mt-6 space-y-4">
                 <input
-                  className="w-full rounded-lg border border-teal-primary/25 bg-[#1FB8C8] px-4 py-3 text-sm text-teal-primary placeholder-teal-primary/45 focus:border-teal-primary focus:outline-none"
+                  className="w-full rounded-lg border border-yellow/25 bg-black px-4 py-3 text-sm text-gold placeholder-yellow/45 focus:border-yellow focus:outline-none"
                   placeholder="Your name"
                   type="text"
                   name="name"
                   required
                 />
                 <input
-                  className="w-full rounded-lg border border-teal-primary/25 bg-[#1FB8C8] px-4 py-3 text-sm text-teal-primary placeholder-teal-primary/45 focus:border-teal-primary focus:outline-none"
+                  className="w-full rounded-lg border border-yellow/25 bg-black px-4 py-3 text-sm text-gold placeholder-yellow/45 focus:border-yellow focus:outline-none"
                   placeholder="Email address"
                   type="email"
                   name="email"
                   required
                 />
                 <input
-                  className="w-full rounded-lg border border-teal-primary/25 bg-[#1FB8C8] px-4 py-3 text-sm text-teal-primary placeholder-teal-primary/45 focus:border-teal-primary focus:outline-none"
+                  className="w-full rounded-lg border border-yellow/25 bg-black px-4 py-3 text-sm text-gold placeholder-yellow/45 focus:border-yellow focus:outline-none"
                   placeholder="Phone number"
                   type="tel"
                   name="phone"
                 />
                 <textarea
-                  className="h-32 w-full rounded-lg border border-teal-primary/25 bg-[#1FB8C8] px-4 py-3 text-sm text-teal-primary placeholder-teal-primary/45 focus:border-teal-primary focus:outline-none"
+                  className="h-32 w-full rounded-lg border border-yellow/25 bg-black px-4 py-3 text-sm text-gold placeholder-yellow/45 focus:border-yellow focus:outline-none"
                   placeholder="Your message"
                   name="message"
                   required
@@ -165,7 +165,7 @@ function Contact({ bgImages }) {
                 <button
                   type="submit"
                   disabled={loading}
-                  className="interactive-button w-full rounded-full bg-teal-secondary px-6 py-3 text-xs font-bold uppercase tracking-[0.25em] text-white hover:bg-teal-secondary/90 hover:shadow-lg transition disabled:opacity-50 disabled:cursor-not-allowed"
+                  className="interactive-button w-full rounded-full bg-gold px-6 py-3 text-xs font-bold uppercase tracking-[0.25em] text-black hover:bg-gold/90 hover:shadow-lg transition disabled:opacity-50 disabled:cursor-not-allowed"
                 >
                   {loading ? "Sending..." : "Send Message"}
                 </button>

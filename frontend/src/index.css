@@ -66,15 +66,6 @@ header {
   color: #C0C0C0 !important; /* metallic silver */
 }
 
-/* Disable legacy hard-coded teal backgrounds so theme image change doesn't leave stale colors. */
-[class*="bg-[#26C6DA]"],
-[class*="bg-[#2DD4E3]"],
-[class*="bg-[#1FB8C8]"],
-[class*="bg-[#1AA5B5]"],
-[class*="bg-[#178A98]"] {
-  background-color: #000000 !important;
-}
-
 /* Disable legacy teal text colors across the page. */
 [class*="text-teal-primary"],
 [class*="text-teal-secondary"] {
@@ -176,15 +167,6 @@ p, span, strong, em, li, a, button, input, textarea, select {
 
 /* Remove legacy teal/cyan/blue backgrounds/text so they can't leak through */
 [class*="bg-teal"],
-[class*="bg-[#26C6DA"],
-[class*="bg-[#2DD4E3"],
-[class*="bg-[#1FB8C8"],
-[class*="bg-[#1AA5B5"],
-[class*="bg-[#178A98"],
-[class*="bg-[#0ea5e9"],
-[class*="bg-[#1d4ed8"],
-[class*="bg-[#1e40af"],
-[class*="bg-[#2563eb"],
 [class*="bg-sky"],
 [class*="bg-blue"],
 [class*="bg-cyan"],
@@ -194,11 +176,6 @@ p, span, strong, em, li, a, button, input, textarea, select {
 }
 
 [class*="text-teal"],
-[class*="text-[#26C6DA"],
-[class*="text-[#2DD4E3"],
-[class*="text-[#1FB8C8"],
-[class*="text-[#1AA5B5"],
-[class*="text-[#178A98"],
 [class*="text-sky"],
 [class*="text-blue"],
 [class*="text-cyan"],
@@ -293,14 +270,6 @@ html.dark [class*="border-teal-secondary/"] {
 }
 
 /* Dark mode: revert turquoise backgrounds to dark */
-html.dark [class*="bg-[#26C6DA]"],
-html.dark [class*="bg-[#2DD4E3]"],
-html.dark [class*="bg-[#1FB8C8]"],
-html.dark [class*="bg-[#1AA5B5]"],
-html.dark [class*="bg-[#178A98]"] {
-  background-color: rgba(15, 23, 42, 0.86) !important;
-}
-
 html.dark .hero-backdrop {
   background-image:
     linear-gradient(120deg, rgba(11, 18, 32, 0.95) 10%, rgba(15, 23, 42, 0.92) 55%, rgba(125, 211, 252, 0.16) 100%),
@@ -310,13 +279,13 @@ html.dark .hero-backdrop {
 
 .hero-backdrop {
   background-image: none !important;
-  background-color: #B3F0FF !important;
+  background-color: #080809 !important;
   background-size: cover;
   background-position: center;
 }
 
 .section-glow {
-  background: radial-gradient(circle at 20% 20%, rgba(111, 197, 191, 0.16), transparent 60%);
+  background: radial-gradient(circle at 20% 20%, rgba(255, 215, 0, 0.08), transparent 60%);
 }
 
 .text-balance {

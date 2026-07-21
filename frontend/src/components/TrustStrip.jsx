@@ -6,15 +6,15 @@ const stats = [
 
 function TrustStrip() {
   return (
-    <section className="border-y border-teal-primary/10 bg-[#178A98]">
+    <section className="border-y border-yellow/20 bg-black">
       <div className="mx-auto grid max-w-6xl gap-8 px-6 py-10 md:grid-cols-3">
         {stats.map((stat) => (
           <div key={stat.label} className="flex items-center justify-between">
             <div>
-              <p className="text-xs uppercase tracking-[0.3em] text-teal-primary/60">{stat.label}</p>
-              <p className="mt-2 text-2xl font-heading text-teal-primary font-bold">{stat.value}</p>
+              <p className="text-xs uppercase tracking-[0.3em] text-gold/60">{stat.label}</p>
+              <p className="mt-2 text-2xl font-heading text-gold font-bold">{stat.value}</p>
             </div>
-            <div className="h-10 w-px bg-teal-secondary/20" aria-hidden="true" />
+            <div className="h-10 w-px bg-yellow/20" aria-hidden="true" />
           </div>
         ))}
       </div>

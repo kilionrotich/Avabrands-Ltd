@@ -31,13 +31,13 @@ function Portfolio({ items, bgImage }) {
   }, [activeFilter]);
 
   return (
-<section id="portfolio" className="border-t border-teal-primary/10 section-bg py-20 relative" style={backgroundStyle}>
-      <div className="absolute inset-0 bg-[#26C6DA]/65" aria-hidden="true" />
+<section id="portfolio" className="border-t border-yellow/20 section-bg py-20 relative" style={backgroundStyle}>
+      <div className="absolute inset-0 bg-black/70" aria-hidden="true" />
       <div className="relative mx-auto max-w-6xl px-6">
-        <div className="flex flex-wrap items-end justify-between gap-6 bg-[#26C6DA]/80 backdrop-blur-sm rounded-2xl p-6 -mx-6">
+        <div className="flex flex-wrap items-end justify-between gap-6 bg-black/70 backdrop-blur-sm rounded-2xl p-6 -mx-6 border border-yellow/15">
           <div>
-            <p className="text-xs uppercase tracking-[0.35em] text-teal-primary font-semibold drop-shadow-sm animate-pulse-slow">Portfolio</p>
-            <h2 className="mt-4 text-3xl font-heading uppercase tracking-[0.08em] md:text-5xl font-bold drop-shadow-sm">
+            <p className="text-xs uppercase tracking-[0.35em] text-gold font-semibold drop-shadow-sm animate-pulse-slow">Portfolio</p>
+            <h2 className="mt-4 text-3xl font-heading uppercase tracking-[0.08em] md:text-5xl font-bold drop-shadow-sm text-gold">
               Evidence of execution.
             </h2>
           </div>
@@ -50,8 +50,8 @@ function Portfolio({ items, bgImage }) {
                 style={{ animationDelay: `${index * 70}ms` }}
                 className={`interactive-button portfolio-filter-chip rounded-full px-4 py-2 text-xs uppercase tracking-[0.2em] transition ${
                   activeFilter === filter
-                    ? "portfolio-filter-chip-active bg-teal-primary text-white font-bold"
-                    : "border border-teal-primary/30 text-teal-primary/70 hover:border-teal-primary hover:text-teal-primary"
+                    ? "portfolio-filter-chip-active bg-gold text-black font-bold"
+                    : "border border-yellow/30 text-gold/70 hover:border-yellow hover:text-gold"
                 }`}
               >
                 {filter}
@@ -61,11 +61,13 @@ function Portfolio({ items, bgImage }) {
         </div>
         <div ref={gridRef} className="mt-12 grid gap-6 md:grid-cols-3">
           {filteredItems.map((item) => (
-            <article
+            <div
               key={item.id}
-              type="button"
+              role="button"
               onClick={() => setActiveItem(item)}
-              className="group flex h-full flex-col justify-between rounded-2xl border border-white/10 bg-white/5 text-left transition hover:border-gold overflow-hidden"
+              onKeyDown={(e) => { if (e.key === 'Enter' || e.key === ' ') setActiveItem(item); }}
+              tabIndex={0}
+              className="group flex h-full flex-col justify-between rounded-2xl border border-yellow/20 bg-black/60 text-left transition hover:border-gold overflow-hidden cursor-pointer"
             >
               {item.image_url && (
                 <div className="w-full overflow-hidden">
@@ -78,41 +80,41 @@ function Portfolio({ items, bgImage }) {
               )}
               <div className="p-6 flex flex-col flex-1 justify-between">
                 <div>
-                  <p className="text-xs uppercase tracking-[0.3em] text-white/50">{item.category}</p>
+                  <p className="text-xs uppercase tracking-[0.3em] text-gold/50">{item.category}</p>
                   <h3 className="mt-4 text-xl font-heading uppercase tracking-[0.08em] text-gold">
                     {item.title}
                   </h3>
-                  <p className="mt-3 text-sm text-white/70">{item.summary}</p>
+                  <p className="mt-3 text-sm text-gold/70">{item.summary}</p>
                 </div>
-                <span className="mt-6 text-xs uppercase tracking-[0.3em] text-white/40 group-hover:text-gold">
+                <span className="mt-6 text-xs uppercase tracking-[0.3em] text-gold/40 group-hover:text-gold">
                   View Project
                 </span>
               </div>
-            </button>
+            </div>
           ))}
         </div>
       </div>
 
       {activeItem ? (
-        <div className="fixed inset-0 z-50 bg-[#26C6DA]/92 backdrop-blur-sm">
+        <div className="fixed inset-0 z-50 bg-black/92 backdrop-blur-sm">
           <div className="h-full w-full overflow-y-auto pb-20">
             <div className="mx-auto w-full max-w-6xl px-6 py-10">
               <div className="flex items-center justify-between">
-                <p className="text-xs uppercase tracking-[0.3em] text-teal-primary/60 font-bold">{activeItem.category}</p>
+                <p className="text-xs uppercase tracking-[0.3em] text-gold/60 font-bold">{activeItem.category}</p>
                 <button
                   type="button"
                   onClick={() => setActiveItem(null)}
-                  className="interactive-button text-xs uppercase tracking-[0.3em] text-teal-primary font-bold hover:text-teal-primary/80"
+                  className="interactive-button text-xs uppercase tracking-[0.3em] text-gold font-bold hover:text-gold/80"
                 >
                   Close
                 </button>
               </div>
-            <h3 className="text-2xl font-heading uppercase tracking-[0.08em] text-teal-primary font-bold">
+            <h3 className="text-2xl font-heading uppercase tracking-[0.08em] text-gold font-bold">
               {activeItem.title}
             </h3>
-            <p className="mt-4 text-sm text-white/70">{activeItem.summary}</p>
+            <p className="mt-4 text-sm text-gold/70">{activeItem.summary}</p>
             {activeItem.image_url ? (
-              <div className="mt-6 overflow-hidden rounded-xl border border-white/10">
+              <div className="mt-6 overflow-hidden rounded-xl border border-yellow/20">
                 <img
                   src={activeItem.image_url}
                   alt={`Full view of ${activeItem.title} project`}
@@ -120,12 +122,13 @@ function Portfolio({ items, bgImage }) {
                 />
               </div>
             ) : (
-              <div className="mt-6 rounded-xl border border-white/10 bg-black/60 p-6 text-sm text-white/60">
+              <div className="mt-6 rounded-xl border border-yellow/20 bg-black/60 p-6 text-sm text-gold/60">
                 No project images available.
               </div>
             )}
           </div>
         </div>
+      </div>
       ) : null}
     </section>
   );
