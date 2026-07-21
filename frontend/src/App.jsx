@@ -44,49 +44,65 @@ const portfolioItems = [
   {
     id: 1,
     title: "Atlas Capital HQ",
-    category: "Production",
+    category: "Corporate Branding",
     summary: "Lobby environmental branding and premium wayfinding system.",
-    image_url: "https://picsum.photos/seed/atlas/800/500"
+    image_url: "corporate branding10.jpeg.jpeg"
   },
   // Signage Solutions
   {
     id: 2,
     title: "Northbridge Rebrand",
-    category: "Branding",
+    category: "Signage Solutions",
     summary: "Complete identity refresh with global rollout toolkit.",
-    image_url: "https://picsum.photos/seed/northbridge/800/500"
+    image_url: "signage solutions14.jpeg.jpeg"
   },
   // Vehicle Branding
   {
     id: 3,
-    title: "Skyline Pavilion",
-    category: "Civil Works",
-    summary: "Large-format structural signage and steel fabrication.",
-    image_url: "https://picsum.photos/seed/skyline/800/500"
+    title: "Skyline Fleet Wraps",
+    category: "Vehicle Branding",
+    summary: "Large-format vehicle wraps and fleet branding rollout.",
+    image_url: "vehicle branding7.jpeg.jpeg"
   },
   // Large Format Printing
   {
     id: 4,
-    title: "Aurora Campaign",
-    category: "Agency",
-    summary: "Cross-agency collaboration for a national campaign launch.",
-    image_url: "https://picsum.photos/seed/aurora/800/500"
+    title: "Aurora Mall Displays",
+    category: "Large Format Printing",
+    summary: "Large-format retail displays and environmental graphics.",
+    image_url: "large format printing14.jpeg.jpeg"
   },
   // Printing Services
   {
     id: 5,
-    title: "Vantage Studio",
-    category: "Production",
-    summary: "Immersive showroom experience with audio-visual integration.",
-    image_url: "https://picsum.photos/seed/vantage/800/500"
+    title: "Vantage Studio Print Pack",
+    category: "Printing Services",
+    summary: "Premium print collateral and branded stationery suite.",
+    image_url: "printing services3.jpeg.jpeg"
   },
   // Apparel & Promotional Branding
   {
     id: 6,
-    title: "Lumen District",
-    category: "Civil Works",
-    summary: "Public-facing identity with architectural lighting accents.",
-    image_url: "https://picsum.photos/seed/lumen/800/500"
+    title: "Lumen Promo Kit",
+    category: "Apparel & Promotional Branding",
+    summary: "Custom apparel and promotional merchandise campaign.",
+    image_url: "Apparel & promotional branding2.jpeg.jpeg"
+  },
+  // Gondola Branding
+  {
+    id: 7,
+    title: "Retail Gondola System",
+    category: "Gondola Branding",
+    summary: "End-to-end gondola branding for retail chain rollout.",
+    image_url: "Gondola branding5.jpeg.jpeg"
+  },
+  // Pop Up Banners
+  {
+    id: 8,
+    title: "Event Banner Suite",
+    category: "Pop Up Banners",
+    summary: "Custom pop-up banners and event display systems.",
+    image_url: "pop up banners2.jpeg.jpeg"
   }
 ];
 

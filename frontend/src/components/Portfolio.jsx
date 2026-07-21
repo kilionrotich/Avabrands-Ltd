@@ -72,7 +72,7 @@ function Portfolio({ items, bgImage }) {
               {item.image_url && (
                 <div className="w-full overflow-hidden">
                   <img
-                    src={item.image_url}
+                    src={`${import.meta.env.BASE_URL}images/${item.image_url}`}
                     alt={`Project image for ${item.title}`}
                     className="w-full h-48 object-cover transition-transform duration-500 group-hover:scale-105"
                   />
@@ -116,7 +116,7 @@ function Portfolio({ items, bgImage }) {
             {activeItem.image_url ? (
               <div className="mt-6 overflow-hidden rounded-xl border border-yellow/20">
                 <img
-                  src={activeItem.image_url}
+                  src={`${import.meta.env.BASE_URL}images/${activeItem.image_url}`}
                   alt={`Full view of ${activeItem.title} project`}
                   className="w-full object-cover"
                 />
