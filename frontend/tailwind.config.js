@@ -5,9 +5,9 @@ export default {
     extend: {
       colors: {
         gold: {
-          DEFAULT: "#d6b15e",
-          soft: "#f2d88c",
-          dark: "#b08a3e"
+          DEFAULT: "#FFE600",
+          soft: "#FFE600",
+          dark: "#E6CF00"
         },
         teal: {
           primary: "#0D3B66",    // Dark navy blue

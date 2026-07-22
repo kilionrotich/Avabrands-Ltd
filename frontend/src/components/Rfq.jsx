@@ -68,12 +68,12 @@ function Rfq({ bgImages }) {
         </div>
         <form onSubmit={handleSubmit} className="rounded-2xl border border-yellow/20 bg-black/70 backdrop-blur-sm p-8 shadow-md">
           {status === "success" && (
-            <div className="mb-4 rounded-lg bg-[#F2D88C] border border-[#F2D88C]/40 p-4 text-sm text-black font-bold">
+              <div className="mb-4 rounded-lg bg-[#FFE600] border border-[#FFE600]/40 p-4 text-sm text-black font-bold">
               ✓ Thank you! Your RFQ has been submitted. We'll respond within one business day.
             </div>
           )}
           {status === "error" && (
-            <div className="mb-4 rounded-lg bg-[#F2D88C]/20 border border-[#F2D88C]/40 p-4 text-sm text-gold font-bold">
+            <div className="mb-4 rounded-lg bg-[#FFE600]/20 border border-[#FFE600]/40 p-4 text-sm text-gold font-bold">
               ✗ Something went wrong. Please try again or contact us directly.
             </div>
           )}
