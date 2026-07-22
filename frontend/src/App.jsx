@@ -39,72 +39,202 @@ const services = [
   }
 ];
 
-const portfolioItems = [
-  // Corporate Branding
-  {
-    id: 1,
-    title: "Atlas Capital HQ",
-    category: "Corporate Branding",
-    summary: "Lobby environmental branding and premium wayfinding system.",
-    image_url: "corporate branding10.jpeg.jpeg"
+// ──────────────────────────────────────────────
+// All media files classified by category
+// ──────────────────────────────────────────────
+const mediaCatalog = {
+  "Corporate Branding": {
+    images: [
+      "corporate branding.jpeg.jpeg",
+      "corporate branding6.jpeg.jpeg",
+      "corporate branding7.jpeg.jpeg",
+      "corporate branding8.jpeg.jpeg",
+      "corporate branding9.jpeg.jpeg",
+      "corporate branding10.jpeg.jpeg",
+      "corporate branding11.jpeg.jpeg",
+      "corporate branding12.jpeg.jpeg",
+      "corporate branding13.jpeg.jpeg",
+      "corporate branding14.jpeg.jpeg",
+      "corporate branding15.jpeg.jpeg",
+      "corporate branding16.jpeg.jpeg",
+      "corporate branding17 (1).jpeg",
+      "corporate branding18 (2).jpeg",
+      "corporate-branding-1.jpeg.jpeg",
+      "corporate-branding-2.jpeg.jpeg",
+      "corporate-branding-3.jpeg.jpeg",
+      "corporate-branding-4.jpeg.jpeg",
+      "corporate-branding-5.jpeg.jpeg",
+      "corporate banding8.jpeg.jpeg"
+    ],
+    videos: ["Corporate branding.mp4"]
   },
-  // Signage Solutions
-  {
-    id: 2,
-    title: "Northbridge Rebrand",
-    category: "Signage Solutions",
-    summary: "Complete identity refresh with global rollout toolkit.",
-    image_url: "signage solutions14.jpeg.jpeg"
+  "Signage Solutions": {
+    images: [
+      "signage solution4.jpeg.jpeg",
+      "signage solution6.jpeg.jpeg",
+      "signage solution17.jpeg.jpeg",
+      "signage solutions 7.jpeg.jpeg",
+      "signage solutions1.jpeg.jpeg",
+      "signage solutions2.jpeg.jpeg",
+      "signage solutions3.jpeg.jpeg",
+      "signage solutions5.jpeg.jpeg",
+      "signage solutions8.jpeg.jpeg",
+      "signage solutions9.jpeg.jpeg",
+      "signage solutions10.jpeg.jpeg",
+      "signage solutions11.jpeg.jpeg",
+      "Signage solutions12.jpeg.jpeg",
+      "signage solutions13 (1).jpeg",
+      "signage solutions14.jpeg.jpeg",
+      "signage solutions15.jpeg.jpeg",
+      "signage solutions16.jpeg.jpeg"
+    ],
+    videos: []
   },
-  // Vehicle Branding
-  {
-    id: 3,
-    title: "Skyline Fleet Wraps",
-    category: "Vehicle Branding",
-    summary: "Large-format vehicle wraps and fleet branding rollout.",
-    image_url: "vehicle branding7.jpeg.jpeg"
+  "Vehicle Branding": {
+    images: [
+      "vehicle branding1.jpeg.jpeg",
+      "vehicle branding2.jpeg.jpeg",
+      "vehicle branding3.jpeg.jpeg",
+      "vehicle branding4.jpeg.jpeg",
+      "vehicle branding5.jpeg.jpeg",
+      "vehicle branding6.jpeg.jpeg",
+      "vehicle branding7.jpeg.jpeg",
+      "vehicle branding8.jpeg.jpeg",
+      "vehicle branding9.jpeg.jpeg",
+      "vehicle branding10.jpeg.jpeg",
+      "vehicle branding11.jpeg.jpeg"
+    ],
+    videos: []
   },
-  // Large Format Printing
-  {
-    id: 4,
-    title: "Aurora Mall Displays",
-    category: "Large Format Printing",
-    summary: "Large-format retail displays and environmental graphics.",
-    image_url: "large format printing14.jpeg.jpeg"
+  "Large Format Printing": {
+    images: [
+      "large format printing1.jpeg.jpeg",
+      "large format printing2.jpeg.jpeg",
+      "large format printing3.jpeg.jpeg",
+      "large format printing4.jpeg.jpeg",
+      "large format printing5.jpeg.jpeg",
+      "large format printing6.jpeg.jpeg",
+      "large format printing7.jpeg.jpeg",
+      "large format printing8.jpeg.jpeg",
+      "large format printing9.jpeg.jpeg",
+      "Large format printing10.jpeg.jpeg",
+      "large format printing11.jpeg.jpeg",
+      "large format printing12.jpeg.jpeg",
+      "large format printing13.jpeg.jpeg",
+      "large format printing14.jpeg.jpeg",
+      "large format printing15.jpeg.jpeg",
+      "large format printing16.jpeg.jpeg",
+      "Large format printing17.jpeg.jpeg",
+      "Large format printing18.jpeg.jpeg"
+    ],
+    videos: ["Large format printing.mp4"]
   },
-  // Printing Services
-  {
-    id: 5,
-    title: "Vantage Studio Print Pack",
-    category: "Printing Services",
-    summary: "Premium print collateral and branded stationery suite.",
-    image_url: "printing services3.jpeg.jpeg"
+  "Printing Services": {
+    images: [
+      "printing services3.jpeg.jpeg",
+      "printing services4.jpeg.jpeg",
+      "printing services5.jpeg.jpeg"
+    ],
+    videos: []
   },
-  // Apparel & Promotional Branding
-  {
-    id: 6,
-    title: "Lumen Promo Kit",
-    category: "Apparel & Promotional Branding",
-    summary: "Custom apparel and promotional merchandise campaign.",
-    image_url: "Apparel & promotional branding2.jpeg.jpeg"
+  "Apparel & Promotional Branding": {
+    images: [
+      "Apparel & promotional branding1.jpeg.jpeg",
+      "Apparel & promotional branding2.jpeg.jpeg",
+      "Apparel & promotional branding3.jpeg.jpeg",
+      "Apparel & promotional branding4.jpeg.jpeg",
+      "Apparel & promotional branding5.jpeg.jpeg",
+      "Apparel & promotional branding12.jpeg.jpeg",
+      "Apparel & promotional branding13.jpeg.jpeg",
+      "Apparel promotion 9.jpeg.jpeg",
+      "Apparell and branding 10.jpeg.jpeg",
+      "Apparell branding and promotion 6.jpeg.jpeg",
+      "Apparell promotion and branding 7.jpeg.jpeg",
+      "Apparell promotion and branding.jpeg.jpeg",
+      "Apparell promotion and branding8.jpeg.jpeg",
+      "Apparell promotion and branding12.jpeg.jpeg"
+    ],
+    videos: []
   },
-  // Gondola Branding
-  {
-    id: 7,
-    title: "Retail Gondola System",
-    category: "Gondola Branding",
-    summary: "End-to-end gondola branding for retail chain rollout.",
-    image_url: "Gondola branding5.jpeg.jpeg"
+  "Gondola Branding": {
+    images: [
+      "Gondola branding.jpeg",
+      "Gondola branding2.jpeg.jpeg",
+      "Gondola branding3.jpeg.jpeg",
+      "Gondola branding4.jpeg.jpeg",
+      "Gondola branding5.jpeg.jpeg",
+      "Gondola branding6.jpeg.jpeg",
+      "Gondola branding7.jpeg.jpeg",
+      "Gondola branding8.jpeg.jpeg",
+      "Gondola branding9.jpeg.jpeg",
+      "Gondola brandings1.jpeg.jpeg"
+    ],
+    videos: []
   },
-  // Pop Up Banners
-  {
-    id: 8,
-    title: "Event Banner Suite",
-    category: "Pop Up Banners",
-    summary: "Custom pop-up banners and event display systems.",
-    image_url: "pop up banners2.jpeg.jpeg"
+  "Pop Up Banners": {
+    images: [
+      "pop up banners1.jpeg.jpeg",
+      "pop up banners2.jpeg.jpeg"
+    ],
+    videos: []
+  },
+  "Photo Frames": {
+    images: [
+      "Photo frames1.jpeg.jpeg",
+      "photo frames2.jpeg.jpeg",
+      "photo frames3.jpeg.jpeg",
+      "photo frames4.jpeg.jpeg",
+      "photo frames5.jpeg.jpeg",
+      "photo frames6.jpeg.jpeg"
+    ],
+    videos: []
+  },
+  "Snapper Frames": {
+    images: [
+      "snapper frames1.jpeg.jpeg"
+    ],
+    videos: []
+  },
+  "Magnetic Stickers": {
+    images: [
+      "magnetic stickers.jpeg.jpeg"
+    ],
+    videos: []
   }
-];
+};
+
+// Build a flat portfolio items list from the catalog
+function buildPortfolioItems(catalog) {
+  const items = [];
+  let id = 1;
+  for (const [category, media] of Object.entries(catalog)) {
+    // — images —
+    media.images.forEach((url, idx) => {
+      items.push({
+        id: id++,
+        title: `${category} ${idx + 1}`,
+        category,
+        summary: `${category} project showcase.`,
+        type: "image",
+        media_url: url
+      });
+    });
+    // — videos —
+    media.videos.forEach((url) => {
+      items.push({
+        id: id++,
+        title: `${category} — Video`,
+        category,
+        summary: `${category} showreel / walkthrough.`,
+        type: "video",
+        media_url: url
+      });
+    });
+  }
+  return items;
+}
+
+const portfolioItems = buildPortfolioItems(mediaCatalog);
 
 const latestImages = [
   "corporate branding10.jpeg.jpeg",

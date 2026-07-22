@@ -1,5 +1,9 @@
 import { useMemo, useState, useRef, useEffect } from "react";
 
+function getMediaUrl(filename) {
+  return `${import.meta.env.BASE_URL}images/${filename}`;
+}
+
 function Portfolio({ items, bgImage }) {
   const backgroundStyle = bgImage ? {
     backgroundImage: `url(${import.meta.env.BASE_URL}images/${bgImage})`,
@@ -29,6 +33,73 @@ function Portfolio({ items, bgImage }) {
       window.scrollTo({ top: y, behavior: 'smooth' });
     }
   }, [activeFilter]);
+
+  /** Render the media (image or video) inside a card */
+  function renderCardMedia(item) {
+    const url = item.media_url;
+    if (!url) return null;
+
+    if (item.type === "video") {
+      return (
+        <div className="w-full overflow-hidden bg-black">
+          <video
+            src={getMediaUrl(url)}
+            className="w-full aspect-[4/3] object-contain"
+            muted
+            loop
+            playsInline
+            preload="metadata"
+          />
+        </div>
+      );
+    }
+
+    return (
+      <div className="w-full overflow-hidden bg-black">
+        <img
+          src={getMediaUrl(url)}
+          alt={`Project image for ${item.title}`}
+          className="w-full aspect-[4/3] object-contain transition-transform duration-500 group-hover:scale-105"
+        />
+      </div>
+    );
+  }
+
+  /** Render the media in the lightbox modal */
+  function renderModalMedia(item) {
+    const url = item.media_url;
+    if (!url) {
+      return (
+        <div className="mt-6 rounded-xl border border-yellow/20 bg-black/60 p-6 text-sm text-gold/60">
+          No project media available.
+        </div>
+      );
+    }
+
+    if (item.type === "video") {
+      return (
+        <div className="mt-6 overflow-hidden rounded-xl border border-yellow/20 bg-black flex justify-center">
+          <video
+            src={getMediaUrl(url)}
+            className="max-h-[80vh] w-auto max-w-full object-contain"
+            controls
+            autoPlay
+            playsInline
+          />
+        </div>
+      );
+    }
+
+    return (
+      <div className="mt-6 overflow-hidden rounded-xl border border-yellow/20 bg-black flex justify-center">
+        <img
+          src={getMediaUrl(url)}
+          alt={`Full view of ${item.title} project`}
+          className="max-h-[80vh] w-auto max-w-full object-contain"
+        />
+      </div>
+    );
+  }
 
   return (
 <section id="portfolio" className="border-t border-yellow/20 section-bg py-20 relative" style={backgroundStyle}>
@@ -69,15 +140,7 @@ function Portfolio({ items, bgImage }) {
               tabIndex={0}
               className="group flex h-full flex-col justify-between rounded-2xl border border-yellow/20 bg-black/60 text-left transition hover:border-gold overflow-hidden cursor-pointer"
             >
-              {item.image_url && (
-                <div className="w-full overflow-hidden">
-                  <img
-                    src={`${import.meta.env.BASE_URL}images/${item.image_url}`}
-                    alt={`Project image for ${item.title}`}
-                    className="w-full h-48 object-cover transition-transform duration-500 group-hover:scale-105"
-                  />
-                </div>
-              )}
+              {item.media_url && renderCardMedia(item)}
               <div className="p-6 flex flex-col flex-1 justify-between">
                 <div>
                   <p className="text-xs uppercase tracking-[0.3em] text-gold/50">{item.category}</p>
@@ -113,19 +176,7 @@ function Portfolio({ items, bgImage }) {
               {activeItem.title}
             </h3>
             <p className="mt-4 text-sm text-gold/70">{activeItem.summary}</p>
-            {activeItem.image_url ? (
-              <div className="mt-6 overflow-hidden rounded-xl border border-yellow/20">
-                <img
-                  src={`${import.meta.env.BASE_URL}images/${activeItem.image_url}`}
-                  alt={`Full view of ${activeItem.title} project`}
-                  className="w-full object-cover"
-                />
-              </div>
-            ) : (
-              <div className="mt-6 rounded-xl border border-yellow/20 bg-black/60 p-6 text-sm text-gold/60">
-                No project images available.
-              </div>
-            )}
+            {renderModalMedia(activeItem)}
           </div>
         </div>
       </div>
@@ -135,3 +186,4 @@ function Portfolio({ items, bgImage }) {
 }
 
 export default Portfolio;
+
